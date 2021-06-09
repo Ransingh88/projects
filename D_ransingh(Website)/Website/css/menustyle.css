@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+header .logo{
+     color: black;
+     height: 50px;
+     line-height: 50px;
+     padding-left: 200px;
+     float: left;
+     font-weight: bold;
+}
+
+header nav{
+    float: left;
+    margin-left: 100px;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: green;
+    text-decoration: none;
+}
+.menu-toggle{
+    color: black;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon{
+    padding-left: 200px;
+}
+ul.icon li a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width:991px){
+     header{
+        padding: 10px 10px;
+     }
+     .menu-toggle{
+         display: block;
+     }
+     header nav{
+        
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: rgb(49, 49, 116);
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        transition: 0.5s;
+     }
+     header nav.active{
+         left: 0;
+     }
+     header nav ul{
+         display: block;
+         text-align: center;
+     }
+     header .logo{
+        padding-left: 20px;
+     }
+     header nav ul li a{
+         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+     }
+     ul.icon li a{
+         float: left;
+         border-bottom: none;
+         padding-top: 50px;
+     }
+     
+     .icon{
+        padding-left: calc(50% - 80px);
+    }
+}
