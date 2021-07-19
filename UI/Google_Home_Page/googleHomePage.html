@@ -20,14 +20,14 @@
         <div class="main">
             <img src="images/google.png" alt="">
             <div class="searchBox">
-                <input type="text" class="search" placeholder="Search Google or type a URL">
+                <input type="text" class="search" id="search" placeholder="Search Google or type a URL">
                 <div class="icons">
                     <div><img src="images/search.png" alt=""></div>
                     <div><img src="images/mic.png" alt=""></div>
                 </div>
             </div>
             <div class="buttons">
-                <button>Google Search</button>
+                <button onclick="search()" onkeypress='search()'>Google Search</button>
                 <button>I'm Feeling Lucky</button>
             </div>
             <ul class="languages">
@@ -62,4 +62,5 @@
         </div>
     </section>
 </body>
+<script src="google.js"></script>
 </html>
