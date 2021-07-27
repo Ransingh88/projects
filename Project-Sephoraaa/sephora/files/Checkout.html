@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../sephora.html">SEPHORA</a>
+    </nav>
+    <div class="checkoutPageCont">
+      <h1>Checkout</h1>
+      <hr />
+      <section class="div">
+        <div class="div1">
+          <h1>1. Shipping Address</h1>
+
+          <form class="form" class="shiping-address">
+            <input type="text" placeholder="First Name*" class="first" />
+
+            <input type="text" placeholder="Last Name*" class="last" /> <br />
+
+            <input type="number" placeholder="Phone*" class="phone" /><br />
+
+            <input type="text" placeholder="Street address*" class="street" />
+            <br />
+
+            <a href="#">Add Apt #, Floor, etc.</a><br />
+
+            <input
+              type="number"
+              placeholder="Zip/Postal code*"
+              class="zipcode"
+            />
+            <span
+              ><b>Enter ZIP/Postal code to see City and State/Region</b> </span
+            ><br />
+
+            <button type="submit" class="butn">Save & Continue</button>
+          </form>
+
+          <hr />
+        </div>
+
+        <div class="div2">
+          <h1>2. Delivery & Gift Options</h1>
+          <h2>Free - Standard</h2>
+          <p>Order Within 4 Hours</p>
+          <p>Delivery By Wed,Jun 18</p>
+
+          <hr />
+        </div>
+
+        <div class="div3">
+          <h1>3. Payment Method</h1>
+
+          <table>
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  class="payPal"
+                  onclick="checkbox()"
+                />
+              </th>
+              <th>
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/payPal.svg"
+                  class="paypal"
+                />
+              </th>
+              <th>
+                <a href="index.html"><b>Pay with PayPal</b></a>
+              </th>
+            </tr>
+
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  class="emi"
+                  onclick="checkbox()"
+                />
+              </th>
+              <th>
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/klarna.svg"
+                  class="paypal"
+                />
+              </th>
+              <th>
+                <a href="index.html"
+                  ><b>Pay with 4 interest-free installments</b></a
+                >
+              </th>
+            </tr>
+
+            <tr>
+              <th><i class="fa fa-plus size:5x" onclick="addCard()"></i></th>
+              <th>
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/placeholder.svg"
+                  class="paypal"
+                />
+              </th>
+              <th>
+                <a href="#"><b>Add new credit or debit card</b></a>
+              </th>
+            </tr>
+            <table class="gift">
+              <tr>
+                <th><i class="fa fa-align-justify"></i></th>
+                <th>
+                  <select class="sort" name="">
+                    <option value="gift">Add gift card</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+
+            <th>
+              <tr>
+                <button class="butn" type="button">Save & Continue</button>
+              </tr>
+            </th>
+          </table>
+
+          <hr />
+        </div>
+
+        <div class="div4">
+          <h1>4. Review & Place Order</h1>
+          <p>Please review your order information before placing your order.</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
+<script>
+  function checkbox() {
+    window.location.href = "index.html";
+  }
+</script>

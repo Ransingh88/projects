@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.brandMainContainer {
+  display: grid;
+  /* height: 100%; */
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 30% 10% 100;
+  grid-row-gap: 20px;
+}
+
+.brandMainContainer .heading > h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+.brandMainContainer .imgLogo {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 50% 50%;
+  grid-gap: 5px;
+  justify-items: center;
+}
+.brandMainContainer .brandAlphabates {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, 50%);
+  justify-items: center;
+  padding: 20px 0;
+}
+.brandMainContainer .brandAlphabates > h1 {
+  font-weight: 500;
+}
+.brandMainContainer .brandAlphabates div {
+  display: flex;
+}
+.brandMainContainer .brandAlphabates div p {
+  padding: 5px 18px;
+  /* background: rosybrown; */
+  font-size: 18px;
+  font-family: "open sans";
+  font-weight: 500;
+}
+.brandMainContainer .brandAlphabates div p > a {
+  text-decoration: none;
+  color: black;
+}
+.brandMainContainer .brandAlphabates div p > a:hover {
+  text-decoration: underline;
+}
+.brandMainContainer .brandNames {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(27, auto);
+  justify-items: center;
+}
+.brandMainContainer .brandNames .alphabates {
+  width: 90%;
+  display: flex;
+  /* background: red; */
+  margin: 5px;
+  justify-content: space-evenly;
+}
+.brandMainContainer .brandNames .alphabates > div:nth-child(1) {
+  text-align: center;
+  font-size: 18px;
+}
+.brandMainContainer .brandNames .alphabates .brandNameItems {
+  width: 200px;
+  /* background: chocolate; */
+  margin: 5px;
+  padding: 15px;
+  font-size: 16px;
+  font-style: italic;
+  font-family: "open sans";
+  font-weight: 600;
+}
+.brandMainContainer .brandNames .alphabates .brandNameItems li {
+  list-style: none;
+  padding: 2.5px 0;
+}
+.brandMainContainer .brandNames .alphabates .brandNameItems li a {
+  text-decoration: none;
+  color: black;
+}
+.brandMainContainer .brandNames .alphabates .brandNameItems li a:hover {
+  text-decoration: underline;
+}
+.line {
+  height: 1px;
+  width: 80%;
+  margin: auto;
+  background: #ddd;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

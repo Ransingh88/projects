@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto";
+}
+nav > div:nth-child(1) > div:nth-child(1) {
+  /*sephora logo link */
+  width: 12%;
+  /* margin: 2%; */
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+nav > div:nth-child(1) {
+  /* search box row */
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+nav > div > div {
+  cursor: pointer;
+}
+nav > div:nth-child(1) > div:nth-child(2) {
+  /* search box div*/
+  width: 36%;
+  /* margin: 0.5%; */
+}
+nav > div:nth-child(1) > div:nth-child(2) > input {
+  /* search box*/
+  /* border to be romoved later */
+  width: 100%;
+  height: 30px;
+  border-radius: 14px;
+  background-color: rgb(246, 246, 248);
+  border: none;
+}
+
+nav > div:nth-child(1) > div:nth-child(3) {
+  /*stores and services */
+  width: 11%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 2%; */
+}
+nav > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p:nth-child(2) {
+  font-size: 12px;
+}
+nav > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p {
+  margin: 0px;
+}
+nav > div:nth-child(1) > div:nth-child(4) {
+  /* targetting community  */
+  display: flex;
+  flex-direction: row;
+  width: 8%;
+  justify-content: space-between;
+}
+nav > div:nth-child(1) p {
+  margin: 0px;
+}
+nav > div:nth-child(1) > div:nth-child(5) {
+  /* sign in */
+  display: flex;
+  flex-direction: row;
+  width: 6%;
+  justify-content: space-between;
+  /* margin: 3%; */
+}
+nav > div:nth-child(1) > div:nth-child(6) {
+  /* heart shape */
+  width: 2%;
+}
+nav > div:nth-child(1) > div:nth-child(6) img {
+  /* heart shape */
+  width: 100%;
+}
+nav > div:nth-child(1) > div:nth-child(7) {
+  /* basket */
+  width: 2%;
+  /* margin: 2%; */
+}
+nav > div:nth-child(1) > div:nth-child(7) img {
+  /* basket */
+  width: 100%;
+}
+
+nav > div:nth-child(2) {
+  /* categories */
+  background-color: black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+}
+nav > div:nth-child(2) a {
+  color: white;
+  text-decoration: none;
+}
+
+.hr {
+  height: 1px;
+  background-color: black;
+  margin: 15% 0;
+}
+.main_container {
+  width: 80%;
+  /* height: 100%; */
+  /* background-color: royalblue; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-content: center;
+  /* overflow-x: scroll; */
+}
+.main_container > .menubar {
+  /* width: 30%; */
+  /* background-color: lightcoral; */
+  padding-right: 30%;
+  padding-top: 6%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menubar ul {
+  list-style: none;
+}
+.menubar ul li {
+  padding: 3px 0;
+  font-style: italic;
+  font-weight: 500;
+}
+.menubar ul li:first-child {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+.menubar p {
+  opacity: 80%;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.main_container > .products {
+  width: 100%;
+  /* background-color: mediumpurple; */
+  border-left: 1px solid black;
+  margin-top: 34px;
+  padding: 2%;
+  display: grid;
+  overflow-x: scroll;
+}
+
+.main_container > .products > div:first-child {
+  justify-self: center;
+  font-size: 34px;
+  font-family: none;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+.main_container > .products > .productItems {
+  display: grid;
+  margin-top: 10px;
+  /* background-color: yellowgreen; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  grid-gap: 50px 15px;
+}
+.main_container > .products > .productItems > .item {
+  /* background-color: hotpink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0px 10px 10px;
+}
+
+.main_container > .products > .productItems > .item a {
+  text-decoration: none;
+  color: black;
+}
+
+.main_container > .products > .productItems > .item a:hover {
+  text-decoration: underline;
+}
+.main_container > .products > .productItems > .item > p {
+  margin: 1px 0px;
+}
+.main_container > .products > .productItems > .item > p:nth-child(2) {
+  font-size: 0.8rem;
+}
+.main_container > .products > .productItems > .item > span {
+  display: flex;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.main_container > .products > .productItems > .item a > p:nth-child(4),
+.main_container > .products > .productItems > .item a > p:nth-child(5) {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .modalCont {
+    display: none;
+  }
+  .stores,
+  .community,
+  .signin {
+    display: none;
+  }
+  .favourite,
+  .basket {
+    width: 6%;
+  }
+  nav > div:nth-of-type(1) {
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+  nav > div:nth-of-type(2) {
+    background-color: white;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    overflow-y: hidden;
+  }
+  nav > div:nth-of-type(2)::-webkit-scrollbar {
+    visibility: hidden;
+    height: 0;
+  }
+  nav > div:nth-of-type(2) a {
+    color: black;
+  }
+  nav > div:nth-of-type(2) > div {
+    border: 1px solid rgb(206, 206, 206);
+    margin: 1%;
+    /* height: 20px; */
+    border-radius: 3px;
+    padding: 1%;
+    min-width: auto;
+  }
+  nav > div:nth-of-type(1) > div:nth-of-type(1) {
+    width: 20%;
+  }
+  nav > div:nth-of-type(1) > div:nth-of-type(2) {
+    width: 50%;
+  }
+  .main_container > .products > .productItems > .item img {
+    width: 6em;
+  }
+}
+/* 
+.responsiveNav {
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
+  height: 70px;
+  color: gray;
+  border-top: 0.5px solid rgb(221, 221, 221);
+  position: fixed;
+  bottom: 0;
+}
+.responsiveNav > div {
+  width: 8.3%;
+  text-align: center;
+  cursor: pointer;
+}
+.responsiveNav a {
+  text-decoration: none;
+  color: grey;
+}
+.responsiveNav img {
+  width: 60%;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .responsiveNav {
+    visibility: visible;
+  }
+} */

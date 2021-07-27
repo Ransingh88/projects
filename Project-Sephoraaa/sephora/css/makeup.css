@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto";
+}
+nav > div:nth-child(1) > div:nth-child(1) {
+  /*sephora logo link */
+  width: 12%;
+  /* margin: 2%; */
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+nav > div:nth-child(1) {
+  /* search box row */
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+nav > div > div {
+  cursor: pointer;
+}
+nav > div:nth-child(1) > div:nth-child(2) {
+  /* search box div*/
+  width: 36%;
+  /* margin: 0.5%; */
+}
+nav > div:nth-child(1) > div:nth-child(2) > input {
+  /* search box*/
+  /* border to be romoved later */
+  width: 100%;
+  height: 30px;
+  border-radius: 14px;
+  background-color: rgb(246, 246, 248);
+  border: none;
+}
+
+nav > div:nth-child(1) > div:nth-child(3) {
+  /*stores and services */
+  width: 11%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin: 2%; */
+}
+nav > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p:nth-child(2) {
+  font-size: 12px;
+}
+nav > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > p {
+  margin: 0px;
+}
+nav > div:nth-child(1) > div:nth-child(4) {
+  /* targetting community  */
+  display: flex;
+  flex-direction: row;
+  width: 8%;
+  justify-content: space-between;
+}
+nav > div:nth-child(1) p {
+  margin: 0px;
+}
+nav > div:nth-child(1) > div:nth-child(5) {
+  /* sign in */
+  display: flex;
+  flex-direction: row;
+  width: 6%;
+  justify-content: space-between;
+  /* margin: 3%; */
+}
+nav > div:nth-child(1) > div:nth-child(6) {
+  /* heart shape */
+  width: 2%;
+}
+nav > div:nth-child(1) > div:nth-child(6) img {
+  /* heart shape */
+  width: 100%;
+}
+nav > div:nth-child(1) > div:nth-child(7) {
+  /* basket */
+  width: 2%;
+  /* margin: 2%; */
+}
+nav > div:nth-child(1) > div:nth-child(7) img {
+  /* basket */
+  width: 100%;
+}
+
+nav > div:nth-child(2) {
+  /* categories */
+  background-color: black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+}
+nav > div:nth-child(2) a {
+  color: white;
+  text-decoration: none;
+}
+
+.hr {
+  height: 1px;
+  background-color: black;
+  margin: 15% 0;
+}
+.main_container {
+  width: 70%;
+  /* height: 100%; */
+  /* background-color: royalblue; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.main_container > .menubar {
+  /* width: 30%; */
+  /* background-color: lightcoral; */
+  padding-right: 30%;
+  padding-top: 6%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menubar ul {
+  list-style: none;
+}
+.menubar ul li {
+  padding: 3px 0;
+  font-style: italic;
+  font-weight: 500;
+}
+.menubar ul li:first-child {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+.menubar p {
+  opacity: 80%;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.main_container > .products {
+  /* width: 70%; */
+  /* background-color: mediumpurple; */
+  border-left: 1px solid black;
+  margin-top: 34px;
+  padding: 2%;
+  display: grid;
+}
+
+.main_container > .products > div:first-child {
+  justify-self: center;
+  font-size: 34px;
+  font-family: none;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+.main_container > .products > .productItems {
+  display: grid;
+  margin-top: 10px;
+  /* background-color: yellowgreen; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  grid-gap: 50px 15px;
+}
+.main_container > .products > .productItems > .item {
+  /* background-color: hotpink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0px 10px 10px;
+}
+
+.main_container > .products > .productItems > .item a {
+  text-decoration: none;
+  color: black;
+}
+.main_container > .products > .productItems > .item a:hover {
+  text-decoration: underline;
+}
+.main_container > .products > .productItems > .item > p {
+  margin: 1px 0px;
+}
+.main_container > .products > .productItems > .item > p:nth-child(2) {
+  font-size: 11px;
+}
+.main_container > .products > .productItems > .item > span {
+  display: flex;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.main_container > .products > .productItems > .item a > p:nth-child(4),
+.main_container > .products > .productItems > .item a > p:nth-child(5) {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+}

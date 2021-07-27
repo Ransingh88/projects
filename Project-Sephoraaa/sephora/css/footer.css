@@ -1,0 +1,242 @@
+/* common style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto";
+}
+.hr_footer {
+  height: 1px;
+  margin-left: 80px;
+  margin-right: 120px;
+  background-color: white;
+  opacity: 50%;
+}
+.footer_container {
+  background-color: black;
+  /* height: 100vh; */
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.footer_container a {
+  color: white;
+  text-decoration: none;
+}
+
+/* start footer top  container */
+.container1 {
+  display: flex;
+  height: 15%;
+  margin: 5px 50px;
+  padding: 10px;
+  font-size: 13px;
+}
+.container1 .item {
+  margin: 10px 10px;
+  flex-grow: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.container1 .item > img,
+.container1 .item > i {
+  width: 22px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.container1 .item > div a {
+  color: white;
+  text-decoration: none;
+}
+.container1 .item > div > p {
+  font-weight: 500;
+  font-style: italic;
+}
+.container1 .item5 {
+  flex-grow: 2;
+}
+
+/* end footer top container */
+
+/* start footer middle container */
+
+.container2 {
+  height: 70%;
+  margin: 5px 50px;
+  padding: 10px;
+  display: flex;
+  /* background: royalblue; */
+}
+
+.container2 .item {
+  height: 95%;
+  /* background: rosybrown; */
+  margin: 10px;
+  flex-grow: 1;
+  padding: 10px;
+  color: white;
+  font-style: italic;
+}
+.container2 .item > h4 {
+  font-style: normal;
+}
+.container2 .item .content > p {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+.container2 .item4 > div {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.container2 .item > div > img {
+  margin-right: 10px;
+}
+.container2 .item5 {
+  display: flex;
+  flex-direction: column;
+}
+.item5 h1 {
+  font-family: none;
+  font-style: normal;
+}
+.container2 .item5 div {
+  margin-top: 60%;
+}
+.container2 .item5 div input {
+  border: none;
+  padding: 15px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 250px;
+}
+.container2 .item5 div input::placeholder {
+  font-style: italic;
+  font-weight: bold;
+}
+.container2 .item5 div > p {
+  font-style: normal;
+  font-weight: bold;
+}
+.container2 .item5 div button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  font-weight: bold;
+  transition: ease-out 0.2s;
+}
+.container2 .item5 div button:hover {
+  opacity: 50%;
+  cursor: pointer;
+  transition: ease-in 0.2s;
+}
+/* end footer middle container */
+
+/* start footer bottom container */
+.container3 {
+  display: flex;
+  height: 15%;
+  margin: 5px 50px;
+  padding: 10px;
+  font-size: 13px;
+  flex-direction: row;
+}
+
+.left-content {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 13px;
+  align-items: center;
+}
+.left-content > p {
+  margin: 10px 0px;
+}
+.left-content > div {
+  display: flex;
+}
+.left-content > div > .items {
+  margin: 0px 5px;
+}
+.right-icons {
+  display: flex;
+  margin-left: 670px;
+}
+.right-icons .icon_item {
+  margin: 10px;
+  display: flex;
+  padding-inline-end: 5px;
+  flex-grow: 1;
+  color: white;
+  align-items: center;
+  font-size: 22px;
+}
+/* end footer bottom container */
+
+@media screen and (max-width: 1199px) {
+  .container1 {
+    flex-direction: column;
+  }
+  .container2 {
+    flex-direction: column;
+  }
+  .container3 {
+    flex-direction: column;
+  }
+  .container2 .item5 div {
+    margin-top: 5%;
+  }
+  .right-icons {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100px;
+  }
+  .right-icons .icon_item {
+    margin: 8px;
+  }
+
+  .container2 .item1 {
+    position: relative;
+  }
+  .container2 .item1 .label {
+    position: relative;
+    /* background-color: teal; */
+    border-bottom: 0.5px solid rgb(141, 141, 141);
+    padding: 10px;
+    cursor: pointer;
+  }
+  .container2 .item1 .label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+   .container2 .item1.active .label::before{
+     content: '-';
+   }
+  .container2 .item1 .content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+  }
+  .container2 .item1.active .content {
+    height: 350px;
+    padding: 10px;
+  }
+  .container2 .item1 .content::-webkit-scrollbar{
+    width: 1px;
+  }
+}
