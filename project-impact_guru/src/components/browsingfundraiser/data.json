@@ -1,0 +1,100 @@
+{
+  "patentInformation": [
+    {
+      "id": 1,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/Adult_Male_750-x-562.jpg",
+      "typeOfEmergency": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNMoEDl3Y3hs0ctTe_HGnywwT-BiKICdFfA&usqp=CAU",
+      "description": "please help me to raise funds for my husband treatment",
+      "raisedFund": "128901",
+      "coverdfund": "30%",
+      "sharedPerson": "by Nivedita",
+      "typeOfneed": "medical"
+    },
+    {
+      "id": 2,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/Adult_Male_750-x-562.jpg",
+      "typeOfEmergency": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNMoEDl3Y3hs0ctTe_HGnywwT-BiKICdFfA&usqp=CAU",
+      "description": "please help me to raise funds for my husband treatment",
+      "raisedFund": "118901",
+      "coverdfund": "3%",
+      "sharedPerson": "by praveena",
+      "typeOfneed": "medical"
+    },
+    {
+      "id": 3,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/thumb_medium/help-baby-of-priyanka-kulkarni162628264132085.jpg",
+      "typeOfEmergency": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNMoEDl3Y3hs0ctTe_HGnywwT-BiKICdFfA&usqp=CAU",
+      "description": "help my new bornbaby raise funds to undergo treatment",
+      "raisedFund": "1289011",
+      "coverdfund": "35%",
+      "sharedPerson": "by Rohit kulkari",
+      "typeOfneed": "medical"
+    },
+    {
+      "id": 4,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/thumb_medium/Taare-fundraiser-1626070440.jpg",
+      "typeOfEmergency": "https://i.pinimg.com/originals/37/19/ec/3719eceb9a3562487051c17741aad593.png",
+      "description": "join hands with taare zameen par to raised fund f...",
+      "raisedFund": "128901",
+      "coverdfund": "3%",
+      "sharedPerson": "by janet mukhiya",
+      "typeOfneed": "NGO"
+    },
+    {
+      "id": 5,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/thumb_medium/VisionWelfareInstitute-fundraiser-1625996464.jpeg",
+      "typeOfEmergency": "https://i.pinimg.com/originals/37/19/ec/3719eceb9a3562487051c17741aad593.png",
+      "description": "help VisionWelfare to raise fund for Autistic....",
+      "raisedFund": "53253",
+      "coverdfund": "10%",
+      "sharedPerson": "by Kesar Hitesh",
+      "typeOfneed": "NGO"
+    },
+    {
+      "id": 6,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/thumb_medium/HKFoundation-fundraiser-1625989837.jpeg",
+      "typeOfEmergency": "https://i.pinimg.com/originals/37/19/ec/3719eceb9a3562487051c17741aad593.png",
+      "description": "Help HK Foundation To Raise Fund For Education of poor",
+      "raisedFund": "2782782",
+      "coverdfund": "40%",
+      "sharedPerson": "by HK FOUNDATION",
+      "typeOfneed": "NGO"
+    },
+    {
+      "id": 7,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://img.youtube.com/vi/ootfKrGkORg/0.jpg",
+      "typeOfEmergency": "https://mpng.subpng.com/20200219/sjz/transparent-idea-icon-creative-icon-ipad-icon-5e4def8ee1c764.6668120315821659029248.jpg",
+      "description": "Help raise fund to empower the blind and keep safe ",
+      "raisedFund": "12890122",
+      "coverdfund": "30%",
+      "sharedPerson": "by Aadhar Bhalinge ",
+      "typeOfneed": "creative idea"
+    },
+    {
+      "id": 8,
+      "tax": "TAX BENIFITS",
+      "Emergency": "URGENT",
+      "backgroundImage": "https://d2aq6dqxahe4ka.cloudfront.net/assets/uploads/campaigns_gallery/thumb_medium/help-ketki162408856749683.jpeg",
+      "typeOfEmergency": "https://mpng.subpng.com/20200219/sjz/transparent-idea-icon-creative-icon-ipad-icon-5e4def8ee1c764.6668120315821659029248.jpg",
+      "description": "Help me raise fund for Inovative Projects ",
+      "raisedFund": "12892201",
+      "coverdfund": "30%",
+      "sharedPerson": "by Ketki ",
+      "typeOfneed": "creative idea"
+    }
+  ]
+}

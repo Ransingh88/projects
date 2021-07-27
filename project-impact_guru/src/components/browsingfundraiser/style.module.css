@@ -1,0 +1,131 @@
+
+.mainCont{
+    text-align: center;
+}
+.imagediv{
+    width: 100%;
+    height: 30rem;
+    background-image: url("https://d2aq6dqxahe4ka.cloudfront.net/themes/front/page/images/browse-fundraiser/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid white;
+}
+.collectiondiv{
+    width: 90%;
+    height: 10rem;
+    /* border: 1px solid blue; */
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 20px;
+    background: rgba(129, 133, 129, 0.3) /* Green background with 30% opacity */
+}
+.textcontainer{
+    width: 80%;
+    height: 10rem;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.inputbox{
+    width: 80%;
+    height: 3rem;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 4%;
+    display: flex;
+    padding: 0px 15px;
+}
+.searchbox{
+    width: 100%;
+    height: 3rem;
+    background: white;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.searchbox > input{
+    width: 100%;
+    background: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+.griddisplay img{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.databox{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.list{
+    width: 22%;
+}
+.patient{
+    width: 74%;
+}
+.list>div{
+    border-radius: 5px;
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    margin-bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #555;
+}
+.list img{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+.selection{
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    margin-left: 10px;
+}
+.griddisplay{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+}
+.donatebtn{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff8502;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.loadbtn{
+    margin-left: 300px;
+    margin-top: 30px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #35aa81;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+}

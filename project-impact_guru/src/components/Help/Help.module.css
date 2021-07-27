@@ -1,0 +1,92 @@
+.help{
+    text-align: center;
+    margin-top: 100px;
+}
+.help  p:first-child{
+    color: #555;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.help h2{
+    font-weight: 500;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex img{
+    width: 570px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px gray;
+}
+.money{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.details{
+    border: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 20px;
+}
+.details > div:first-child{
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px gray;
+    margin-bottom: 30px;
+    color: #888;
+}
+.details > div:first-child > span{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: -25px;
+    color: #666;
+}
+.details > div:last-child{
+    font-size: 20px;
+    color: #aaa;
+}
+.details > div:last-child span{
+    font-weight: 700;
+    color: #666;
+}
+.btn1donate, .btn1fb{
+    background-color: #ff8502;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    margin-top: 30px;
+}
+.share{
+    font-family: cursive;
+    margin-top: 30px;
+    color: #999;
+}
+.btn1fb{
+    background-color: #4c69ba;
+}
+
+@media only screen and (max-width: 700px) {
+  .flex {
+    flex-direction: column;
+  }
+  .flex img{
+      width: 100%;
+      margin-bottom: 40px;
+  }
+}

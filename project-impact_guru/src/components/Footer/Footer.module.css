@@ -1,0 +1,77 @@
+.footer{
+    background-color: black;
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subscribe > input {
+    border-radius: 25px;
+    border: none;
+    padding: 10px 15px;
+    background-color: #333;
+    font-size: 12px;
+    outline: none;
+}
+.subscribe > input:focus{
+    background-color: white;
+    border: 1px solid dodgerblue;
+}
+.subscribe > button{
+    margin-left: 15px;
+    padding: 10px 15px;
+    font-size: 10px;
+    background-color: #0bb378;
+    color: white;
+    font-weight: 800;
+    border: none;
+    border-radius: 25px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.bottom p{
+    margin: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.contact > div{
+    margin: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.bottom h4{
+    margin: 10px;
+    font-size: 15px;
+    color: #888;
+}
+
+@media only screen and (max-width: 700px) {
+  .top {
+    flex-direction: column;
+  }
+  .subscribe > button {
+      display: block;
+      margin-top: 15px;
+      margin-left: 25px;
+  }
+  .bottom{
+      flex-direction: column;
+      text-align: center;
+  }
+  .bottom p{
+      display: none;
+  }
+  .contact > div{
+      font-size: 14px;
+  }
+  .bottom h4{
+      font-size: 17px;
+  }
+}
