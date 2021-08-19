@@ -17,10 +17,7 @@ text-align: center;
     transform: scale(1.005);
     transition: ease 0.1s;
 }
-@media only screen and (max-width: 600px) {
-margin-top: 4rem;
 
-}
 
 `
 

@@ -35,12 +35,11 @@
 
 @media only screen and (max-width: 600px) {
   .summery {
-    width: 90%;
+    width: 95%;
     font-size: 12px;
   }
   .mainContainer{
     height: 100%;
-     padding-top: 4rem;
   }
   
 }
