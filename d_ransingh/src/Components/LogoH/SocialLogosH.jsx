@@ -15,10 +15,7 @@ a{
 span{
     margin: 0.4rem;
     padding: 0.2rem;
-    @media only screen and (max-width: 600px){
-    margin: 0.2rem;
-    padding: 0.1rem;
-}
+
 
     &:hover{
         transition: ease;
@@ -29,6 +26,11 @@ span{
 
 @media only screen and (max-width: 600px){
     font-size: 1rem;
+    margin: 1rem;
+    span{
+        margin: 0.2rem;
+    padding: 0.1rem;
+    }
 }
 `
 
