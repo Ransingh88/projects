@@ -22,6 +22,10 @@ span{
         filter: brightness(90%);
     }
 }
+
+@media only screen and (max-width: 600px){
+    font-size: 1rem;
+}
 `
 
 const SocialLogosH = () => {

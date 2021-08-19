@@ -10,7 +10,7 @@
     align-items: center;
     padding: 2rem;
     padding-top: 6rem;
-    /* height: 100vh; */
+    height: 100vh;
     padding-bottom: 2rem;
    background: rgb(9,73,121);
 /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,73,121,1) 35%, rgba(0,185,255,1) 100%); */
@@ -28,6 +28,13 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,73,121,1) 35%, rgba
     width: 50%;
     text-align: center;
 }
-.CustomButton{
-    color: red;
+
+
+@media only screen and (max-width: 600px){
+    .summery{
+        width: 100%;
+    }
+    .mainContainer{
+        height: 100%;
+    }
 }
