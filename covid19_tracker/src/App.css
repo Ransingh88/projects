@@ -8,6 +8,11 @@
 .app {
   padding: 1rem;
   /* background-color: #f0faff; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.app__left{
+  flex: 0.9;
 }
 .app__logo{
   display: flex;
@@ -31,5 +36,16 @@
   align-items: center;
   margin-bottom: 1.25rem;
 }
+.app__status{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
 
-
+@media screen and (max-width:990px) {
+  .app{
+    flex-direction: column;
+  }
+  
+}
