@@ -1,0 +1,23 @@
+.nav{
+    background:  linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 73, 121, 1) 35%,
+    rgba(0, 125, 255, 1) 100%
+  );
+  color: whitesmoke;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ border-bottom: 1px solid #eee;
+  padding: 1rem;
+}
+.nav p{
+     padding: 0.2rem  0.8rem;
+     margin: 0 0.4rem;
+}
+.nav p:hover{
+    cursor: pointer;
+    color: royalblue;
+}
