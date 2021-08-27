@@ -11,7 +11,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({})
-  
+  const [tableData,setTableData] = useState([])
   
   useEffect(() => {
     
@@ -28,6 +28,7 @@ function App() {
         //console.log(countries)
         setCountries(countries)
       })
+      .then(data=>console.log(data))
       .catch(err => console.log(err))
   
   }, [])
@@ -44,7 +45,7 @@ function App() {
     .catch(err=>console.log(err))
   },[country])
 
- console.log(">>>>>>>",countryInfo)
+ //console.log(">>>>>>>",countryInfo)
   
   
   const onCountryChange = (e) => {
