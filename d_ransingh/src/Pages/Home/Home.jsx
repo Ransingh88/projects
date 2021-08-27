@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
 import { Button } from '../../Components/Button/Button'
 import { SiMinutemailer } from 'react-icons/si';
-import { Navbar } from '../../Components/Navbar/Navbar'
 import { Card } from '../../Components/Card/Card'
 
 const Name = styled.h1`
