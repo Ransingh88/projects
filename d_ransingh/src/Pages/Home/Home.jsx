@@ -5,6 +5,7 @@ import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
 import { Button } from '../../Components/Button/Button'
 import { SiMinutemailer } from 'react-icons/si';
 import { Navbar } from '../../Components/Navbar/Navbar'
+import { Card } from '../../Components/Card/Card'
 
 const Name = styled.h1`
 color: whitesmoke;
@@ -24,6 +25,7 @@ text-transform:uppercase;
 
 const Home = () => {
     return (
+        <div className={styles.Container}>
         <div className={styles.mainContainer}>
             
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
@@ -32,7 +34,13 @@ const Home = () => {
             <SocialLogosH />
             <p className={styles.summery}>Detailed-oriented, responsible, and committed developer, with a get-it-done, on-time, and high-quality product spirit, and more than a year of experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using verity programming and technologies.</p>
             <Button><SiMinutemailer/> Contact Me </Button>
-        </div>
+            </div>
+            <div className={styles.bodyContent}>
+                <Card img="./images/portfolio.png" title="Portfolio" desc="This is my personal portfolio website"/>
+                <Card img="./images/impactguru.png" title="Impactguru" desc="This is Impactguru clone"/>
+                <Card img="./images/sephora.png" title="Sephora" desc="This is sephora clone"/>
+            </div>
+            </div>
     )
 }
 
