@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
 import { Button } from '../../Components/Button/Button'
 import { SiMinutemailer } from 'react-icons/si';
+import { Navbar } from '../../Components/Navbar/Navbar'
 
 const Name = styled.h1`
 color: whitesmoke;
@@ -24,6 +25,7 @@ text-transform:uppercase;
 const Home = () => {
     return (
         <div className={styles.mainContainer}>
+            
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
             <Name>DEBASISH RANSINGH</Name>
             <Work>Full Stack Web Developer</Work>
