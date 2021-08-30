@@ -71,7 +71,7 @@ const Home = () => {
             <Button><SiMinutemailer/> Contact Me </Button>
             </div>
             <div className={styles.bodyContent}>
-                <Card img="./images/portfolio.png" title="Portfolio" desc="This is my personal portfolio website"/>
+                {/* <Card img="./images/portfolio.png" title="Portfolio" desc="This is my personal portfolio website"/> */}
                 <Card img="./images/impactguru.png" title="Impactguru" desc="This is Impactguru clone"/>
                 <Card img="./images/sephora.png" title="Sephora" desc="This is sephora clone"/>
             </div>
