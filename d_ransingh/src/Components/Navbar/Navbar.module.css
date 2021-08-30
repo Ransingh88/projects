@@ -1,23 +1,30 @@
 .nav{
-    background:  linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 73, 121, 1) 35%,
-    rgba(0, 125, 255, 1) 100%
-  );
-  color: whitesmoke;
-  font-weight: 300;
+  background:  white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
- border-bottom: 1px solid whitesmoke;
+ border-bottom: 1px solid #ddd;
+  padding: 0.2rem 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+.nav > img{
+  width: 80px;
+}
+.nav__menus{
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-weight: 500;
   padding: 1rem;
 }
-.nav p{
+.nav__menus p{
      padding: 0.2rem  0.8rem;
      margin: 0 0.4rem;
 }
-.nav p:hover{
+.nav__menus p:hover{
+    color: #151515;
     cursor: pointer;
-    color: royalblue;
 }
