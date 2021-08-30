@@ -28,3 +28,8 @@
     color: #151515;
     cursor: pointer;
 }
+@media only screen and (max-width: 600px){
+  .nav{
+    padding: 0.2rem 1.5rem;
+  }
+}
