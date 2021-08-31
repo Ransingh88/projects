@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 import styled from 'styled-components'
 import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
@@ -23,6 +23,7 @@ text-transform:uppercase;
 
 `
 const Warning = styled.div`
+z-index: 100000;
 position: fixed;
 top: 5rem;
 right: 3rem;
@@ -54,9 +55,19 @@ button:hover{
 `
 
 const Home = () => {
-    const [vs,setVs] = useState(false)
+    const [vs, setVs] = useState(true)
+
+
+    useEffect(() => {
+       setTimeout(() => {
+            setVs(false)
+        },5000)
+   },[])
+        
+
 
     const handleWarning = () => {
+
         setVs(true)
     }
     return (
@@ -70,10 +81,17 @@ const Home = () => {
             <p className={styles.summery}>Detailed-oriented, responsible, and committed developer, with a get-it-done, on-time, and high-quality product spirit, and more than a year of experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using verity programming and technologies.</p>
             <Button><SiMinutemailer/> Contact Me </Button>
             </div>
-            <div className={styles.bodyContent}>
-                {/* <Card img="./images/portfolio.png" title="Portfolio" desc="This is my personal portfolio website"/> */}
-                <Card img="./images/impactguru.png" title="Impactguru" desc="This is Impactguru clone"/>
-                <Card img="./images/sephora.png" title="Sephora" desc="This is sephora clone"/>
+            <div className={styles.projectSection}>
+                <h2>Projects</h2>
+                <div className={styles.projectContent}>
+                    
+                
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                    <Card />
+                    </div>
             </div>
             </div>
     )
