@@ -38,13 +38,28 @@
   width: 50%;
   text-align: center;
 }
-
-.bodyContent {
-  margin: 1rem;
-  padding: 0.5rem;
+.projectSection{
+  background-color: #fafafa;
+ border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectSection h2{
+  font-size: 32px;
+  margin-top: 30px;
+}
+.projectContent {
+  /* margin: 1rem; */
+  /* padding: 0.5rem; */
   flex: 0.7;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+ 
 }
 @media only screen and (max-width: 600px) {
   .summery {
