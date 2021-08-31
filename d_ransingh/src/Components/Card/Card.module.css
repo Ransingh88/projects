@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+.Container .card{
+    position: relative;
+    width: 380px;
+    height: 520px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.05),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
+.Container .card .box{
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: 0.3s;
+    /* background-color: red; */
+}
+.Container .card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    
+}
+.Container .card .box .content{
+    /* padding: 10px; */
+    /* text-align: center; */
+    color: #303030;
+    /* background-color: aquamarine; */
+}
+.Container .card .box .content > img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.Container .card .box .content .bodyContents{
+    padding: 15px;
+}
+.Container .card .box .content .bodyContents > h2{
+    text-align: center;
+}
+.techStack{
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.techStack img{
+    margin: 0.5rem;
+    /* filter: grayscale(100%); */
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 1px;
+    width: 90%;
+    border-top: 1px solid #ddd;
+    padding: 1rem 0;
+    /* background-color: red; */
+}
+.links .demo{
+    background-color: royalblue;
+    color: whitesmoke;
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.links .demo:hover,
+.links .code:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+.links .code{
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+}
