@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import styles from './Card.module.css'
 import { FiExternalLink,FiGithub } from 'react-icons/fi';
 
