@@ -41,3 +41,22 @@ align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 1099px) {
+.tech__techSkills img{
+    margin: 2rem 3rem 0.8rem 3rem;
+    transition: 0.2s;
+}
+
+}
+@media only screen and (max-width: 930px) {
+.tech__techSkills img{
+    margin: 2rem 2rem 0.8rem 2rem;
+    transition: 0.2s;
+}
+
+}
+@media only screen and (max-width: 599px) {
+
+
+}
