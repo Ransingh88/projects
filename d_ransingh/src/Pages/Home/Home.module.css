@@ -47,10 +47,7 @@
   flex-direction: column;
   align-items: center;
 }
-.projectSection > h2{
-  font-size: 32px;
-  margin-top: 30px;
-}
+
 .projectContent {
   /* margin: 1rem; */
   /* padding: 0.5rem; */

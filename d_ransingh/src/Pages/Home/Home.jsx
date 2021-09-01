@@ -5,6 +5,8 @@ import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
 import { Button } from '../../Components/Button/Button'
 import { SiMinutemailer } from 'react-icons/si';
 import { Card } from '../../Components/Card/Card'
+import { Heading } from '../../Components/Heading/Heading'
+import { Technologies } from '../../Components/Skills/Technologies'
 
 const Name = styled.h1`
 color: #252525;
@@ -81,8 +83,10 @@ const Home = () => {
             <p className={styles.summery}>Detailed-oriented, responsible, and committed developer, with a get-it-done, on-time, and high-quality product spirit, and more than a year of experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using verity programming and technologies.</p>
             <Button><SiMinutemailer/> Contact Me </Button>
             </div>
+            <Technologies/>
             <div className={styles.projectSection}>
-                <h2>Projects</h2>
+               
+                <Heading>Projects</Heading>
                 <div className={styles.projectContent}>
                     
                 
@@ -93,6 +97,7 @@ const Home = () => {
                     <Card />
                     </div>
             </div>
+            
             </div>
     )
 }
