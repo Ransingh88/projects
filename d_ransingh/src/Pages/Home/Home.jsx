@@ -75,12 +75,17 @@ const Home = () => {
     return (
         <div className={styles.Container}>
         <div className={styles.mainContainer}>
-            <Warning vs={vs}><p>! The  website is under construction</p><button onClick={handleWarning}>X</button></Warning>
+            <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning>
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
             <Name>Hi I'm DEBASISH RANSINGH</Name>
             <Work>Full Stack Web Developer</Work>
-            
-            <p className={styles.summery}>Detailed-oriented, responsible, and committed developer, with a get-it-done, on-time, and high-quality product spirit, and more than a year of experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using verity programming and technologies.</p>
+            <br />
+            <p className={styles.summery}>An enthusiastic Full Stack Web Developer with a strong set of technical as well as non-technical skills and a dedication towards creating useful and interactive web applications.</p>
+            <br />
+                <a href="https://drive.google.com/file/d/1YV8OpaMyZmNYqGPBEqehl2n_w4Psq-Rl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <div className={styles.resume}>
+                    <p>Resume</p>
+            </div></a>
             </div>
             <About/>
             <Technologies/>

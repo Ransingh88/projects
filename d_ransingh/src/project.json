@@ -11,26 +11,18 @@
         {
             "image":"impactguru",
             "title":"Impact guru",
-            "desc":"Lorem10ljjflnkfjkhfj",
-            "tech":["react-2","logo-javascript"],
-            "demo":"https://sephora-clone.netlify.app",
-            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
-        }
-        ,{
-            "image":"impactguru",
-            "title":"Impact guru",
-            "desc":"Lorem10ljjflnkfjkhfj",
-            "tech":["react-2","logo-javascript"],
-            "demo":"https://sephora-clone.netlify.app",
-            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
+            "desc":"Clone of Impactguru website which is a fundraiser website where it Makes Healthcare Affordable To Save Lives Today While Securing Families For A Better Tomorrow.",
+            "tech":["react-2","logo-javascript","html-1","css-3","material-ui-1"],
+            "demo":"https://impactguruclone.netlify.app",
+            "code":"https://github.com/Ransingh88/project-impact_guru"
         },
         {
-            "image":"impactguru",
-            "title":"Impact guru",
-            "desc":"Lorem10ljjflnkfjkhfj",
-            "tech":["react-2","logo-javascript"],
-            "demo":"https://sephora-clone.netlify.app",
-            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
+            "image":"Hotels",
+            "title":"Hotels",
+            "desc":"Hotels.com is a leading provider of hotel accommodation worldwide, offering booking services through its own network of localised websites.",
+            "tech":["react-2","redux","logo-javascript","html-1","css-3","material-ui-1"],
+            "demo":"https://hotelsclone.netlify.app/",
+            "code":"https://github.com/abhishekmah/Project-Hotels.com"
         }
     
     ]
