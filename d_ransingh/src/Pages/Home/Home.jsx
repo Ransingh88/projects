@@ -14,6 +14,8 @@ font-size: 5rem;
 text-align: center;
 letter-spacing: 0.1rem;
 font-weight: 900;
+
+font-family: 'open sans';
 `
 const Work = styled.p`
 color: #252525;
@@ -21,6 +23,8 @@ font-size: 1.2rem;
 text-align: center;
 letter-spacing: 0.1rem;
 text-transform:uppercase;
+
+font-family: 'open sans';
 
 `
 const Warning = styled.div`

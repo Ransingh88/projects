@@ -64,6 +64,8 @@
 }
 .Container .card .box .content .bodyContents > h2{
     text-align: center;
+    
+font-family: 'open sans';
 }
 .techStack{
     padding: 20px 10px;

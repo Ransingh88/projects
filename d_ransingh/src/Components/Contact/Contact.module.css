@@ -1,3 +1,7 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+
 .container{
     /* background-color: #353535; */
     width: 100%;
