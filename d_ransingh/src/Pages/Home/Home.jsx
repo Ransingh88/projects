@@ -6,6 +6,7 @@ import { Heading } from '../../Components/Heading/Heading'
 import { Technologies } from '../../Components/Skills/Technologies'
 import { About } from '../../Components/About/About'
 import { Contact } from '../../Components/Contact/Contact'
+import projectData from '../../project.json'
 
 const Name = styled.h1`
 color: #252525;
@@ -89,11 +90,18 @@ const Home = () => {
                 <div className={styles.projectContent}>
                     
                 
+                {/* <Card/>
                 <Card/>
                 <Card/>
                 <Card/>
-                <Card/>
-                    <Card />
+                    <Card /> */}
+                    {projectData.map(({image,title,desc,tech,demo,code}) => (
+                        
+                        <Card title={title} desc={desc} tech={tech} img={image} demo={ demo} code={ code} />
+                    )
+
+                    )}
+
                     </div>
             </div>
             <Contact/>
