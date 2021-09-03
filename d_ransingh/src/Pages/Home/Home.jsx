@@ -14,7 +14,7 @@ font-size: 5rem;
 text-align: center;
 letter-spacing: 0.1rem;
 font-weight: 900;
-
+font-family: "inter";
 `
 const Work = styled.p`
 color: #252525;
