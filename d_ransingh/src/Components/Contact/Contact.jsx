@@ -17,10 +17,10 @@ const Contact = () => {
                         <p> <MdLocationOn/> &nbsp; Bhubaneswar, Odisha, India</p>
                         </div>
                         <div className={styles.socialLinks}>
-                            <img src="./icons/github-icon-1.svg" alt="github" height="50px"/>
-                            <img src="./icons/linkedin-icon-2.svg" alt="github" height="50px"/>
-                            <img src="./icons/monogram-medium.svg" alt="github" height="50px"/>
-                            <img src="./icons/twitter-6.svg" alt="github" height="50px"/>
+                            <a href="https://github.com/Ransingh88" target="_blank" rel="noopener noreferrer"><img src="./icons/github-icon-1.svg" alt="github" height="50px"/></a>
+                            <a href="https://www.linkedin.com/in/debasish-ransingh-612437154/" target="_blank" rel="noopener noreferrer"><img src="./icons/linkedin-icon-2.svg" alt="github" height="50px"/></a>
+                             <a href="https://medium.com/@d_ransingh88" target="_blank" rel="noopener noreferrer"><img src="./icons/monogram-medium.svg" alt="github" height="50px"/></a>
+                            <a href="https://twitter.com/Ransingh88" target="_blank" rel="noopener noreferrer"><img src="./icons/twitter-6.svg" alt="github" height="50px"/></a>
                         </div>
                         </div>
                     <div className={styles.right}>
