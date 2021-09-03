@@ -1,0 +1,20 @@
+[
+    
+        {
+            "image":"sephora",
+            "title":"Shephora",
+            "desc":"Clone of Canada based e-Commerce website 'Sephora' where you can buy beauty products.We have added all the functionalities, animation, products, checkout, payments etc.",
+            "tech":["logo-javascript","html-1","css-3"],
+            "demo":"https://sephora-clone.netlify.app",
+            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
+        },
+        {
+            "image":"impactguru",
+            "title":"Impact guru",
+            "desc":"Lorem10ljjflnkfjkhfj",
+            "tech":["react-2","logo-javascript"],
+            "demo":"https://sephora-clone.netlify.app",
+            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
+        }
+    
+    ]
