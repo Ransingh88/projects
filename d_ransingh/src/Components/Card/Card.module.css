@@ -59,6 +59,8 @@
 .bodyContents .projectDesc p{
     /* background-color: red; */
     font-size: 14px;
+    margin-top: 0.4rem;
+    color: gray;
 }
 .Container .card .box .content .bodyContents > h2{
     text-align: center;
@@ -86,6 +88,10 @@
     border-top: 1px solid #ddd;
     padding: 1rem 0;
     /* background-color: red; */
+    
+}
+.links a{
+    text-decoration: none;
 }
 .links .demo{
     background-color: royalblue;
