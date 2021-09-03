@@ -45,17 +45,10 @@ const Technologies = () => {
             <p>Express</p>
           </div>
           <div className={styles.tech__skill}>
-            <img src="./icons/next-js.svg" alt="icons" />
-            <p>Next.js</p>
-          </div>
-          <div className={styles.tech__skill}>
             <img src="./icons/nodejs-icon.svg" alt="icons" />
             <p>Node.js</p>
           </div>
-          <div className={styles.tech__skill}>
-            <img src="./icons/firebase-1.svg" alt="icons" />
-            <p>Firebase</p>
-          </div>
+          
         </div>
       </div>
     </div>
