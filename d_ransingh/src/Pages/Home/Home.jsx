@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 import styled from 'styled-components'
-import { SocialLogosH } from '../../Components/LogoH/SocialLogosH'
-import { Button } from '../../Components/Button/Button'
-import { SiMinutemailer } from 'react-icons/si';
 import { Card } from '../../Components/Card/Card'
 import { Heading } from '../../Components/Heading/Heading'
 import { Technologies } from '../../Components/Skills/Technologies'
+import { About } from '../../Components/About/About'
+import { Contact } from '../../Components/Contact/Contact'
 
 const Name = styled.h1`
 color: #252525;
@@ -79,10 +78,10 @@ const Home = () => {
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
             <Name>Hi I'm DEBASISH RANSINGH</Name>
             <Work>Full Stack Web Developer</Work>
-            <SocialLogosH />
+            
             <p className={styles.summery}>Detailed-oriented, responsible, and committed developer, with a get-it-done, on-time, and high-quality product spirit, and more than a year of experience defining requirements, designing, implementing, testing, and delivering complex back-end and web applications using verity programming and technologies.</p>
-            <Button><SiMinutemailer/> Contact Me </Button>
             </div>
+            <About/>
             <Technologies/>
             <div className={styles.projectSection}>
                
@@ -97,7 +96,7 @@ const Home = () => {
                     <Card />
                     </div>
             </div>
-            
+            <Contact/>
             </div>
     )
 }
