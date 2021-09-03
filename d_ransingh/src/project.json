@@ -23,6 +23,14 @@
             "tech":["react-2","logo-javascript"],
             "demo":"https://sephora-clone.netlify.app",
             "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
+        },
+        {
+            "image":"impactguru",
+            "title":"Impact guru",
+            "desc":"Lorem10ljjflnkfjkhfj",
+            "tech":["react-2","logo-javascript"],
+            "demo":"https://sephora-clone.netlify.app",
+            "code":"https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
         }
     
     ]
