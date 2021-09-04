@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.content{
+  padding-top: calc(80vh/2);
+}
+.content p {
+  font-size: 26px;
+  color: whitesmoke;
+  /* background-color: #aaa; */
+  /* border-radius: 0.2rem; */
+  /* display: inline-block; */
+}
+button{
+  background-color: #fafafa;
+  border: 1px solid gray;
+  padding: 0.8rem 1rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+}
+button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 15px #aaa;
+}
+h2{
+  color: whitesmoke;
+}
