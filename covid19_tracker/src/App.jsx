@@ -5,6 +5,9 @@ import axios from 'axios';
 import {v4 as uuid} from 'uuid'
 import { InfoBox } from './Components/InfoBox';
 import { Map } from './Components/Map';
+import { Table } from './Components/Table'
+import {LineGraph} from './Components/LineGraph'
+import { sortData } from './utils/utils';
 
 function App() {
 
@@ -25,8 +28,11 @@ function App() {
           }
           
         ))
+
+        const sortedData = sortData(res.data)
         //console.log(countries)
         setCountries(countries)
+        setTableData(sortedData)
       })
       .then(data=>console.log(data))
       .catch(err => console.log(err))
@@ -92,8 +98,10 @@ function App() {
           <CardContent>
         {/* table */}
             <h2>Live cases by Country</h2>
+            <Table countries={ tableData}/>
       {/* graph */}
             <h2>World wide new Cases</h2>
+            <LineGraph/>
           </CardContent>
         </Card>
 
