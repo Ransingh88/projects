@@ -10,7 +10,7 @@ const Technologies = () => {
               <div className={styles.tech__techSkills}>
                   <div className={styles.tech__skill}>
             <img src="./icons/logo-javascript.svg" alt="icons" />
-            <p>Javascript</p>
+            <p>JavaScript</p>
                   </div>
                   <div className={styles.tech__skill}>
             <img src="./icons/react-2.svg" alt="icons" />
@@ -47,6 +47,26 @@ const Technologies = () => {
           <div className={styles.tech__skill}>
             <img src="./icons/nodejs-icon.svg" alt="icons" />
             <p>Node.js</p>
+          </div>
+          <div className={styles.tech__skill}>
+            <img src="./icons/mongodb-icon-1.svg" alt="icons" />
+            <p>MongoDB</p>
+          </div>
+          <div className={styles.tech__skill}>
+            <img src="./icons/next-js.svg" alt="icons" />
+            <p>Next.js</p>
+          </div>
+          <div className={styles.tech__skill}>
+            <img src="./icons/tailwind-css-2.svg" alt="icons" />
+            <p>Tailwind CSS</p>
+          </div>
+           <div className={styles.tech__skill}>
+            <img src="./icons/bootstrap-5-1.svg" alt="icons" />
+            <p>Bootstarp 5</p>
+          </div>
+          <div className={styles.tech__skill}>
+            <img src="./icons/firebase-1.svg" alt="icons" />
+            <p>Firebase</p>
           </div>
           
         </div>

@@ -7,6 +7,8 @@ import { Technologies } from '../../Components/Skills/Technologies'
 import { About } from '../../Components/About/About'
 import { Contact } from '../../Components/Contact/Contact'
 import projectData from '../../project.json'
+import { Tools } from '../../Components/Skills/Tools'
+import { Proficient } from '../../Components/Skills/Proficient'
 
 const Name = styled.h1`
 color: #252525;
@@ -91,7 +93,9 @@ const Home = () => {
             </div></a>
             </div>
             <About/>
-            <Technologies/>
+            <Technologies />
+            <Proficient/>
+            <Tools/>
             <div className={styles.projectSection}>
                
                 <Heading>Projects</Heading>
