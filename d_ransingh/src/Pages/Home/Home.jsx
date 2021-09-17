@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 import styled from 'styled-components'
 import { Card } from '../../Components/Card/Card'
@@ -29,54 +29,54 @@ text-transform:uppercase;
 font-family: 'open sans';
 
 `
-const Warning = styled.div`
-z-index: 100000;
-position: fixed;
-top: 5rem;
-right: 3rem;
-border-radius: 0.2rem;
-background-color: #ffffa1;
-border: 2px solid #ffee00;
-padding: 1rem 2rem;
-color: #252525;
-box-shadow: 0 0 10px #ddd;
-visibility: ${props=>props.vs ? "hidden" : "visible"};
-button{
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    height: 20px;
-    width: 20px;
-    background-color: #ffee00;
-    border: 1px solid #ffee00;
-    color: #252525;
-    font-weight: bold;
-    border-radius: 50%;
-    border: 0;
-    outline: 0;
-}
-button:hover{
-    cursor: pointer;
-}
+// const Warning = styled.div`
+// z-index: 100000;
+// position: fixed;
+// top: 5rem;
+// right: 3rem;
+// border-radius: 0.2rem;
+// background-color: #ffffa1;
+// border: 2px solid #ffee00;
+// padding: 1rem 2rem;
+// color: #252525;
+// box-shadow: 0 0 10px #ddd;
+// visibility: ${props=>props.vs ? "hidden" : "visible"};
+// button{
+//     position: absolute;
+//     top: -10px;
+//     right: -10px;
+//     height: 20px;
+//     width: 20px;
+//     background-color: #ffee00;
+//     border: 1px solid #ffee00;
+//     color: #252525;
+//     font-weight: bold;
+//     border-radius: 50%;
+//     border: 0;
+//     outline: 0;
+// }
+// button:hover{
+//     cursor: pointer;
+// }
 
-`
+// `
 
 const Home = () => {
-    const [vs, setVs] = useState(true)
+//     const [vs, setVs] = useState(true)
 
 
-    useEffect(() => {
-       setTimeout(() => {
-            setVs(false)
-        },5000)
-   },[])
+//     useEffect(() => {
+//        setTimeout(() => {
+//             setVs(false)
+//         },5000)
+//    },[])
         
 
 
-    const handleWarning = () => {
+//     const handleWarning = () => {
 
-        setVs(true)
-    }
+//         setVs(true)
+//     }
     return (
         <div className={styles.Container}>
         <div className={styles.mainContainer}>
