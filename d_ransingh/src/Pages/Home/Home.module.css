@@ -16,7 +16,7 @@ font-family: 'open sans';
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  padding-top: 6rem;
+  padding-top: 8rem;
   /* height: 100vh; */
   padding-bottom: 6rem;
   /* background: rgb(9, 73, 121); */
@@ -38,6 +38,7 @@ font-family: 'open sans';
   color: #252525;
   width: 80%;
   text-align: center;
+  padding-top:1rem
 }
 .projectSection{
   width: 100%;
@@ -77,6 +78,7 @@ font-family: 'open sans';
   color: whitesmoke;
   padding: 0.8rem 1.8rem;
   border-radius: 0.4rem;
+  margin-top: 3rem;
 }
 .mainContainer a{
   text-decoration: none;

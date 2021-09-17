@@ -16,7 +16,7 @@ font-size: 5rem;
 text-align: center;
 letter-spacing: 0.1rem;
 font-weight: 900;
-
+margin-top: 2.5rem;
 font-family: 'open sans';
 `
 const Work = styled.p`
@@ -80,7 +80,7 @@ const Home = () => {
     return (
         <div className={styles.Container}>
         <div className={styles.mainContainer}>
-            <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning>
+            {/* <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning> */}
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
             <Name>Hi I'm DEBASISH RANSINGH</Name>
             <Work>Full Stack Web Developer</Work>
