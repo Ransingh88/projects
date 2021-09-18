@@ -10,8 +10,15 @@
   width: 100%;
   z-index: 10000;
 }
-.nav > img{
+.nav .hamBurgerMenu{
+  visibility: hidden;
+  display: none;
+}
+.nav .navLogo{
   width: 80px;
+}
+.nav .navLogo:hover{
+  cursor: pointer;
 }
 .nav__menus{
   display: flex;
@@ -34,5 +41,10 @@
   }
   .nav__menus{
     visibility: hidden;
+    display: none;
+  }
+  .nav .hamBurgerMenu{
+    visibility: visible;
+    display: block;
   }
 }

@@ -9,15 +9,16 @@ import { Contact } from '../../Components/Contact/Contact'
 import projectData from '../../project.json'
 import { Tools } from '../../Components/Skills/Tools'
 import { Proficient } from '../../Components/Skills/Proficient'
+import {Hero} from '../../Components/Hero/Hero'
 
 const Name = styled.h1`
 color: #252525;
 font-size: 5rem;
 text-align: center;
 letter-spacing: 0.1rem;
-font-weight: 900;
 margin-top: 2.5rem;
-font-family: 'open sans';
+font-family: 'Inter', sans-serif;
+font-weight: 900;
 `
 const Work = styled.p`
 color: #252525;
@@ -25,9 +26,6 @@ font-size: 1.2rem;
 text-align: center;
 letter-spacing: 0.1rem;
 text-transform:uppercase;
-
-font-family: 'open sans';
-
 `
 // const Warning = styled.div`
 // z-index: 100000;
@@ -79,8 +77,8 @@ const Home = () => {
 //     }
     return (
         <div className={styles.Container}>
-        <div className={styles.mainContainer}>
-            {/* <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning> */}
+        {/* <div className={styles.mainContainer}>
+            <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning>
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
             <Name>Hi I'm DEBASISH RANSINGH</Name>
             <Work>Full Stack Web Developer</Work>
@@ -91,11 +89,19 @@ const Home = () => {
                 <div className={styles.resume}>
                     <p>Resume</p>
             </div></a>
-            </div>
+            </div> */}
+            <section id="hero">
+                <Hero/>
+            </section>
+            <section id="about">
             <About/>
+            </section>
+            <section id="skills">
             <Technologies />
             <Proficient/>
             <Tools/>
+            </section>
+            <section id="project">
             <div className={styles.projectSection}>
                
                 <Heading>Projects</Heading>
@@ -116,7 +122,10 @@ const Home = () => {
 
                     </div>
             </div>
+            </section>
+            <section id="contact">
             <Contact/>
+            </section>
             </div>
     )
 }

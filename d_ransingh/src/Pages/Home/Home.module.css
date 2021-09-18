@@ -2,15 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-font-family: 'open sans';
+/* font-family: 'open sans'; */
+/* font-family: 'Inter'; */
 }
-.Container {
+/* .Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 .mainContainer {
+  max-width: 360px;
   position: relative;
   display: flex;
   flex-direction: column;

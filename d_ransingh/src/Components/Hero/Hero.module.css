@@ -1,0 +1,139 @@
+.hero{
+    padding: 5rem 2rem 0rem 2rem;
+    /* height: 100vh; */
+    /* height: 100vh; */
+    /* background-color: #fafafa; */
+    display: flex;
+    justify-content: center;
+}
+
+.hero .left{
+    /* background-color: aquamarine; */
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.hero .left .name{
+    font-size: 80px;
+    font-weight: 900;
+    color: #111146;
+    
+}
+
+
+.hero .left .resumeBtn{
+    color: #ffff;
+    background-color: #3535D2;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    width: 100px;
+}
+
+.hero .left .designation{
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #111146;
+    color: #ffffff;
+    -webkit-text-stroke: 0.02rem #8686da;
+    position: relative;
+}
+
+.hero .left .designation::before{
+content: attr(data-text);
+position: absolute;
+top: 10;
+left: 0;
+width: 0%;
+height: 100%;
+color: #111146;
+    -webkit-text-stroke: 0;
+    border-right: 2px solid #111146;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 65%;
+    }
+}
+.hero .left .shortDesc{
+    padding: 2rem 0;
+    color: #111146;
+    text-align: justify;
+    
+}
+
+.hero .left a{
+    text-decoration: none;
+}
+.hero .left .resumeBtn:hover{
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+
+.hero .right{
+    /* background-color: red; */
+    flex: 0.4;
+}
+.hero .right .ProfileImage{
+    width: 640px;
+}
+
+@media only screen and (max-width:1260px){
+    .hero .right .ProfileImage{
+    width: 550px;
+}
+}
+@media only screen and (max-width:1010px){
+    .hero .right .ProfileImage{
+    width: 520px;
+}
+.hero .left .name{
+    font-size: 65px;
+}
+}
+@media only screen and (max-width:890px){
+
+.hero{
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.hero .left{
+    align-items: center;
+}
+.hero .left .name{
+    text-align: center;
+}
+.hero .left .designation{
+    text-align: center;
+}
+.hero .left .shortDesc{
+    text-align: center;
+}
+
+}
+@media only screen and (max-width:530px){
+.hero .right .ProfileImage{
+    width: 400px;
+}
+.hero .left .name{
+    font-size: 60px;
+}
+}
+@media only screen and (max-width:430px){
+.hero .right .ProfileImage{
+    width: 250px;
+}
+.hero .left .name{
+    font-size: 50px;
+}
+}
