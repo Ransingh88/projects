@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from 'react'
 import styles from './Home.module.css'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { Card } from '../../Components/Card/Card'
 import { Heading } from '../../Components/Heading/Heading'
 import { Technologies } from '../../Components/Skills/Technologies'
@@ -11,22 +11,22 @@ import { Tools } from '../../Components/Skills/Tools'
 import { Proficient } from '../../Components/Skills/Proficient'
 import {Hero} from '../../Components/Hero/Hero'
 
-const Name = styled.h1`
-color: #252525;
-font-size: 5rem;
-text-align: center;
-letter-spacing: 0.1rem;
-margin-top: 2.5rem;
-font-family: 'Inter', sans-serif;
-font-weight: 900;
-`
-const Work = styled.p`
-color: #252525;
-font-size: 1.2rem;
-text-align: center;
-letter-spacing: 0.1rem;
-text-transform:uppercase;
-`
+// const Name = styled.h1`
+// color: #252525;
+// font-size: 5rem;
+// text-align: center;
+// letter-spacing: 0.1rem;
+// margin-top: 2.5rem;
+// font-family: 'Inter', sans-serif;
+// font-weight: 900;
+// `
+// const Work = styled.p`
+// color: #252525;
+// font-size: 1.2rem;
+// text-align: center;
+// letter-spacing: 0.1rem;
+// text-transform:uppercase;
+// `
 // const Warning = styled.div`
 // z-index: 100000;
 // position: fixed;
