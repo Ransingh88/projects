@@ -29,7 +29,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     text-align: center;
-    width: 100px;
+    width: 120px;
 }
 
 .hero .left .designation{
@@ -37,32 +37,8 @@
     font-size: 17px;
     font-weight: 500;
     color: #111146;
-    color: #ffffff;
-    -webkit-text-stroke: 0.02rem #8686da;
-    position: relative;
 }
 
-.hero .left .designation::before{
-content: attr(data-text);
-position: absolute;
-top: 10;
-left: 0;
-width: 0%;
-height: 100%;
-color: #111146;
-    -webkit-text-stroke: 0;
-    border-right: 2px solid #111146;
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-}
-@keyframes animate{
-    0%,10%,100%{
-        width: 0%;
-    }
-    70%,90%{
-        width: 100%;
-    }
-}
 .hero .left .shortDesc{
     padding: 2rem 0;
     color: #111146;
@@ -76,6 +52,7 @@ color: #111146;
 .hero .left .resumeBtn:hover{
     filter: brightness(120%);
     cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(1,1,1,0.3);
 }
 
 
@@ -103,7 +80,6 @@ color: #111146;
 @media only screen and (max-width:890px){
 
 .hero{
-    height: 100%;
     flex-direction: column-reverse;
     align-items: center;
 }

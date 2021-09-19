@@ -2,7 +2,7 @@
     
         {
             "image":"sephora",
-            "title":"Shephora",
+            "title":"Sephora",
             "desc":"Clone of Canada based e-Commerce website 'Sephora' where you can buy beauty products.We have added all the functionalities, animation, products, checkout, payments etc.",
             "tech":["logo-javascript","html-1","css-3"],
             "demo":"https://sephora-clone.netlify.app",
@@ -19,7 +19,7 @@
         {
             "image":"Hotels",
             "title":"Hotels",
-            "desc":"Hotels.com is a leading provider of hotel accommodation worldwide, offering booking services through its own network of localised websites.",
+            "desc":"Clone of Hotels.com website. Hotels.com is a leading provider of hotel accommodation worldwide, offering booking services through its own network of localised websites.",
             "tech":["react-2","redux","logo-javascript","html-1","css-3","material-ui-1"],
             "demo":"https://hotelsclone.netlify.app/",
             "code":"https://github.com/abhishekmah/Project-Hotels.com"
