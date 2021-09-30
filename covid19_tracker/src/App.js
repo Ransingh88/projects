@@ -76,8 +76,8 @@ const App = () => {
       <div className="app__left">
         <div className="app__header">
           {/* <h1>COVID-19 Tracker</h1> */}
-          <div>
-          <img src="images/covid19_logo.jpg" width="200px" alt="logo"/> <span></span>
+          <div className="app__covidlogo">
+          <img src="images/covid19_logo.jpg" width="200px" alt="logo"/> <span>Tracker</span>
           </div>
           <FormControl className="app__dropdown">
             <Select
