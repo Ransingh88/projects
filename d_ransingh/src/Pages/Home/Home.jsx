@@ -101,6 +101,9 @@ const Home = () => {
             <Proficient/>
             <Tools/>
             </section>
+            {/* <section>
+                <img src="./images/github.png" alt="" />
+            </section> */}
             <section id="project">
             <div className={styles.projectSection}>
                
