@@ -23,6 +23,14 @@
             "tech":["react-2","redux","logo-javascript","html-1","css-3","material-ui-1"],
             "demo":"https://hotelsclone.netlify.app/",
             "code":"https://github.com/abhishekmah/Project-Hotels.com"
+        },
+        {
+            "image":"covid19",
+            "title":"Covid-19 Tracker",
+            "desc":"Covid 19 Tracker. Where you can visualize the data of covid 19",
+            "tech":["react-2","logo-javascript","html-1","css-3","material-ui-1"],
+            "demo":"https://covid19-trak.netlify.app/",
+            "code":"https://github.com/Ransingh88/projects/tree/main/covid19_tracker"
         }
     
     ]
