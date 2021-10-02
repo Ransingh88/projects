@@ -1,5 +1,9 @@
 # React COVID Tracker
 
+## Covid19 Layout
+<img src="https://github.com/Ransingh88/projects/blob/main/covid19_tracker/public/Images/Frame%201%20(2).png" alt="Webpage"  width="1000">
+
+
 ## Available Scripts
 
 In the project directory, you can run:
