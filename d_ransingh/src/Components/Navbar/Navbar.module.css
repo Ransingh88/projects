@@ -13,6 +13,7 @@
 .nav .hamBurgerMenu{
   visibility: hidden;
   display: none;
+  position: relative;
 }
 .nav .navLogo{
   width: 80px;
@@ -34,6 +35,44 @@
 .nav__menus p:hover{
     color: #151515;
     cursor: pointer;
+}
+
+.hamMenu{
+  /* height:160px; */
+  width: 150px;
+  background-color:white;
+  position:absolute;
+  right:0px;
+  top: 40px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0.5rem 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.hamMenuActive{
+   width: 150px;
+  background-color:white;
+  position:absolute;
+  right:0px;
+  top: 40px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0.5rem 0;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.15s ease;
+}
+.hamMenuActive p{
+  padding: 0.5rem 1.5rem;
+}
+.hamMenuActive p:hover{
+  background-color: #f1f1f1;
+  cursor:pointer;
 }
 @media only screen and (max-width: 599px){
   .nav{
