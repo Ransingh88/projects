@@ -1,0 +1,23 @@
+.header{
+    display: grid;
+    grid-template-columns: 300px auto 200px;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+.header__logo img{
+    width: 35px;
+}
+.header__logo span{
+    font-size:22px;
+    color: #5f6368;
+    margin-left: 10px;
+}
+.header__search{
+    background-color: whitesmoke;
+    padding: 5px 10px;
+}
