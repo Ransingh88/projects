@@ -1,8 +1,12 @@
+
+*{
+font-family:'product sans';
+}
 .header{
     display: grid;
     grid-template-columns: 250px auto 400px;
     align-items: center;
-    padding: 12px 20px;
+    padding: 6px 20px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -19,7 +23,7 @@
     margin-left: 10px;
 }
 .header__search{
-    background-color: whitesmoke;
+    background-color: #F1F3F4;
     padding: 10px;
     border-radius: 8px;
     height: 50px;
