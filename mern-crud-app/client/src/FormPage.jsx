@@ -1,29 +1,52 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
+import axios from 'axios';
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import {Redirect} from 'react-router'
 
-const FormPage = () => {
+const FormPage = ({data}) => {
+    const history = useHistory()
 
-    const [studentDetails,setStudentDetails] = useState({})
+    const [studentDetails, setStudentDetails] = useState({
+        name:"",age:"",gender:"",city:""
+    })
 
     const handleSubmitForm = (e) => {
         e.preventDefault();
         const form = e.target
-        setStudentDetails({
-            name: form.name.value,
+        // setStudentDetails({
+        //     name: form.name.value,
+        //     age:form.age.value,
+        //     gender:form.gender.value,
+        //     city:form.city.value,
+        // })
+     
+        
+          
+        axios.post('http://localhost:8080/student', {
+             name: form.name.value,
             age:form.age.value,
             gender:form.gender.value,
             city:form.city.value,
         })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+        alert('User Added Successfully')
 
-        
+        form.name.value = null
+        form.age.value = null
+        form.gender.value = null
+        form.city.value = null
+
+        history.push('/')
     }
 
     
 
-    console.log(studentDetails);
+    
+
+    // console.log(studentDetails);
     return (
         <div className="formPage">
             <div className="student__header">Student Manage System</div>
