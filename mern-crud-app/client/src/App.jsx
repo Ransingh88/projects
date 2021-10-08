@@ -40,7 +40,7 @@ function App() {
       .then(res => {
         setDetails(res.data)
         console.log(res.data)
-        history.push('/formPage')
+        history.push('/form')
       })
     .catch(err => console.error(err))
     
