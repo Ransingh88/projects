@@ -52,7 +52,7 @@ const Technologies = () => {
             <img src="./icons/mongodb-icon-1.svg" alt="icons" />
             <p>MongoDB</p>
           </div>
-          {/* <div className={styles.tech__skill}>
+          <div className={styles.tech__skill}>
             <img src="./icons/next-js.svg" alt="icons" />
             <p>Next.js</p>
           </div>
@@ -67,7 +67,7 @@ const Technologies = () => {
           <div className={styles.tech__skill}>
             <img src="./icons/firebase-1.svg" alt="icons" />
             <p>Firebase</p>
-          </div> */}
+          </div>
           
         </div>
       </div>
