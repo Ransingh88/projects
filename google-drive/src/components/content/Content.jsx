@@ -1,10 +1,11 @@
 import React from 'react'
 import './Content.css'
-import { RiHardDrive2Line } from 'react-icons/ri'
-import { MdComputer,MdStarBorder,MdCloudQueue } from 'react-icons/md'
+import { RiHardDrive2Line, RiArrowDownSFill } from 'react-icons/ri'
+import { MdComputer,MdStarBorder,MdArrowDownward, MdCloudQueue,MdInfoOutline, MdMenuOpen } from 'react-icons/md'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { IoMdTime } from 'react-icons/io'
 import { FiUsers } from 'react-icons/fi'
+import { FcFile,FcImageFile } from 'react-icons/fc'
 
 const Content = () => {
     return (
@@ -53,7 +54,59 @@ const Content = () => {
                 </div>
             </div>
             <div className="content__data">
-                <h1>Data</h1>
+                <div className="contentData__header">
+                    <div className="header__left">
+                        <p>My Drive</p>
+                        <RiArrowDownSFill/>
+                    </div>
+                    <div className="header__right">
+                        <MdMenuOpen/>
+                        <MdInfoOutline/>
+                    </div>
+                </div>
+                <hr />
+                <div className="contentData__data">
+                    <div className="contentData__data__item">
+                        <FcFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                    <div className="contentData__data__item">
+                        <FcImageFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                    <div className="contentData__data__item">
+                        <FcFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                    <div className="contentData__data__item">
+                        <FcFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                    <div className="contentData__data__item">
+                        <FcFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                    <div className="contentData__data__item">
+                        <FcImageFile/>
+                        <p className="dataItem__fileName">fileName</p>
+                    </div>
+                </div>
+                <div className="contentData__dataFiles">
+                    <table>
+  <tr>
+    <th>Name <MdArrowDownward/></th>
+    <th>Owner</th>
+    <th>Last Modified</th>
+    <th>File Size</th>
+  </tr>
+  <tr>
+    <td>Debasish Ransingh</td>
+    <td>Me</td>
+    <td>Yesterday</td>
+    <td>1 GB</td>
+  </tr>
+                    </table>
+                </div>
             </div>
             <div className="content__icons">
                 icon

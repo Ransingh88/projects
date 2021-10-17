@@ -97,3 +97,75 @@ width: 80%;
 .content__data{
     padding: 1rem;
 }
+.contentData__header{
+    padding: 0.2rem 0.6rem;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.contentData__header svg{
+    font-size: 20px;
+    margin: 0 0.2rem;
+}
+.contentData__header .header__left{
+    display: flex;
+    align-items:center;
+}
+.contentData__header .header__right svg{
+    margin: 0 0.4rem;
+}
+.contentData__header .header__left:hover,
+.contentData__header .header__right svg{
+    cursor: pointer;
+}
+.contentData__data{
+    padding: 1rem;
+    /* max-height: 350px; */
+    min-height: 350px;
+    /* overflow-y: scroll; */
+}
+.contentData__data__item{
+    padding-top: 1rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+    border: 1px solid #ddd;
+    margin: 0.8rem;
+    text-align: center;
+}
+.contentData__data__item:hover{
+ box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+ cursor: pointer;
+ transition: ease 0.2s;
+}
+.contentData__data__item svg{
+    font-size: 50px;
+}
+.dataItem__fileName{
+padding: 0.6rem 1.5rem;
+font-size: 14px;
+background-color:whitesmoke;
+color: gray;
+text-transform: lowercase;
+}
+
+
+.contentData__dataFiles table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.contentData__dataFiles table td,.contentData__dataFiles table th {
+  /* border: 1px solid #ddd; */
+  padding: 12px 10px;
+}
+.contentData__dataFiles table th{
+    text-align: left;
+}
+
+.contentData__dataFiles table tr{
+    /* background-color: #f2f2f2; */
+    
+    border-bottom: 1px solid #bbb;
+}
+
+/* .contentData__dataFiles table tr:hover {background-color: #ddd;} */
