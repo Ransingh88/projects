@@ -1,17 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Content.css'
 import { RiHardDrive2Line, RiArrowDownSFill } from 'react-icons/ri'
 import { MdComputer,MdStarBorder,MdArrowDownward, MdCloudQueue,MdInfoOutline, MdMenuOpen } from 'react-icons/md'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { IoMdTime } from 'react-icons/io'
 import { FiUsers } from 'react-icons/fi'
-import { FcFile,FcImageFile } from 'react-icons/fc'
+import { FcFile, FcImageFile } from 'react-icons/fc'
+import {Modal} from '@material-ui/core'
 
 const Content = () => {
+
+    const [open, setOpen] = useState(false)
+    const [uploading,setUploading] = useState(true)
+    
+    const handleClose = () => {
+        setOpen(false)
+    }
+    const handleOpen = () => {
+        setOpen(true)
+    }
     return (
+        <>
+            <Modal open={open} onClose={handleClose}>
+                <div className="modal__popup">
+                    {uploading ? <p className="popup__uploading">Uploading... </p> :
+                    <form>
+                        <div className="modaleading">
+                            <h2>Select a file you want to upoad</h2>
+                        </div>
+                        <hr />
+                        <div className="modalContent">
+                            <input type="file" name="" id=""  className="popup__fileUpload"/><br />
+                            <input type="submit" value="Upload" className="popup__UploadButton" />
+                        </div>
+                    </form>
+                    }
+                    </div>
+                </Modal>
         <div className="content">
             <div className="content__sidebar">
-                <div className="sidebar__createBtn">
+                <div className="sidebar__createBtn" onClick={handleOpen}>
                     <img src="./images/googledriveplus.jpg" alt="" />
                     <p>New</p>
                 </div>
@@ -111,7 +139,8 @@ const Content = () => {
             <div className="content__icons">
                 icon
             </div>
-        </div>
+            </div>
+            </>
     )
 }
 
