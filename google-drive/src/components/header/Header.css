@@ -60,7 +60,7 @@ color: #5f6368;
     align-items: center;
     justify-content:flex-end;
 }
-.header__iconLeft svg{
+.header__iconLeft svg, .header__iconRight svg{
     margin-right:10px
 }
 .header__iconRight{
