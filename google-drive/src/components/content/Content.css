@@ -130,6 +130,8 @@
   border: 1px solid #ddd;
   margin: 0.8rem;
   text-align: center;
+  max-width:110px;
+  
 }
 .contentData__data__item:hover {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
@@ -145,6 +147,8 @@
   background-color: whitesmoke;
   color: gray;
   text-transform: lowercase;
+  overflow:hidden;
+  padding-right: 1rem;
 }
 
 .contentData__dataFiles table {
@@ -212,9 +216,31 @@
     color: white;
     background-color:green;
     padding: 0.6rem 1rem;
+    margin-top: 1rem;
     text-align: center;
+    font-size:14px;
 }
-.modal__popup .popup__uploading img{
-    background-color: red;
-    height: 20px;
+
+.modal__popup input[type="file"]::file-selector-button{
+  /* display:none; */
+  width:50%;
+  background-color: rgb(226, 226, 226);
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  border-radius:0.2rem;
+  color: #151515;
+}
+.modal__popup input[type="file"]{
+  color: #151515;
+  text-align: center;
+}
+.modal__popup input[type="file"]::file-selector-button:hover{
+cursor: pointer;
+background-color: rgb(212, 212, 212);
+}
+.modal__popup .popup__fileUpload{
+  border-radius:0.2rem;
+  background-color: rgb(236, 236, 236);
+  width:100%;
 }

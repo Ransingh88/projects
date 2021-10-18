@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Content.css'
 import { RiHardDrive2Line, RiArrowDownSFill } from 'react-icons/ri'
 import { MdComputer,MdStarBorder,MdArrowDownward, MdCloudQueue,MdInfoOutline, MdMenuOpen } from 'react-icons/md'
@@ -6,35 +6,88 @@ import { FaRegTrashAlt } from 'react-icons/fa'
 import { IoMdTime } from 'react-icons/io'
 import { FiUsers } from 'react-icons/fi'
 import { FcFile, FcImageFile } from 'react-icons/fc'
-import {Modal} from '@material-ui/core'
+import { Modal } from '@material-ui/core'
+import { db, storagee } from '../../firebase'
+import firebase from 'firebase'
 
 const Content = () => {
 
     const [open, setOpen] = useState(false)
-    const [uploading,setUploading] = useState(true)
+    const [uploading, setUploading] = useState(false)
+    const [uploadStatus,setUploadStatus] = useState('Uploading...')
+    const [file,setFile] = useState(null)
+    const [files, setFiles] = useState([])
+    
+    useEffect(() => {
+        db.collection("myFiles").onSnapshot(snapshot => {
+            setFiles(snapshot.docs.map(doc => ({
+                id: doc.id,
+                data:doc.data()   
+           })))
+       }) 
+    },[])
     
     const handleClose = () => {
         setOpen(false)
+        setUploading(false)
     }
     const handleOpen = () => {
         setOpen(true)
     }
+
+    const handleChange = (e) => {
+        if (e.target.files[0]) {
+            setFile(e.target.files[0])
+        }
+    }
+
+    const handleUpload = (e) => {
+        e.preventDefault()
+        setUploading(true)
+
+        storagee.ref(`files/${file.name}`).put(file)
+            .then(snapshot => {
+                storagee.ref("files").child(file.name).getDownloadURL()
+                    .then(url => {
+                        db.collection("myFiles").add({
+                            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                            filename: file.name,
+                            fileURL: url,
+                            size:snapshot._delegate.bytesTransferred
+                    })
+                })
+             })
+
+        setTimeout(() => {
+            setUploadStatus("Upload Done.")
+        }, 600)
+            
+       
+        setTimeout(() => {
+            setOpen(false)
+        }, 2000)
+        
+
+    }
+
+    console.log(files)
     return (
         <>
             <Modal open={open} onClose={handleClose}>
                 <div className="modal__popup">
-                    {uploading ? <p className="popup__uploading">Uploading... </p> :
+                    
                     <form>
                         <div className="modaleading">
                             <h2>Select a file you want to upoad</h2>
                         </div>
                         <hr />
                         <div className="modalContent">
-                            <input type="file" name="" id=""  className="popup__fileUpload"/><br />
-                            <input type="submit" value="Upload" className="popup__UploadButton" />
+                            <input type="file" name="" id="" className="popup__fileUpload" onChange={ handleChange}/><br />
+                            {uploading ? <p className="popup__uploading">{uploadStatus} </p> :
+                                <input type="submit" value="Upload" className="popup__UploadButton" onClick={handleUpload} />}
                         </div>
                     </form>
-                    }
+                    
                     </div>
                 </Modal>
         <div className="content">
@@ -93,31 +146,17 @@ const Content = () => {
                     </div>
                 </div>
                 <hr />
-                <div className="contentData__data">
-                    <div className="contentData__data__item">
+                    <div className="contentData__data">
+                        {files.map(item => (
+                            <a href={item.data.fileURL} target="_blank" rel="noopener noreferrer">
+                            <div className="contentData__data__item">
                         <FcFile/>
-                        <p className="dataItem__fileName">fileName</p>
+                                <p className="dataItem__fileName">{ item.data.filename}</p>
                     </div>
-                    <div className="contentData__data__item">
-                        <FcImageFile/>
-                        <p className="dataItem__fileName">fileName</p>
-                    </div>
-                    <div className="contentData__data__item">
-                        <FcFile/>
-                        <p className="dataItem__fileName">fileName</p>
-                    </div>
-                    <div className="contentData__data__item">
-                        <FcFile/>
-                        <p className="dataItem__fileName">fileName</p>
-                    </div>
-                    <div className="contentData__data__item">
-                        <FcFile/>
-                        <p className="dataItem__fileName">fileName</p>
-                    </div>
-                    <div className="contentData__data__item">
-                        <FcImageFile/>
-                        <p className="dataItem__fileName">fileName</p>
-                    </div>
+                                </a>
+
+                        ))}
+                    
                 </div>
                 <div className="contentData__dataFiles">
                     <table>
