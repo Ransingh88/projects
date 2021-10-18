@@ -17,6 +17,8 @@ const Content = () => {
     const [uploadStatus,setUploadStatus] = useState('Uploading...')
     const [file,setFile] = useState(null)
     const [files, setFiles] = useState([])
+
+    
     
     useEffect(() => {
         db.collection("myFiles").onSnapshot(snapshot => {
@@ -74,7 +76,12 @@ const Content = () => {
 
     }
 
+
     console.log(files)
+
+    files && files.sort(function (a, b) {
+        return  b.data.timestamp?.seconds * 1000 - a.data.timestamp?.seconds * 1000
+    })
     return (
         <>
             <Modal open={open} onClose={handleClose}>
