@@ -130,7 +130,8 @@
   border: 1px solid #ddd;
   margin: 0.8rem;
   text-align: center;
-  max-width:110px;
+  width:110px;
+  /* height: 110px; */
   
 }
 .contentData__data__item:hover {

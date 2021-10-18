@@ -41,11 +41,11 @@ const Content = () => {
         }
     }
 
-    const handleUpload = (e) => {
+    const handleUpload = async (e) => {
         e.preventDefault()
         setUploading(true)
-
-        storagee.ref(`files/${file.name}`).put(file)
+        setUploadStatus("Uploading....")
+        await storagee.ref(`files/${file.name}`).put(file)
             .then(snapshot => {
                 storagee.ref("files").child(file.name).getDownloadURL()
                     .then(url => {
@@ -59,13 +59,17 @@ const Content = () => {
              })
 
         setTimeout(() => {
-            setUploadStatus("Upload Done.")
-        }, 600)
-            
-       
+             setUploadStatus("Upload Done.")
+
+        },1000)
         setTimeout(() => {
-            setOpen(false)
-        }, 2000)
+             setOpen(false)
+            setUploading(false)
+
+        },2000)
+           
+            
+        
         
 
     }
@@ -148,12 +152,16 @@ const Content = () => {
                 <hr />
                     <div className="contentData__data">
                         {files.map(item => (
+                            
                             <a href={item.data.fileURL} target="_blank" rel="noopener noreferrer">
-                            <div className="contentData__data__item">
-                        <FcFile/>
-                                <p className="dataItem__fileName">{ item.data.filename}</p>
-                    </div>
+                                
+                                <div className="contentData__data__item">
+                                    { item.data.filename.split('.').pop() === 'png' || item.data.filename.split('.').pop() === 'jpg' ? <FcImageFile /> : <FcFile />}
+                                    <p className="dataItem__fileName">{item.data.filename}</p>
+                                    
+                                    </div>
                                 </a>
+                            
 
                         ))}
                     
@@ -165,13 +173,23 @@ const Content = () => {
     <th>Owner</th>
     <th>Last Modified</th>
     <th>File Size</th>
+                            </tr>
+                            
+
+                            {files.map(item => (<tr>
+    <td><FcFile /> {item.data.filename}</td>
+    <td>Me</td>
+    <td>{new Date(item.data.timestamp?.seconds*1000).toUTCString()}</td>
+    <td>{item.data.size} bytes</td>
   </tr>
-  <tr>
+
+                            ) )}
+  {/* <tr>
     <td>Debasish Ransingh</td>
     <td>Me</td>
     <td>Yesterday</td>
     <td>1 GB</td>
-  </tr>
+  </tr> */}
                     </table>
                 </div>
             </div>
