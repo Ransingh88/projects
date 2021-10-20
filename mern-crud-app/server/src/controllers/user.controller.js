@@ -15,7 +15,7 @@ router.get("/", async function (req, res) {
         var gender = req.query.gender;
         var sort = req.query.sort || "asce";
         var to = (page - 1) * size;
-        console.log(age, city, gender, sort)
+       
 
         var data = await User.find().lean().exec()
 
@@ -28,7 +28,7 @@ router.get("/", async function (req, res) {
         }
         if (city !== "all") {
             data = data.filter((item) => item.city === city);
-            console.log(data)
+            // console.log(data)
 
         }
         if (sort) {
@@ -49,7 +49,7 @@ router.get("/", async function (req, res) {
         });
     }
     catch (err) {
-        console.log(err);
+        // console.log(err);
         return res.status(400).json("SOmething went wrong please try again ")
     }
 })
@@ -74,7 +74,7 @@ router.get("/:id", async function (req, res) {
 
 router.post("/", async function (req, res) {
     const request = req.body;
-    console.log(request)
+    // console.log(request)
     if (!request) {
         return res.status(400).json("Please add required data")
     }
