@@ -81,7 +81,7 @@ export const User = () => {
                 </select>
             </div>
             <button onClick={handleSubmit}>Submit</button>
-            <button onClick={handleBack}>Back</button>
+            <button onClick={handleBack}>Back to Home</button>
         </PageWrapper>
     </>
 }
@@ -90,18 +90,21 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-border:1px solid blue;
 width:300px;
 margin:auto;
 border-radius:5px;
 padding:10px;
 gap:10px;
+margin-top:100px;
+background-color:whitesmoke;
 & > button{
-    border:1px solid gray;
     width:100px;
     margin:auto;
-    color:blue;
     border-radius:5px;
     cursor:pointer;
+    padding:0.4rem 1rem;
+    border:none;
+    outline:none;
+    background-color:#ddd;
 }
 `

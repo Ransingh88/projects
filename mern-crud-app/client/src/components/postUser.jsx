@@ -23,7 +23,7 @@ export const PostUser = ({ handlePost }) => {
             gender
         }
         handlePost(payload)
-
+window.location.reload();
     }
 
 
@@ -62,11 +62,13 @@ display:flex;
 flex-direction:column;
 gap:10px;
 & > button{
-    border:1px solid gray;
+    padding:0.5rem 1rem;
     width:100px;
     margin:auto;
-    color:blue;
     border-radius:5px;
     cursor:pointer;
+    border:none;
+    outline:none;
+    background-color:#DDD;
 }
 `

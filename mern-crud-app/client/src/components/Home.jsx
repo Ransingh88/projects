@@ -24,11 +24,7 @@ export const Home = ({ id }) => {
 
 
 
-    useEffect(() => {
-        dispatch(getData({ page, age, gender, city, sort }));
-        findData()
-        // console.log(page, age, city, gender,)
-    }, [dispatch, page, age, gender, city, sort]);
+    
     const findData = () => {
         const queryParams = new URLSearchParams(window.location.search);
         const p = queryParams.get('page');
@@ -121,6 +117,7 @@ export const Home = ({ id }) => {
             }
             dispatch(getData({ page, age, gender, city, sort }));
         })
+        window.location.reload();
     }
     const handlePost = (payload) => {
         axios.post(`http://localhost:2345/users/`, payload).then((res) => {
@@ -132,31 +129,55 @@ export const Home = ({ id }) => {
             }
         })
         dispatch(getData({ page, age, gender, city }));
-
+window.location.reload();
     }
 
+    useEffect(() => {
+        dispatch(getData({ page, age, gender, city, sort }));
+        findData()
+        // console.log(page, age, city, gender,)
 
+    }, []);
+
+    // dispatch, page, age, gender, city, sort
+
+console.log(state)
     return <HomeWrapper>
 
         <div>
             <UserWrapper>
-                <ul>
+                    <table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>City</th>
+    <th>Action</th>
+  </tr>
+  
+  
+                    
 
                     {
                         state && state.map((el) => {
-                            return <li key={el._id}>
-                                <h5>  Name : {el.name}</h5>
-                                <p>{el.age}</p>
-                                <p>{el.gender}</p>
-                                <p>{el.city}</p>
+                            return <tr key={el._id}>
+                                <td>{el.name}</td>
+                                <td>{el.age}</td>
+                                <td>{el.gender}</td>
+                                <td>{el.city}</td>
+                                <td>
                                 <Link to={`/${el._id}`}>
                                     <button >Edit</button>
                                 </Link>
                                 <button onClick={() => handleDelete(el._id)}>Delete</button>
-                            </li>
+                                </td>
+                            </tr>
                         })
                     }
-                </ul>
+</table>
+
+
+                
             </UserWrapper>
 
 
@@ -207,8 +228,11 @@ export const Home = ({ id }) => {
                         <label >city :  </label>
                         <select name="city" onChange={(e) => setCity(e.target.value)} value={city}>
                             <option value="all">select city</option>
-                            <option value="valsad">valsad</option>
-                            <option value="Phlapphla Chai">Phlapphla Chai</option>
+                            <option value="BBSR">BBSR</option>
+                            <option value="Kalahandi">Kalahandi</option>
+                            <option value="Angul">Angul</option>
+                            <option value="Banpur">Banpur</option>
+                            <option value="Khordha">Khordha</option>
 
                         </select>
                     </div>
@@ -237,50 +261,49 @@ export const Home = ({ id }) => {
 
 
 const HomeWrapper = Styled.div`
+
 display:flex;
 justify-content:space-between;
 padding:10px;
-margin:0 70px;
+margin:2rem;
 `
 const UserWrapper = Styled.div`
-/* border:1px solid black; */
-& > ul{
-    list-style:none;
-    padding:10px;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:10px;
+padding:2rem;
+width: 100%;
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
-& > ul > li{
-    border:1px solid blue;
-   border-radius:5px;
-    margin-bottom:10px;
-    list-style:none;
-    padding:10px
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
-& > ul > li button{
-    border:1px solid gray;
-    margin-right:10px;
-    border-radius:5px;
-    cursor:pointer;
-    color:blue;
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #537bf1;
+  color: white;
 }
 `
 const PageWrapper = Styled.div`
 display:flex;
-/* border:1px solid black; */
 align-items:center;
 justify-content:center;
 gap:10px;
 & > button{
-    border:1px solid gray;
-    color:blue;
-   padding:10px;
+    border:none;
+    outline:none;
+   padding:0.6rem 1.2rem;
    cursor:pointer;
    border-radius:5px;
 `
 const FilterWrapper = Styled.div`
-border:1px solid blue;
+background-color:whitesmoke;
 max-height:250px;
 border-radius:5px;
 padding:10px;
@@ -293,8 +316,7 @@ padding:10px;
 `
 
 const SortingWrapper = Styled.div`
-/* display:1px solid blue; */
-/* margin:10px; */
+
 position:sticky;
 top:0px;
 &>div{
