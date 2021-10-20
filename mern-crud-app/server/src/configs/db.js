@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
-require('dotenv').config()
-
-
-const CONNECTION_URL = process.env.CONNECTION_URL;
+const mongoose = require("mongoose")
 
 const connect = () => {
-    return mongoose.connect(CONNECTION_URL)
+    return mongoose.connect("mongodb://127.0.0.1:27017/crud", {
+        useNewUrlParser: true,
+        useFindAndModify: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+    })
 }
 
-module.exports= connect;
+module.exports = connect

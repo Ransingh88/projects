@@ -1,26 +1,23 @@
-const express = require('express');
-const connect = require('./configs/db')
-const cors = require('cors')
+const express = require("express")
 require('dotenv').config()
-const studentController = require('./controllers/student.controller')
+const connect = require("./configs/db")
 
-const app = express();
+const cors = require("cors")
+
+
+const app = express()
+app.use(cors())
 app.use(express.json())
-app.use(cors());
 
-const SERVER_PORT = process.env.SERVER_PORT || 5000
+const userController = require("./controllers/user.controller")
 
-app.use("/student",studentController);
+app.use("/users", userController)
 
-
-
-const start =  () => {
-    connect()
-    .then(()=>
-    app.listen(SERVER_PORT, () => {
-        console.log(`Server running on port ${SERVER_PORT}...`)
-    }))
-    .catch((err)=>{console.log(err.message)})
+const start = async () => {
+    await connect()
+    app.listen(process.env.SERVER_PORT, () => {
+        console.log(`Listening to the server on port ${process.env.SERVER_PORT}...`)
+    })
 }
 
-module.exports = start;
+module.exports = start
