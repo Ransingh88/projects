@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.comments{
+    padding: 2rem;
+    /* background-color:red; */
+    width: 50%;
+    /* margin: auto; */
+}
+.comments__details{
+    display: flex;
+    font-size:12px;
+}
+.comments__details p{
+    margin: 0.2rem 0.3rem;
+    font-weight: 500;
+    color: #686868;
+}
+.comments__message p{
+    padding: 0.2rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #202020;
+}
+.comments__actions{
+    display: flex;
+
+}
+.comments__actions p{
+    margin: 0.2rem 0.4rem;
+    font-weight: 500;
+    color: rgb(150, 150, 150);
+    font-size:14px;
+}
+.comments__actions p:hover{
+    color: rgb(110, 110, 110);
+    cursor: pointer;
+}
+.comment__itemList{
+    margin-left: 5rem;
+    list-style-type: none;
+    border-left: 2px solid rgb(182, 182, 182);
+    border-radius: 4px;
+}

@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+.App{
+ background-color:rgb(235, 235, 235);
+ /* height:100vh; */
+ padding: 2rem;
+ padding-bottom: 300px;
+}
+.app__Heading{
+  text-align: center;
+  padding: 1rem 0;
+}
