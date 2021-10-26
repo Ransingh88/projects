@@ -27,7 +27,7 @@ const Experience = () => {
             </div>
             </div>
             </div>
-            <div>
+            <div className="experience__githubImg">
                 <img src="./images/github.png" alt="github" />
             </div>
         </>

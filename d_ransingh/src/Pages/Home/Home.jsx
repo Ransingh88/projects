@@ -117,9 +117,9 @@ const Home = () => {
                 <Card/>
                 <Card/>
                     <Card /> */}
-                    {projectData.map(({image,title,desc,tech,demo,code}) => (
+                    {projectData.map(({image,title,desc,tech,demo,code},index) => (
                         
-                        <Card title={title} desc={desc} tech={tech} img={image} demo={ demo} code={ code} />
+                        <Card key={index } title={title} desc={desc} tech={tech} img={image} demo={ demo} code={ code} />
                     )
 
                     )}

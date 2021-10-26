@@ -1,36 +1,69 @@
-.experience__mainContainer{
-    background-color: #F5F5F5;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+.experience__mainContainer {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.experience{
-    
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+.experience {
+  /* background-color: red; */
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem;
 }
-.experience__left, .experience__right{
-     display:flex;
-    align-items: center;
-    justify-content: center;
+.experience__left,
+.experience__right {
+    /* background-color: gray; */
+    flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.experience__left div, .experience__right div{
- padding: 1rem 4rem;
- text-align: center;
+.experience__left div,
+.experience__right div {
+  padding: 1rem;
+  text-align: center;
 }
 
-.experience__left div h1, .experience__right div h1{
-    font-size:48px;
-    font-weight: 800;
+.experience__left div h1,
+.experience__right div h1 {
+  font-size: 48px;
+  font-weight: 800;
 }
-.experience__left div p, .experience__right div p{
-    font-size:14px;
-    font-weight: 600;
-    color: gray;
-    letter-spacing:1px;
-    padding-top: 2px;
+.experience__left div p,
+.experience__right div p {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  letter-spacing: 1px;
+  padding-top: 2px;
+}
+.experience__githubImg{
+    display: flex;
+    justify-content:center;
+    padding: 2rem 0;
+}
+.experience__githubImg img{
+    width: 70%;
+}
+
+@media screen and (max-width: 968px) {
+    .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 398px) {
+    .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+    .experience__left,
+.experience__right {
+    flex-direction: column;
+        align-items: center;
+}
 }

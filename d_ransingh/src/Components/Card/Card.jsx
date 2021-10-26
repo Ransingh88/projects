@@ -21,9 +21,9 @@ const Card = ({img,title,desc,tech,demo,code}) => {
                                 {/* <img src="./icons/react-2.svg" alt="" height="25px"/> */}
                                 
                                 {
-                                    tech.map((ele) => (
+                                    tech.map((ele,index) => (
                                         
-                                        <img src={`./icons/${ele}.svg`} alt="tech" height="25px"/>
+                                        <img key={ index} src={`./icons/${ele}.svg`} alt="tech" height="25px"/>
                                     ))
                                 }
                                 
