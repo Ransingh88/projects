@@ -9,7 +9,8 @@ import { Contact } from '../../Components/Contact/Contact'
 import projectData from '../../project.json'
 import { Tools } from '../../Components/Skills/Tools'
 import { Proficient } from '../../Components/Skills/Proficient'
-import {Hero} from '../../Components/Hero/Hero'
+import { Hero } from '../../Components/Hero/Hero'
+import {Experience} from '../../Components/experience/Experience'
 
 // const Name = styled.h1`
 // color: #252525;
@@ -101,9 +102,9 @@ const Home = () => {
             <Proficient/>
             <Tools/>
             </section>
-            {/* <section>
-                <img src="./images/github.png" alt="" />
-            </section> */}
+            <section id="experience">
+                <Experience/>
+            </section>
             <section id="project">
             <div className={styles.projectSection}>
                
