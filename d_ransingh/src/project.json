@@ -45,7 +45,7 @@
             "title":"Edutor",
             "desc":"A selfthought Hackathon project with in 48 hours",
             "tech":["react-2","logo-javascript","html-1","css-3","nodejs-icon","express-109","mongodb-icon-1","socket-io"],
-            "demo":"https://covid19-trak.netlify.app/",
+            "demo":"https://edutor-dr.herokuapp.com/",
             "code":"https://github.com/Ransingh88/projects/tree/main/covid19_tracker"
         }
     
