@@ -10,10 +10,16 @@ const setProducts = (products) => {
 
 const selectedProduct = (product) => {
     return {
-        type: SET_PRODUCTS,
+        type: SELECTED_PRODUCT,
         payload:product
     }
 }
 
+const removeSelectedProduct = () => {
+    return {
+        type: REMOVE_SELECTED_PRODUCT,
+    }
+}
 
-export {setProducts,selectedProduct}
+
+export {setProducts,selectedProduct,removeSelectedProduct}

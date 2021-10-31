@@ -22,14 +22,19 @@ const ProductListing = () => {
     },[])
     
     return (
-        <div>
-            <h1>All Products</h1>
+        <div className="ProductList">
+            <h2 className="ProductList__heading">All Products</h2>
             
-        
-            {products.map(({ id, title, category, image, price }) => (
+            {products.length === 0 ? (<div className="Loading">Loading products...</div>) :
+                <div className="ProductList__productContainer">
+                {
+                    products.map(({ id, title, category, image, price ,rating}) => (
                 
-                <ProductCard key={id} id={ id} title={title} category={category} image={image} price={ price}/>
-            ))}
+                        <ProductCard key={id} id={id} title={title} category={category} image={image} price={price} rating={rating.count} />
+                    ))
+                    }
+                    </div>
+                }
             
         </div>
     )
