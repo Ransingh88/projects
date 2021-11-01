@@ -37,8 +37,8 @@
             "title":"Medium",
             "desc":"Medium Clone, It is a full stack web app",
             "tech":["react-2","redux","logo-javascript","html-1","css-3","material-ui-1","nodejs-icon","express-109","mongodb-icon-1"],
-            "demo":"https://covid19-trak.netlify.app/",
-            "code":"https://github.com/Ransingh88/projects/tree/main/covid19_tracker"
+            "demo":"https://medium-app-clone.herokuapp.com/",
+            "code":"https://github.com/Somesh-Kumar-Yadav/medium-clone"
         },
         {
             "image":"edutor",
@@ -46,7 +46,7 @@
             "desc":"A selfthought Hackathon project with in 48 hours",
             "tech":["react-2","logo-javascript","html-1","css-3","nodejs-icon","express-109","mongodb-icon-1","socket-io"],
             "demo":"https://edutor-dr.herokuapp.com/",
-            "code":"https://github.com/Ransingh88/projects/tree/main/covid19_tracker"
+            "code":"https://github.com/Ransingh88/edutor"
         }
     
     ]
