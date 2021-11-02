@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-const Tour = ({ id, name, info, price, image }) => {
+const Tour = ({ id, name, info, price, image ,removeTour}) => {
     
-    const [readmore, setReadmore] = useState(true);
+    const [readmore, setReadmore] = useState(false);
 
     return (
         <div className="tourCard">
@@ -15,10 +15,10 @@ const Tour = ({ id, name, info, price, image }) => {
                     <h4 className="headDetails__price">Rs. { price}</h4>
                 </div>
                 <p className="tourCard__details__info">
-                    {info}
-                    <button className="readmore" onClick={setReadmore(!readmore)}>{ readmore ? " Show less" : " Readmore"}</button>
+                    {readmore ? `${info}` : `${info.substring(0,200)}. . . `}
+                    <button className="readmore" onClick={()=>setReadmore(!readmore)}>{ readmore ? "  Show less" : " Readmore"}</button>
                 </p>
-                <button className="tourCard__details__btn">Not Interested</button>
+                <button className="tourCard__details__btn" onClick={()=>removeTour(id)}>Not Interested</button>
             </div>
         </div>
     )
