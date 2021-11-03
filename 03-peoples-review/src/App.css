@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #353535;
+}
+.main{
+  padding: 2rem;
+  background-color: #F9F9F9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main__heading{
+  color: #353535;
+  text-decoration: underline;
+  text-decoration-color: #4082D4;
+  text-underline-offset: 6px;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+
+/* ---------------review------------ */
+.review{
+  width: 600px;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.05);
+}
+.review .crop{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+.review .crop img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.review__text{
+  padding: 0.6rem 0;
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+.review__job{
+  color: #2674CF;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.review__surbrise-btn{
+  margin: 0.4rem 0;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  outline: none;
+  background-color: #4082D4;
+  color: #fff;
+  border-radius: 0.4rem;
+  font-weight: bold;
+}
+.review__name{
+  text-transform: capitalize;
+}
+.review__btn{
+  display: flex;
+}
+.review__btn button{
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+.review__btn button svg{
+  fill: #4082D4;
+}
+
+.review__surbrise-btn:hover, .review__btn button svg:hover{
+  filter: brightness(90%);
+  cursor: pointer;
+}
