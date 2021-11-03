@@ -5,15 +5,25 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const Review = () => {
     const [index, setIndex] = useState(0)
-    const { id, name, job, image, text } = data[index]
+    const {name, job, image, text } = data[index]
     
+
+    const checkNum = (num) => {
+        if (num > data.length - 1) {
+            return 0
+        }
+        if (num < 0) {
+            return data.length - 1
+        }
+        return num
+    }
 
     const prevReview = () => {
 
        
          setIndex((index) => {
            let newIndex = index - 1
-           return newIndex
+           return checkNum(newIndex)
             }
            
         )
@@ -23,10 +33,19 @@ const Review = () => {
         
        setIndex((index) => {
            let newIndex = index + 1
-           return newIndex
+           return checkNum(newIndex)
             }
            
         )
+    }
+
+    const random = () => {
+        let newIndx = Math.floor(Math.random() * data.length)
+        console.log('newIndx: ', newIndx);
+        if (index === newIndx) {
+            newIndx+=1
+        }
+        setIndex(newIndx)
     }
     
     return (
@@ -47,7 +66,7 @@ const Review = () => {
                 <MdKeyboardArrowRight/>
                 </button>
             </div>
-            <button className="review__surbrise-btn">Surprise</button>
+            <button className="review__surbrise-btn" onClick={random}>Surprise</button>
         </div>
     )
 }
