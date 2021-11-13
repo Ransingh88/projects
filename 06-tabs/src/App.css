@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: rgb(240, 248, 248);
   min-height: 100vh;
+}
+.heading{
+  font-size: 32px;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  /* padding: 0.5rem 0; */
+  /* display: block; */
+}
+.underline{
+  height: 3px;
+  background-color: teal;
+  margin-top: 6px;
+  display: block;
+  width: 130px;
+  align-self: center;
+}
+
+.content{
+  padding: 2rem;
+  display: flex;
+}
+.content__button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 1rem;
+}
+
+.btn{
+  width: 150px;
+  height: 30px;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #303030;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  letter-spacing: 2px;
+}
+.btn:hover{
+  border-left: 3px solid teal;
+  color: teal;
+  cursor: pointer;
+}
+.active-btn{
+  border-left: 3px solid teal;
+  color: teal;
+}
+.content__Detaile{
+  padding: 0 5rem;
+}
+.details__title{
+  font-weight: 400;
+}
+.details__company{
+  font-weight: 500;
+  background-color: rgb(166, 194, 192,0.6);
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  margin: 0.4rem 0;
+  display: inline-block;
+  color: rgb(45, 160, 160);
+  letter-spacing: 2px;
+}
+.details__dates{
+  margin: 0.6rem 0;
+  color: gray;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+.arrow{
+  fill: teal;
+  margin: 0 0.4rem;
+  font-size: 16px;
+  color: red;
+}
+.duties{
+  display: flex;
+  margin: 1.2rem 0rem;
+}
+
+.moreInfo{
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-top: 50px;
+  background-color: teal;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+  
 }
