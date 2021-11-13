@@ -8,7 +8,7 @@ const Hero = () => {
                 <h1 className={styles.name}>Hi I'm <br /> DEBASISH RANSINGH</h1>
                 <p  className={styles.designation}>FULL STACK WEB DEVELOPER 💻</p>
                 <p className={styles.shortDesc}>An enthusiastic Full Stack Web Developer with a strong set of technical as well as non-technical skills and a dedication towards creating useful and interactive web applications.</p>
-                <a href="https://drive.google.com/file/d/1YV8OpaMyZmNYqGPBEqehl2n_w4Psq-Rl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/10hwwf6ameo2djlbrnyd1iKyG4a-pHOCv/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <p className={styles.resumeBtn}>Resume</p>
                 </a>
             </div>
