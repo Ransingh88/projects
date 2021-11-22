@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-![alt](./tabs.png)
+![alt](https://github.com/Ransingh88/projects/blob/main/06-tabs/public/tabs.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
