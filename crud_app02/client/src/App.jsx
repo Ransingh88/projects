@@ -1,10 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routess} from './routes/routes'
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>uhhuhuhu</h1>
+      <h1>CRUD APP</h1>
+      <Routess/>
     </div>
   );
 }
