@@ -77,6 +77,7 @@ let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
 
 
+let muteBtn = document.getElementById('mutebtn')
 let startBtn = document.getElementById('startbtn')
 let pauseBtn = document.getElementById('pausebtn')
 let stopBtn = document.getElementById('stopbtn')
@@ -97,6 +98,7 @@ let waveformColor = 'red';
 startBtn.addEventListener('click', startAnimation)
 pauseBtn.addEventListener('click', pauseAnimation)
 stopBtn.addEventListener('click', stopAnimation)
+muteBtn.addEventListener('click', muteAudio)
 
 
 
@@ -130,10 +132,22 @@ function stopAnimation() {
     
 }
 
-// music.ontimeupdate = function () {
-//     console.log('music-',100*(music.currentTime/music.duration))
-//     timeline.style.width = `${((music.currentTime/music.duration)*100)}%`
-// }
+function muteAudio() {
+    if (muteBtn.value === 'unmute') {
+        music.muted = true;
+        muteBtn.value = 'mute'
+        muteBtn.innerText = "unmute"
+    } else {
+        music.muted = false;
+        muteBtn.value = 'unmute'
+        muteBtn.innerText = "mute"
+    }
+}
+
+music.ontimeupdate = function () {
+    console.log('music complete % -',100*(music.currentTime/music.duration))
+    timeline.style.width = `${((music.currentTime/music.duration)*100)}%`
+}
 
 timelineBar.onclick = function (e) {
     music.currentTime = ((e.offsetX/timelineBar.offsetWidth)*music.duration);
@@ -164,7 +178,7 @@ for (let i = 0; i < 500; i++) {
 
 // --------------------Extracting value from localStorage--------------------
 let wave = JSON.parse(localStorage.getItem("waves"))
-console.log(wave)
+// console.log(wave)
 
 
 
