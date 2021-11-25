@@ -11,6 +11,7 @@ let timelineBar = document.getElementById("timelineBar");
 // let timeline = document.getElementById('timeline')
 let start_stop_Img = document.getElementById("start_stop_Img")
 let mute_Img = document.getElementById("mute_Img")
+let tooltip = document.getElementById("tooltips")
 
 let posX = 0;
 let posY = canvas.offsetHeight - 30 || 50;
@@ -22,6 +23,7 @@ startBtn.addEventListener("click", startAnimation);
 stopBtn.addEventListener("click", stopAnimation);
 muteBtn.addEventListener("click", muteAudio);
 // pauseBtn.addEventListener('click', pauseAnimation)
+tooltip.addEventListener('click', hideTags)
 
 //--------------------Animation Start/pause--------------------
 function startAnimation() {
@@ -79,6 +81,10 @@ function muteAudio() {
     // muteBtn.innerText = "mute";
      
   }
+}
+
+function hideTags() {
+    tooltip.classList.add("removeTooltips")
 }
 
 music.ontimeupdate = function () {
