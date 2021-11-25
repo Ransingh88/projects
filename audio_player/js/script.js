@@ -12,12 +12,19 @@ let timelineBar = document.getElementById("timelineBar");
 let start_stop_Img = document.getElementById("start_stop_Img")
 let mute_Img = document.getElementById("mute_Img")
 let tooltip = document.getElementById("tooltips")
+let totalDuration = document.getElementById("totalDuration")
+let currentTimeline = document.getElementById("currentTimeline")
 
 let posX = 0;
 let posY = canvas.offsetHeight - 30 || 50;
 let currentCursorPosition = 0;
 let skeletonColor = "#ccc";
 let waveformColor = "red";
+
+
+
+    
+
 
 startBtn.addEventListener("click", startAnimation);
 stopBtn.addEventListener("click", stopAnimation);
@@ -34,7 +41,15 @@ function startAnimation() {
     
 
     music.play();
-    music.ontimeupdate = function () {
+      music.ontimeupdate = function () {
+          if (music.currentTime == music.duration) {
+              console.log("Finished")
+              startBtn.value = "stop";
+    start_stop_Img.src = "https://img.icons8.com/fluency/45/000000/play.png"
+          }
+        console.log("music duratuin-",music.duration,"current time - ",music.currentTime);
+        currentTimeline.innerText = fmtMSS(music.currentTime)
+          totalDuration.innerText = fmtMSS(music.duration)
       if (music.currentTime === 0) {
         drawSkeleton();
         currentCursorPosition = 0;
@@ -86,6 +101,13 @@ function muteAudio() {
 function hideTags() {
     tooltip.classList.add("removeTooltips")
 }
+
+// --------------------AudioPlayList--------------------
+// function AudioPlayList() {
+    
+// }
+
+function fmtMSS(s){return((s-(s%=60))/60+(9<s?':':':0')+s.toFixed(0))}
 
 music.ontimeupdate = function () {
   console.log("music complete % -", 100 * (music.currentTime / music.duration));
