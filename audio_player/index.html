@@ -10,7 +10,13 @@
 <body>
     <div class="main_container">
         <h2 class="container__heading">Audio Player</h2>
-
+        <div class="tooltips" id="tooltips">
+            <div class="tooltip tooltip1">Introduction</div>
+            <div class="tooltip tooltip2">one_six</div>
+            <div class="tooltip tooltip3">Rapport Building - Energy</div>
+            <div class="tooltip tooltip4">Profile</div>
+            <div class="tooltip tooltip5">Rapport Building - Energy</div>
+        </div>
         <div class="audioSpectrum">
             <audio id="music" class="music" controls>
                 <source src="./media/aaa.mp3" type="audio/mpeg">
@@ -28,6 +34,7 @@
         </div>
 
         <button onclick="genarateNewWaveform()">Generate Waveform</button>
+        <button onclick="hideTags()">Hide Tags</button>
 
     </div>
 </body>
