@@ -10,6 +10,7 @@
 .container__heading{
     text-align: center;
     color: #303030;
+    margin-bottom: 50px;
 }
 .audioSpectrum{
 position: relative;
@@ -69,4 +70,129 @@ align-items: center;
 .buttons .btn2{
     width: 80px;
     height: 80px;
+}
+.removeTooltips{
+    display: none;
+}
+.tooltips{
+    position: relative;
+    /* background-color:red;  */
+    height: 50px;
+    /* width: 200px; */
+}
+.tooltip{
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius:0.5rem;
+    display: inline-block;
+    position: absolute;
+    font-weight: 400;
+    font-size:12px;
+    
+    /* background-color: royalblue; */
+}
+.tooltip:before{
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 2px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color:royalblue; */
+    
+
+}
+.tooltip:after{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 125px;
+    right: 50%;
+    transform: translateX(50%);
+    /* background-color:royalblue; */
+}
+
+.tooltip1{
+    background-color: #35c361;
+    top: 40px;
+    left: 18%;
+}
+.tooltip1:before{
+    height: 60px;
+    background-color: #35c361;
+    
+}
+.tooltip1:after{
+    background-color: #35c361;
+    top: 85px;
+}
+
+.tooltip2{
+    background-color: #90f7c3;
+    left: 31%;
+}
+.tooltip2:before{
+    background-color: #90f7c3;
+}
+.tooltip2:after{
+    background-color: #90f7c3;
+}
+
+.tooltip3{
+    background-color: #74b02f;
+    left: 75%;
+    top: -15px;
+}
+.tooltip3:before{
+    background-color: #74b02f;
+    height: 120px;
+}
+.tooltip3:after{
+    background-color: #74b02f;
+    top: 145px;
+}
+
+.tooltip4{
+    background-color: #937e6a;
+    left: 75%;
+    top: 45px;
+}
+.tooltip4:before{
+    background-color: #937e6a;
+    height: 70px;
+}
+.tooltip4:after{
+    background-color: #937e6a;
+    top: 95px;
+}
+.tooltip5{
+    background-color: #064664;
+    left: 67%;
+    top: 15px;
+}
+.tooltip5:before{
+    background-color: #064664;
+     height: 90px;
+}
+.tooltip5:after{
+    background-color: #064664;
+    top: 115px;
+}
+
+@media screen and (max-width:998px) {
+
+    .canvas, .timelineBar{
+        width: 700px;
+    }
+    
+}
+@media screen and (max-width:768px) {
+
+    .canvas, .timelineBar{
+        width: 550px;
+    }
+    
 }
