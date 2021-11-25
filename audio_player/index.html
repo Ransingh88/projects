@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="main_container">
+        <h2 class="container__heading">Audio Player</h2>
+
+        <div class="audioSpectrum">
+            <audio id="music" class="music" controls>
+                <source src="./media/aaa.mp3" type="audio/mpeg">
+            </audio>
+            <canvas id="canvas" class="canvas"></canvas>
+            <div class="timelineBar" id="timelineBar">
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </div>
+        <div>
+            <button id="mutebtn">Mute</button>
+            <button id="startbtn">Start</button>
+            <button id="pausebtn">Pause</button>
+            <button id="stopbtn">Stop</button>
+        </div>
+
+        <button onclick="genarateNewWaveform()">Generate Waveform</button>
+
+    </div>
+</body>
+<script src="./js/script.js"></script>
+<!-- <script src="./js/script3.js"></script> -->
+<!-- <script src="./js/script2.js"></script> -->
+
+
+</html>
