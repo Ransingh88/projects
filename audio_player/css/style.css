@@ -27,25 +27,46 @@ align-items: center;
     border-radius:4px;
     position: absolute;
 }
-#waveform{
-    width: 50%;
-}
+
 .music{
     display: none;
 }
-
-
 
 .timelineBar{
     position: absolute;
     height: 100px;
     width: 1000px;
     background-color: transparent;
-    /* z-index:-1 */
+
 }
 .timeline{
     height: 100px;
     width: 0%;
     background-color: transparent;
     /* transition: all 2s; */
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0.6rem;
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    border:none;
+    outline: none;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+}
+.buttons .btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+.buttons .btn2{
+    width: 80px;
+    height: 80px;
 }

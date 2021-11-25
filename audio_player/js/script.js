@@ -9,6 +9,8 @@ let stopBtn = document.getElementById("stopbtn");
 let timelineBar = document.getElementById("timelineBar");
 // let pauseBtn = document.getElementById('pausebtn')
 // let timeline = document.getElementById('timeline')
+let start_stop_Img = document.getElementById("start_stop_Img")
+let mute_Img = document.getElementById("mute_Img")
 
 let posX = 0;
 let posY = canvas.offsetHeight - 30 || 50;
@@ -25,7 +27,9 @@ muteBtn.addEventListener("click", muteAudio);
 function startAnimation() {
   if (startBtn.value === "stop") {
     startBtn.value = "start";
-    startBtn.innerText = "pause";
+    // startBtn.innerHTML = `pause`;
+    start_stop_Img.src = "https://img.icons8.com/fluency/48/000000/pause.png"
+    
 
     music.play();
     music.ontimeupdate = function () {
@@ -38,10 +42,11 @@ function startAnimation() {
           (music.currentTime / music.duration) * 100
         );
       }
-    };
+      };
   } else {
     startBtn.value = "stop";
-    startBtn.innerText = "start";
+    // startBtn.innerText = "start";
+      start_stop_Img.src = "https://img.icons8.com/fluency/45/000000/play.png"
     music.pause();
   }
 }
@@ -56,18 +61,23 @@ function stopAnimation() {
   music.currentTime = 0;
   music.pause();
   startBtn.value = "stop";
-  startBtn.innerText = "start";
+//   startBtn.innerText = "start";
+    start_stop_Img.src = "https://img.icons8.com/fluency/45/000000/play.png"
 }
 
 function muteAudio() {
   if (muteBtn.value === "unmute") {
     music.muted = true;
-    muteBtn.value = "mute";
-    muteBtn.innerText = "unmute";
+      muteBtn.value = "mute";
+      mute_Img.src = 'https://img.icons8.com/fluency/30/000000/mute.png'
+     
+    // muteBtn.innerText = "unmute";
   } else {
     music.muted = false;
-    muteBtn.value = "unmute";
-    muteBtn.innerText = "mute";
+      muteBtn.value = "unmute";
+       mute_Img.src = 'https://img.icons8.com/fluency/30/000000/high-volume.png'
+    // muteBtn.innerText = "mute";
+     
   }
 }
 
