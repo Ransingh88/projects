@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+.main_container{
+    padding: 2rem;
+}
+.container__heading{
+    text-align: center;
+    color: #303030;
+}
+.audioSpectrum{
+position: relative;
+height: 200px;
+padding: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.canvas{
+    width: 1000px;
+    height: 100px;
+    /* border: 1px solid black; */
+    border-radius:4px;
+    position: absolute;
+}
+#waveform{
+    width: 50%;
+}
+.music{
+    display: none;
+}
+
+
+
+.timelineBar{
+    position: absolute;
+    height: 100px;
+    width: 1000px;
+    background-color: transparent;
+    /* z-index:-1 */
+}
+.timeline{
+    height: 100px;
+    width: 0%;
+    background-color: transparent;
+    /* transition: all 2s; */
+}
