@@ -79,7 +79,7 @@ let ctx = canvas.getContext('2d')
 
 let muteBtn = document.getElementById('mutebtn')
 let startBtn = document.getElementById('startbtn')
-let pauseBtn = document.getElementById('pausebtn')
+// let pauseBtn = document.getElementById('pausebtn')
 let stopBtn = document.getElementById('stopbtn')
 let timelineBar = document.getElementById('timelineBar')
 // let timeline = document.getElementById('timeline')
@@ -96,34 +96,45 @@ let waveformColor = 'red';
 
 
 startBtn.addEventListener('click', startAnimation)
-pauseBtn.addEventListener('click', pauseAnimation)
+// pauseBtn.addEventListener('click', pauseAnimation)
 stopBtn.addEventListener('click', stopAnimation)
 muteBtn.addEventListener('click', muteAudio)
 
 
 
 
-//--------------------Animation Start--------------------
+//--------------------Animation Start/pause--------------------
 function startAnimation() {
-    music.play()
-    music.ontimeupdate = function () {
 
-        if (music.currentTime === 0) {
-            drawSkeleton()
-            currentCursorPosition = 0
-        }
-        else {
-            drawWaveform()
-            currentCursorPosition = Math.floor((music.currentTime / music.duration) * 100)
-        }
+    if (startBtn.value === 'stop') {
+        startBtn.value = 'start'
+        startBtn.innerText = 'pause'
+    
+        music.play()
+        music.ontimeupdate = function () {
 
+            if (music.currentTime === 0) {
+                drawSkeleton()
+                currentCursorPosition = 0
+            }
+            else {
+                drawWaveform()
+                currentCursorPosition = Math.floor((music.currentTime / music.duration) * 100)
+            }
+
+        }
+    }
+    else {
+        startBtn.value = 'stop'
+        startBtn.innerText = 'start'
+        music.pause()
     }
 }
 
 //--------------------Pause Animation--------------------
-function pauseAnimation() {
-    music.pause()
-}
+// function pauseAnimation() {
+//     music.pause()
+// }
 
 //--------------------Stop Animation--------------------
 function stopAnimation() {
