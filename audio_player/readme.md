@@ -3,7 +3,7 @@
 
 **This project is an Audio player App, where you can play and visualizeas well as controll over the visualizer.It is made up with HTML, CSS, JavaScript and Canvas API.**
 
-### Download the project [here]()
+### Download the project [here](https://drive.google.com/drive/folders/1ZuRO8VxBYHUtoOYC5olFtoL70L23ejV2?usp=sharing)
 ### Live [Demo](https://dr-audioplayer.netlify.app/)
 
 
@@ -61,6 +61,7 @@
     minHeight = 5;
     maxHeight = 60;
 ```
+<p>If you want to know about the element in the page just hover and hold for second, you will see a text. 😁</p>
 <br/>
 <br/>
 <br/>
