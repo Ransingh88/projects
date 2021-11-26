@@ -25,7 +25,7 @@ let currentCursorPosition = 0;
 let skeletonColor = "#ccc";
 let waveformColor = "red";
 let songsNum = 0
-let songs = ['aaa.mp3','bbb.mp3','ccc.mp3','Aila Re Aillaa Sooryavanshi 320 Kbps.mp3','Tip Tip Barsa Pani - Sooryavanshi_320(PagalWorld.com.se).mp3']
+let songs = ['aaa.mp3','bbb.mp3','Aila Re Aillaa Sooryavanshi 320 Kbps.mp3','Tip Tip Barsa Pani - Sooryavanshi_320(PagalWorld.com.se).mp3','Spectrum - Home (feat. Ria Choony)(INSTRUMENTAL)_1.mp3']
 
 
 function shuffelSong() {
