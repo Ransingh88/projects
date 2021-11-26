@@ -18,6 +18,9 @@ let audioSrc = document.getElementById("audioSrc")
 
 let posX = 0;
 let posY = canvas.offsetHeight - 30 || 50;
+let width = 1;
+let minHeight = 5;
+let maxHeight = 60;
 let currentCursorPosition = 0;
 let skeletonColor = "#ccc";
 let waveformColor = "red";
