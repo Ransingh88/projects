@@ -14,13 +14,52 @@ let mute_Img = document.getElementById("mute_Img")
 let tooltip = document.getElementById("tooltips")
 let totalDuration = document.getElementById("totalDuration")
 let currentTimeline = document.getElementById("currentTimeline")
+let audioSrc = document.getElementById("audioSrc")
 
 let posX = 0;
 let posY = canvas.offsetHeight - 30 || 50;
 let currentCursorPosition = 0;
 let skeletonColor = "#ccc";
 let waveformColor = "red";
+let songsNum = 0
+let songs = ['aaa.mp3','bbb.mp3','ccc.mp3','Aila Re Aillaa Sooryavanshi 320 Kbps.mp3','Tip Tip Barsa Pani - Sooryavanshi_320(PagalWorld.com.se).mp3']
 
+
+function shuffelSong() {
+    songsNum++
+    if(songsNum >= songs.length){songsNum = 0}
+    audioSrc.src = `./media/${songs[songsNum]}`
+    music.load()
+
+
+    // if (startBtn.value === "stop") {
+    // startBtn.value = "start";
+    // startBtn.innerHTML = `pause`;
+    start_stop_Img.src = "https://img.icons8.com/fluency/48/000000/pause.png"
+    
+
+    music.play();
+      music.ontimeupdate = function () {
+          if (music.currentTime == music.duration) {
+              console.log("Finished")
+              startBtn.value = "stop";
+    start_stop_Img.src = "https://img.icons8.com/fluency/45/000000/play.png"
+          }
+        console.log("music duratuin-",music.duration,"current time - ",music.currentTime);
+        currentTimeline.innerText = fmtMSS(music.currentTime)
+          totalDuration.innerText = fmtMSS(music.duration)
+      if (music.currentTime === 0) {
+        drawSkeleton();
+        currentCursorPosition = 0;
+      } else {
+        drawWaveform();
+        currentCursorPosition = Math.floor(
+          (music.currentTime / music.duration) * 100
+        );
+      }
+      };
+//   }
+}
 
 
     
@@ -138,6 +177,16 @@ function genarateNewWaveform() {
   localStorage.setItem("waves", JSON.stringify(wave));
   location.reload();
 }
+function genarateNewWaveformOnce() {
+  // alert('Music will be stopped! Do you want to continue?')
+  let wave = [];
+  let pos = 0;
+  for (let i = 0; i < 500; i++) {
+    wave.push({ pos, height: getRandomIntiger(5, 60) });
+    pos += 3;
+  }
+  localStorage.setItem("waves", JSON.stringify(wave));
+}
 
 // --------------------Extracting value from localStorage--------------------
 let wave = JSON.parse(localStorage.getItem("waves"));
@@ -184,7 +233,7 @@ function skipWaveform() {
 }
 
 window.onload = function () {
-  // genarateNewWaveform()
+  genarateNewWaveformOnce()
   wave = JSON.parse(localStorage.getItem("waves"));
   drawSkeleton();
 };
