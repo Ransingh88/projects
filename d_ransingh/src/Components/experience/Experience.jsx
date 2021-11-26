@@ -11,13 +11,13 @@ const Experience = () => {
                     <p>HOURS OF CODING</p>
                 </div>
                 <div>
-                    <h1>600+</h1>
+                    <h1>700+</h1>
                     <p>GIT COMMITS</p>
                 </div>
             </div>
             <div className="experience__right">
                 <div>
-                    <h1>20+</h1>
+                    <h1>30+</h1>
                     <p>PROJECTS</p>
                 </div>
                 <div>
@@ -28,7 +28,7 @@ const Experience = () => {
             </div>
             </div>
             <div className="experience__githubImg">
-                <img src="./images/github.png" alt="github" />
+                <img src="./images/github1.png" alt="github" />
             </div>
         </>
     )

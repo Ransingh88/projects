@@ -47,6 +47,14 @@
             "tech":["react-2","logo-javascript","html-1","css-3","nodejs-icon","express-109","mongodb-icon-1","socket-io"],
             "demo":"https://edutor-dr.herokuapp.com/",
             "code":"https://github.com/Ransingh88/edutor"
+        },
+        {
+            "image":"audioPlayer",
+            "title":"Audio Player",
+            "desc":"A Audioplayer by using canvas",
+            "tech":["logo-javascript","html-1","css-3"],
+            "demo":"https://dr-audioplayer.netlify.app/",
+            "code":"https://github.com/Ransingh88/projects/tree/main/audio_player"
         }
     
     ]
