@@ -31,10 +31,6 @@ function shuffelSong() {
     audioSrc.src = `./media/${songs[songsNum]}`
     music.load()
 
-
-    // if (startBtn.value === "stop") {
-    // startBtn.value = "start";
-    // startBtn.innerHTML = `pause`;
     start_stop_Img.src = "https://img.icons8.com/fluency/48/000000/pause.png"
     
 
