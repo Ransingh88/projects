@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #303030;
+}
+
+/* Navbar */
+.navbar_container{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+.navbar_menu{
+  display: flex;
+  align-items: center;
+}
+.navbar_menu-items{
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+.navbar_menu-items p{
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.4rem;
+  text-transform: capitalize;
+}
+.navbar_menu-items p:hover{
+  cursor: pointer;
+  color: #101010;
+  
+}
+.logo{
+  text-transform: uppercase;
+}
+.nabar_profile{
+  display: flex;
+  align-items: center;
+}
+.nabar_profile p{
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.4rem;
+  text-transform: capitalize;
+}
+.nabar_profile p:hover{
+  cursor: pointer;
+  color: #101010;
+}
+
+/* body container */
+.body_container{
+  padding: 2rem;
+}
+
+.pizzaMenu{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* Pizza Card */
+.card{
+  margin: 1rem;
+  padding: 1rem;
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+.pizzaImages{
+  width: 200px;
+}
+.pizzaDesc{
+  font-size: 10px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.card::-webkit-scrollbar{
+  display: none;
+}
+.pizza_customize{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0.4rem 0;
+}
+.varient_button{
+  margin: 0.2rem;
+  padding: 0.1rem 0.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #303030;
+  border-radius: 0.2rem;
+  outline: none;
+}
+.varient_button:hover{
+  background-color: royalblue;
+  color: white;
+  border: 1px solid royalblue;
+  cursor: pointer;
+}
+
+.pizza_counetr{
+  display: flex;
+  margin: 0.2rem 0;
+  align-items: center;
+}
+.pizza_counetr button{
+  height: 20px;
+  width: 20px;
+  margin: 0 0.2rem;
+  padding: 0.1rem 0.2rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #303030;
+  border-radius: 0.2rem;
+  outline: none;
+}

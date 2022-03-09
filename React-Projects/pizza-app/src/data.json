@@ -1,0 +1,100 @@
+[{
+    "name":"MARGHERITA",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":200,
+            "md":350,
+            "lg":500
+        }
+    ],
+    "catagory":"veg",
+    "image":"https://www.dominos.co.in/files/items/Margherit.jpg",
+    "desc":"A hugely popular margherita, with a deliciously tangy single cheese topping"
+},
+{
+    "name":"FARM HOUSE",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":225,
+            "md":330,
+            "lg":480
+        }
+    ],
+    "catagory":"veg",
+    "image":"https://www.dominos.co.in/files/items/Farmhouse.jpg",
+    "desc":"A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes"
+},
+{
+    "name":"PEPPY PANEER",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":250,
+            "md":380,
+            "lg":560
+        }
+    ],
+    "catagory":"veg",
+    "image":"https://www.dominos.co.in/files/items/Peppy_Paneer.jpg",
+    "desc":"Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!"
+},
+{
+    "name":"PEPPER BARBECUE CHICKEN",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":280,
+            "md":390,
+            "lg":670
+        }
+    ],
+    "catagory":"nonveg",
+    "image":"https://www.dominos.co.in/files/items/Pepper_Barbeque.jpg",
+    "desc":"Pepper Barbecue Chicken I Cheese"
+},
+{
+    "name":"CHICKEN GOLDEN DELIGHT",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":334,
+            "md":445,
+            "lg":799
+        }
+    ],
+    "catagory":"nonveg",
+    "image":"https://www.dominos.co.in/files/items/Chicken_Golden_Delight.jpg",
+    "desc":"Mmm! Barbeque chicken with a topping of golden corn loaded with extra cheese. Worth its weight in gold!"
+},
+{
+    "name":"CHICKEN DOMINATOR",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":299,
+            "md":349,
+            "lg":599
+        }
+    ],
+    "catagory":"nonveg",
+    "image":"https://www.dominos.co.in/files/items/Dominator.jpg",
+    "desc":"Treat your taste buds with Double Pepper Barbecue Chicken, Peri-Peri Chicken, Chicken Tikka & Grilled Chicken Rashers"
+}
+,
+{
+    "name":"VEG LOADED",
+    "varient":["sm","md","lg"],
+    "prices":[
+        {
+            "sm":249,
+            "md":349,
+            "lg":549
+        }
+    ],
+    "catagory":"veg",
+    "image":"https://www.dominos.co.in/files/items/PrimeLoadedL.jpg",
+    "desc":"Tomato | Grilled Mushroom |Jalapeno |Golden Corn | Beans in a fresh pan crust"
+}
+]
