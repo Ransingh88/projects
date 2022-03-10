@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_left">
+        <a href="index.html"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvwYAfmW3-gEbCKppFWFsF10REo2Bm1p3HADdjFVP6J4MNL1B4C4qQLXwFmbtqMouJyss&usqp=CAU" alt="logo"></a>
+        <div class="navmenu">
+           <a href="index.html"> <p>Home</p></a>
+        </div>
+    </div>
+        <div id="user_profile" class="user_profile" ><button><a href="login.html">Login</a></button><button><a href="register.html">Register</a></button></div>
+        <!-- <div class="user_profile"><p class="user_welcome">Welcome <span class="userName" id="display_userName">Unknow</span></p><img src="https://img.icons8.com/bubbles/40/000000/user.png"/><button id="logout" class="user_logout" onclick="user_logout()">Logout</button></div> -->
+    </div>
+    <div class="main_container">
+        <p id="user_desc" class="user_desc">Hello Admin 👋</p>
+        <button onclick="viewUsers()"> view users</button>
+        <div id="ll"></div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

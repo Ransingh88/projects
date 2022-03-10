@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_left">
+            <a href="index.html"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvwYAfmW3-gEbCKppFWFsF10REo2Bm1p3HADdjFVP6J4MNL1B4C4qQLXwFmbtqMouJyss&usqp=CAU" alt="logo"></a>
+            <div class="navmenu">
+               <a href="index.html"> <p>Home</p></a>
+            </div>
+        </div>
+        <div id="user_profile" class="user_profile" ><button><a href="login.html">Login</a></button><button><a href="register.html">Register</a></button></div>
+        <!-- <div class="user_profile"><p class="user_welcome">Welcome <span class="userName" id="display_userName">Unknow</span></p><img src="https://img.icons8.com/bubbles/40/000000/user.png"/><button id="logout" class="user_logout" onclick="user_logout()">Logout</button></div> -->
+    </div>
+    <div class="main_container centered">
+        <div class="user_registerForm">
+            <p id="login_status" class="login_status"></p>
+            <input type="text"  id="l_username" placeholder="User name" ><br><br>
+            <input type="password"  id="l_password" placeholder="Password" ><br><br>
+            
+            <button id="l_login" class="user_login" onclick="user_login()">Login</button>
+        </div><br><br>
+        
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emp_avatar{
+    height: 60px;
+    width: 60px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+}
+.emp_avatar-name{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.emp_name{
+    text-transform: capitalize;
+}

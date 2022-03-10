@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: https://1.envato.market/EA4JP
+Renew Support: https://1.envato.market/EA4JP
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+<head>
+<meta charset="utf-8" />
+<title>Salesken | Reports | Correlation</title>
+<meta name="description" content="No aside layout examples" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="canonical" href="https://keenthemes.com/metronic" />
+<!--begin::Fonts-->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<!--end::Fonts-->
+
+<!--begin::Global Theme Styles(used by all pages)-->
+<link href="../../new_assets/css/fonts.css" rel="stylesheet" />
+<link href="../../new_assets/css/all.min.css" rel="stylesheet" />
+<link href="../../new_assets/css/plugin.bundle.css" rel="stylesheet" />
+<link href="../../new_assets/css/style.bundle.css" rel="stylesheet" />
+<!--end::Global Theme Styles-->
+<!--begin::Layout Themes(used by all pages)-->
+<link href="../../new_assets/css/header.css" rel="stylesheet" />
+
+<style>
+.select2-selection {
+	min-height: 35px !important;
+	height: 35px !important;
+	border-radius: 0 !important;
+}
+</style>
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+
+<body>
+<body id="kt_body"
+	class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed page-loading aside-minimize">
+
+	<!--begin::Main-->
+
+	<div class="d-flex flex-column flex-root">
+		<!--begin::Page-->
+		<div class="d-flex flex-row flex-column-fluid page">
+			<!--begin::Sidebar-->
+			<jsp:include page="../includes/sidebar.jsp" />
+			<!--end::Sidebar-->
+			<!--begin::Wrapper-->
+			<div class="d-flex flex-column flex-row-fluid wrapper"
+				id="kt_wrapper">
+				<!--begin::Header-->
+				<jsp:include page="../includes/navbar.jsp" />
+				<!--end::Header-->
+				<!--begin::Content-->
+				<div class="content d-flex flex-column flex-column-fluid"
+					id="kt_content">
+
+					
+					<!-- <div class="d-block d-md-flex align-items-center mb-3 p-3" id="won_compare_chart"></div> -->
+					<!--begin::Entry-->
+					<div class="d-flex flex-column-fluid">
+						<div class="container-fluid" id="">
+						<!--begin::Header-->
+						<div class="sken-header row align-items-center m-0">
+								<div class="col-md-6">
+
+									<div class="d-flex  flex-wrap mr-1 flex-grow-1 bd-highlight">
+										<!--begin::Page Heading-->
+										<div class="d-flex flex-wrap mr-5">
+											<!--begin::Page Title-->
+											<div class="sken-title">Corelation</div>
+											<!--end::Page Title-->
+
+											<!--begin::Breadcrumb-->
+											<ul class="sken-breadcrumb">
+												<li class="sken-breadcrumb-item active"><a href="/associate/dashboard">Home</a></li>
+												 <li class="sken-breadcrumb-item "><a><i class="fas fa-chevron-circle-right f-12 brown-grey"></i></a></li>
+												<li class="sken-breadcrumb-item "><a href="#">Reports</a></li>
+												<li class="sken-breadcrumb-item "><a><i class="fas fa-chevron-circle-right f-12 brown-grey"></i></a></li>
+												<li class="sken-breadcrumb-item "><a href="#" >Correlation</a></li>
+											</ul>
+											<!--end::Breadcrumb-->
+										</div>
+										<!--end::Page Heading-->
+									</div>
+									
+								</div>
+								<div class="col-md-6">
+								<!-- daterange -->
+							</div>
+
+							</div>
+							<!--end::Header-->
+						
+							<div class="sken-subheader">
+								<div class="col-md-12">
+										<div
+									class="d-flex bd-highlight d-md-flex justify-content-between">
+									<div class="" id="sort-dropdown">
+										<button class="btn btn-white d-none" id="download-correlation"
+											onclick="downloadCorrelation()">Download</button>
+									</div>
+									<div
+										class="d-flex input-group-sm input-group-solid form-group flex-grow-1 mr-2 m-0">
+										<select
+											class="multiple-select2 form-control uat-reports-activity_log-filters-select"
+											id="filters" multiple="multiple">
+
+										</select>
+									</div>
+
+									<div class="bd-highlight" ">
+										<!--begin::Daterange-->
+										<a href="#"
+											class="btn btn-light-primary font-weight-bold uat-reports-correlation-date-picker"
+											id="kt_correlation_daterangepicker" data-toggle="tooltip"
+											title="Select daterange" data-placement=top> <span
+											class="opacity-60 font-weight-bold mr-2"
+											id="kt_correlation_daterangepicker_title"></span> <span
+											class="font-weight-bold"
+											id="kt_correlation_daterangepicker_date"></span>
+										</a>
+										<!--end::Daterange-->
+									</div>
+
+								</div>
+
+								</div>
+								<div class="col-md-12 my-2">
+								<div class=" align-items-center">
+								
+								<div
+									class="d-flex bd-highlight d-md-flex justify-content-between"
+									id="observe-correlate">
+									<div class="form-group col-md-6 pl-0 m-0">
+										<select
+											class="multiple-select2 form-control uat-reports-correlation-multiple-Select-2"
+											id="observe" multiple="multiple"></select>
+									</div>
+									<div class="form-group col-md-6 pl-0 m-0">
+										<select class="multiple-select2 form-control" id="correlate"
+											multiple="multiple"></select>
+									</div>
+								</div>
+							</div>
+								
+								</div>
+
+							
+							
+							
+							<!--end::Subheader-->
+							
+							<!-- <div class="card card-custom gutter-b mr-5" id="filterData">
+									<div class="card-body">
+										<div class="text-center h-75 mt-5" id="no-result-found">
+											<h3 class="mt-5">There are no signals to correlate. Update the filters.</h3>
+										</div>
+									</div>
+								</div> -->
+							<!--begin::Entry-->
+								<div class="sken-page-container">
+							<div class="card card-custom gutter-b" id="heatmap">
+								<div class="card-body d-flex flex-column p-0" id="container">
+									<div class="card-rounded-bottom mt-5 ml-4" data-color="info"
+										style="height: 500px" id="chart"></div>
+									<!--end::Entry-->
+								</div>
+								<!-- </div> -->
+							</div>
+							<!--end::Container-->
+
+							<div class="card card-custom gutter-b" id="container1">
+								<div class="card-body p-0">
+									<!--begin::Example-->
+									<div class="example mb-10">
+										<div class="example-preview border-0">
+											<table
+												class="table table-separate table-head-custom table-checkable"
+												id="data-table-signalAnalysis">
+												<thead>
+													<tr>
+														<th>Signals To Observe</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row" id="noData">
+								<div class="card col-md-12 gutter-b bg-transparent">
+									<%@ include file="../../no_results_card.jsp"%>
+								</div>
+
+							</div>
+						</div>
+					</div>	
+                    </div>
+					</div>
+
+					<!--end::Entry-->
+				</div>
+				<!--end::Content-->
+
+			</div>
+			<!--end::Wrapper-->
+		</div>
+		<!--end::Page-->
+	</div>
+	<!--end::Main-->
+
+	<script>
+		var KTAppSettings = {
+			"breakpoints" : {
+				"sm" : 576,
+				"md" : 768,
+				"lg" : 992,
+				"xl" : 1200,
+				"xxl" : 1200
+			},
+			"colors" : {
+				"theme" : {
+					"base" : {
+						"white" : "#ffffff",
+						"primary" : "#8950FC",
+						"secondary" : "#E5EAEE",
+						"success" : "#1BC5BD",
+						"info" : "#6993FF",
+						"warning" : "#FFA800",
+						"danger" : "#F64E60",
+						"light" : "#F3F6F9",
+						"dark" : "#212121"
+					},
+					"light" : {
+						"white" : "#ffffff",
+						"primary" : "#EEE5FF",
+						"secondary" : "#ECF0F3",
+						"success" : "#C9F7F5",
+						"info" : "#E1E9FF",
+						"warning" : "#FFF4DE",
+						"danger" : "#FFE2E5",
+						"light" : "#F3F6F9",
+						"dark" : "#D6D6E0"
+					},
+					"inverse" : {
+						"white" : "#ffffff",
+						"primary" : "#ffffff",
+						"secondary" : "#212121",
+						"success" : "#ffffff",
+						"info" : "#ffffff",
+						"warning" : "#ffffff",
+						"danger" : "#ffffff",
+						"light" : "#464E5F",
+						"dark" : "#ffffff"
+					}
+				},
+				"gray" : {
+					"gray-100" : "#F3F6F9",
+					"gray-200" : "#ECF0F3",
+					"gray-300" : "#E5EAEE",
+					"gray-400" : "#D6D6E0",
+					"gray-500" : "#B5B5C3",
+					"gray-600" : "#80808F",
+					"gray-700" : "#464E5F",
+					"gray-800" : "#1B283F",
+					"gray-900" : "#212121"
+				}
+			},
+			"font-family" : "Poppins"
+		};
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../../../new_assets/js/all.min.js"></script>
+	<script src="../../../new_assets/js/plugins.bundle.js"></script>
+	<script src="../../../new_assets/js/scripts.bundle.js"></script>
+	<script
+		src="../../../new_assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="../../../new_assets/js/manager/navbar_location.js"></script>
+	<script src="../../../new_assets/js/manager/reports/correlation.js"></script>
+	<script src="../../assets/plugins/html2canvas/js/html2canvas.js"></script>
+
+</body>
+<!--end::Body-->
+
+</html>

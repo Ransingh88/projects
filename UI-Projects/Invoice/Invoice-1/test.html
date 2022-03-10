@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div class="navi-item">
+        <div class="d-flex justify-content-between px-2 py-1">
+        <div id="completedTask-callIcon-${data.id}" class="completedTask-callIcon">
+        ${data?.direction == "Outbound" ? `<i class="fa-light fa-phone-arrow-up-right icon-lg text-dark-75 icon-hover-white"></i>` : `<i class="fa-light fa-phone-arrow-down-left icon-lg text-dark-75 icon-hover-white"></i>`}
+        </div>
+        <div class="d-flex flex-column  align-items-center">
+        <span id="completedTask-name-${data.id}" class="navi-text font-size-lg d-block completedTask-name greyish-brown font-weight-bolder">${data?.name}</span>
+        <span id="completedTask-callStartAt-${data.id}" class="navi-text font-size-sm brown-grey completedTask-callStartAt">${data?.created_at}</span>
+        </div>
+        <span class="navi-label">
+            <p id="completedTask-callDuration-${data.id}" class="sken-label" style="font-size:12px">${data?.call_duration ? data.call_duration : "00:00:00"}</p>
+            ${data.status === "INPROGRESS" ? `<span class="spinner-border spinner-border-sm ml-4" role="status"></span>` : `<span class="btn pr-0" data-toggle="tooltip" title="View details"><a id="completedTask-details-${data.id}" class="completedTask-duration" href="/associate/task?taskId=${data.id}"><i class="fa-duotone fa-angles-right text-muted text-hover-danger icon-hover-white"></i></a></span>`}
+        </span>
+    </div>
+</div>
+<div class="separator separator-dashed separator-border-2 my-1"></div>
+</body>
+</html>
