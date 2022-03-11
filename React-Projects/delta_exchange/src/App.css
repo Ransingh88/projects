@@ -1,0 +1,267 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #303030;
+  transition: 0.2s ease;
+}
+.link_line_none{
+  text-decoration: none;
+}
+
+/* begin::App */
+/* .App{
+ 
+} */
+.app_container{
+  width: 100%;
+  padding: 1rem;
+}
+/* End::App */
+
+/* begin::Navbar */
+.navbar{
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+}
+.navbar__container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.navbar__auth{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* End::Navbar */
+
+/* Begin::Team */
+.team{
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.team__head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0.2rem;
+  border-bottom: 1px solid #303030;
+}
+.team__head__heading{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.team__addmember{
+  background-color: royalblue;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+  color: white;
+  fill: aliceblue;
+}
+.team__addmember:hover{
+  cursor: pointer;
+}
+.team__content{
+  margin: 0.5rem;
+}
+.team__tableData{
+  padding: 1rem;
+}
+.team_table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.team_table td, .team_table th{
+  padding: 8px;
+}
+.team_table th{
+  text-align: left;
+}
+.team_table tr:nth-child(even){
+  background-color: whitesmoke;
+}
+.deleteItem:hover{
+  cursor: pointer;
+}
+.nodatafound{
+  padding: 1rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.nodatafound p{
+  font-size: 2rem;
+}
+.team__filter{
+  display: flex;
+  gap: 1rem;
+}
+.team__multiCheckbox{
+  width: 160px;
+  position: absolute;
+  background-color: white;
+  padding: 0.6rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+.team__allSelect_Checkbox{
+  border-bottom: 1px solid #aaa;
+  padding: 0.4rem 0;
+}
+.filter__btn{
+  width: 160px;
+  height: 30px;
+  align-items: center;
+  border: 1px solid #aaa;
+  outline: none;
+  background-color: white;
+  color: #303030;
+  border-radius: 0.2rem;
+}
+.statusBtn,.dummyBtn{
+  padding: 0.2rem 0.8rem;
+  border: 1px solid #aaa;
+  outline: none;
+  background-color: white;
+  color: #303030;
+  border-radius: 0.2rem;
+}
+.dummyBtn:hover{
+  cursor: pointer;
+  background-color: #505050;
+  color: whitesmoke;
+}
+.filter__btn:hover,.statusBtn:hover{
+  cursor: pointer;
+}
+/* End::Team */
+
+/* Begin:Modal */
+  .team__addmember__modal{
+    width: 40%;
+    min-height: 500px;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+  }
+  .team__addmember__form{
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .form__fields{
+    margin: 0.5rem 0;
+  }
+  .form__fields input{
+    width: 100%;
+    height: 30px;
+    margin: 0.4rem 0;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0 0.5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 0.2rem;
+  }
+  .form__fields input:focus {
+    border: 1px solid #303030;
+  }
+  .modal__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 16px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal__close:hover{
+    cursor: pointer;
+  }
+  .addmember__footer{
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .addmember__footer button{
+    padding: 0.4rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+  }
+  .addmember__footer button:nth-child(1){
+
+    background-color: white;
+    border: 1px solid royalblue;
+    color: royalblue;
+  }
+  .addmember__footer button:nth-child(2){
+
+    background-color: royalblue;
+    color: white;
+  }
+  .addmember__footer button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+/* End:Modal */
+
+/* begin::Login */
+.login_container,.signin__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+}
+.login, .signin{
+  width: 20%;
+}
+.login__heading,.signin__heading{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.auth__btn{
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  background-color: #303030;
+  color: whitesmoke;
+  margin: 1rem 0;
+}
+.auth__btn:hover{
+  cursor: pointer;
+  filter: brightness(120%);
+}
+/* end::Login */
