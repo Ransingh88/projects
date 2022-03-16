@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 1rem;
+}
+
+.app__header {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_content {
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  min-height: 100vh;
+}
+.hr_line {
+  height: 1px;
+  min-width: 80vw;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.timeSlot_box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 100%;
+  margin: 0.4rem 0;
+}
+.timeSlot_box:hover {
+  cursor: pointer;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+.time_element {
+  padding: 0.5rem;
+  margin: 0.2rem 0.6rem;
+  display: flex;
+  align-items: center;
+}
+.planner_events {
+  display: flex;
+  margin: 0.2rem 0.6rem;
+}
+.planner {
+  height: 70px;
+  width: 180px;
+  border-radius: 0.5rem;
+  background-color: rgb(105, 164, 252);
+  color: white;
+  padding: 0.4rem 0.6rem;
+  margin: 2px;
+  /* font-size: 12px; */
+}
+.planner_head {
+  font-size: 18px;
+  font-weight: 600;
+}
+.planner_time {
+}
+.app_form {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.5s ease;
+}
+.app_form h2 {
+  color: #303030;
+  text-align: center;
+  margin: 1rem 0;
+}
+.app_form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0.6rem 0;
+}
+.app_form div input,
+.app_form div textarea {
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+}
+.app_formBtn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.app_form button {
+  padding: 0.4rem 0.6rem;
+  margin: 0.2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+}
+.app_form button:hover {
+  cursor: pointer;
+}
+.app_form button:nth-child(1) {
+  background-color: rgb(255, 52, 52);
+  color: white;
+}
+.app_form button:nth-child(2) {
+  background-color: yellowgreen;
+  color: white;
+}
+.showEventData {
+  min-height: 250px;
+  padding: 1rem;
+}

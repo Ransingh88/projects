@@ -8,9 +8,19 @@
   --spt-green:#1db954;
   --spt-dark:#191414;
   --spt-white:#ffffff;
+  --spt-blue:#4267B2;
+  --spt-gray:#ddd;
 }
 .center{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hr_line{
+  height: 1px;
+  width: 100%;
+  background-color:var(--spt-gray);
+}
+.border-rounded{
+  border-radius: 4px;
 }
