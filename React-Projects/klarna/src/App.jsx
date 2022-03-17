@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
+import Deals from './pages/Deals';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <div className="app__container">
-        <p className='app__head'>All deals and coupons.</p>
+        <Deals/>
       </div>
       
     </div>

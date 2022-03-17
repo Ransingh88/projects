@@ -19,12 +19,3 @@
   margin: 80px 40px;
   padding: 10px 30px;
 }
-
-.app__head{
-  height: 1800px;
-  background-color: antiquewhite;
-  /* padding-top: 200px; */
-  /* margin: 80px; */
-  font-size: 100px;
-  font-weight: 700;
-}
