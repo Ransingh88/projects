@@ -1,0 +1,114 @@
+/* -----begin::heading----- */
+
+.deals__head{
+    font-size: 64px;
+    margin: 50px 0px 25px 0px;
+}
+.deals__ad{
+    background-color: var(--k-lightblue);
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.deals__ad > p > span{
+    font-weight: 600;text-decoration: underline;
+}
+.deals__ad > p > span:hover{
+    cursor: pointer;
+    color: steelblue;
+}
+.deals__closeIcon{
+    position: absolute;
+    right: 30px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.deals__closeIcon:hover{
+    cursor: pointer;
+}
+
+
+/* -----end::heading----- */
+
+
+
+/* ==========begin::content========== */
+
+.deals__content{
+    display: flex;
+    margin-top: 50px;
+    }
+
+/* -----begin::filterSection----- */
+
+.content__filterSection{
+flex: 1;
+/* background-color: antiquewhite; */
+height: 400px;
+
+}
+
+.filter__Headings{
+    font-size: 20px;
+    font-weight: 600;
+}
+.filterSection__catagory{
+    min-height: 400px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0.8rem;
+}
+.filter__menus{
+    padding: 1.5rem 0;
+}
+.filter__menus.active{
+    text-decoration: underline;
+}
+
+/* -----end::filterSection----- */
+
+
+
+/* -----begin::productSection----- */
+
+.content__productSection{
+flex: 3;
+/* background-color: bisque; */
+height: 600px;
+}
+.productSection__search input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    /* border: none; */
+}
+.productSection__search input:focus{
+    transition: 0.3s ease;
+    border-bottom: 1px solid #505050;
+}
+.productSection__sort{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+.productSection__products{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+/* -----end::productSection----- */
+
+/* ==========end::content========== */
