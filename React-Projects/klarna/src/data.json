@@ -1,0 +1,212 @@
+[
+    {
+        "id":1003,
+        "title":"Kidsbooks.com",
+        "desc":"Create dazzling, shimmering perfection",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453209/klarna/image--Zj1PrQ_j7ykkc.jpg",
+        "catagory":"Babies & Kids",
+        "discount":35,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1004,
+        "title":"Tommy Hilfiger",
+        "desc":"Even more fresh styles",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453212/klarna/image--dvRVWX_tcu57w.jpg",
+        "catagory":"Clothing & Apparel",
+        "discount":35,
+        "type":["BOGO and more","Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Cole Haan",
+        "desc":"Treat your feet",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453212/klarna/image--dYDRUa_sxfdbn.png",
+        "catagory":"Clothing & Apparel",
+        "discount":35,
+        "type":["BOGO and more"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453208/klarna/image--xPiwHr_d8ahkm.jpg",
+        "catagory":"Clothing & Apparel",
+        "discount":79,
+        "type":["Only Coupons","BOGO and more"]
+
+    },
+    {
+        "id":1003,
+        "title":"Kidsbooks.com",
+        "desc":"Create dazzling, shimmering perfection",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--Bqv8aa_ia6w1c.png",
+        "catagory":"Babies & Kids",
+        "discount":44,
+        "type":["Only Coupons","Exclusives","BOGO and more"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453209/klarna/image--bDY7JO_tpa6kx.jpg",
+        "catagory":"Clothing & Apparel",
+        "discount":30,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1002,
+        "title":"Samuel Johnston",
+        "desc":"The best baby products",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453203/klarna/image--RWnl5L_ewm1tw.jpg",
+        "catagory":"Babies & Kids",
+        "discount":60,
+        "type":["BOGO and more","Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--bz0xuM_odmcq0.jpg",
+        "catagory":"Clothing & Apparel",
+        "discount":35,
+        "type":["Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--bSIVkQ_qa8mun.png",
+        "catagory":"Clothing & Apparel",
+        "discount":50,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1001,
+        "title":"Kids Foot Locker",
+        "desc":"Save on kids clothes",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453209/klarna/image--YdHPMe_hxonmb.jpg",
+        "catagory":"Babies & Kids",
+        "discount":40,
+        "type":["Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--Bqv8aa_ia6w1c.png",
+        "catagory":"Clothing & Apparel",
+        "discount":55,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--c475Jr_rombjy.png",
+        "catagory":"Clothing & Apparel",
+        "discount":35,
+        "type":["Only Coupons"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--c88cdW_jwy0fm.png",
+        "catagory":"Clothing & Apparel",
+        "discount":55,
+        "type":["Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453210/klarna/image--cmUTfb_taelrs.png",
+        "catagory":"Clothing & Apparel",
+        "discount":40,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453211/klarna/image--CNv2OE_e2blvy.png",
+        "catagory":"Clothing & Apparel",
+        "discount":65,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1005,
+        "title":"Missguided",
+        "desc":"Fresh looks",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453211/klarna/image--DLoIZ0_qxcdqm.png",
+        "catagory":"Clothing & Apparel",
+        "discount":20,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1006,
+        "title":"Lenevo",
+        "desc":"Fresh looks Laptop Lenevo",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453209/klarna/image--bDY7JO_tpa6kx.jpg",
+        "catagory":"Computers & Accessories",
+        "discount":80,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1007,
+        "title":"Dell",
+        "desc":"Fresh looks Slim Laptop Dell",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453206/klarna/image--A8j8AU_kxnfat.jpg",
+        "catagory":"Computers & Accessories",
+        "discount":50,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1008,
+        "title":"Beautiful Place",
+        "desc":"Fresh looks Amazing Visiting Place",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453204/klarna/image--tWkQBj_uwrzka.png",
+        "catagory":"Holidays & Occasions",
+        "discount":10,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1009,
+        "title":"Bluemercury",
+        "desc":"Get ready to glow",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453203/klarna/image--9em5d7_r9mn7r.png",
+        "catagory":"Computers & Accessories",
+        "discount":10,
+        "type":["Only Coupons","Exclusives"]
+
+    },
+    {
+        "id":1011,
+        "title":"Levi's",
+        "desc":"Premium denim",
+        "image":"https://res.cloudinary.com/dransinghdev/image/upload/v1647453196/klarna/image--Mbl6Sg_f8ageg.png",
+        "catagory":"Clothing & Apparel",
+        "discount":30,
+        "type":["Only Coupons","Exclusives"]
+
+    }
+]
