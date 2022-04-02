@@ -1,12 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Admin from './pages/Admin'
 
 function App() {
-  function printHello(){
-    
-  }
   return (
     <div className="App">
+      <Admin/>
     </div>
   );
 }
