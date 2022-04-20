@@ -1,0 +1,139 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFDEA9;
+  padding: 2rem;
+}
+
+.container{
+  display: flex;
+  width: 70%;
+  /* padding: 0.4rem; */
+  height: 300px;
+  /* background-color: transparent; */
+  /* box-shadow: 0 15px 15px rgba(0,0,0,0.1) ; */
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.qrcode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.3;
+  background-color: black;
+  border-radius: 1rem;
+  position: relative;
+}
+.qrcode img{
+  height: 250px;
+  object-fit: cover;
+}
+.strip{
+  height: 240px;
+  width: 1px;
+  background-color: transparent;
+  border-right: 6px dashed #FFDEA9;
+  position: absolute;
+  right: -2px;
+}
+.cuttop,.cutbot{
+  background-color: #FFDEA9;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  position: absolute;
+  right: -16px;
+}
+.cuttop{
+  top: -15px;
+}
+.cutbot{
+  bottom: -15px;
+}
+.info{
+  flex: 0.7;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.info__station{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info__station .station__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info__station .station__name h1{
+  font-size: 64px;
+  color: #303030;
+}
+.info__station .station__name p{
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 500;
+}
+.info__passenger{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.info__passenger div p:nth-child(1){
+  color: #bbb;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.info__passenger div p:nth-child(2){
+  color: #303030;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.airplaneDot{
+  height: 4px;
+  width: 30px;
+}
+.info__icons{
+  /* width: 200px; */
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.airplaneDot{
+  width: 40%;
+  border-top: 6px dotted #FFDEA9;
+}
+.download-section{
+  margin-top: 2rem;
+}
+
+.download{
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  background-color: #303030;
+  color: whitesmoke;
+  margin: 1rem;
+}
+.download:hover{
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

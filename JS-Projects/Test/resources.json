@@ -1,0 +1,37 @@
+{
+  "resources": [
+    { "catagory": "code editor", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "code editor", "name": "codepen", "link": "https://codepen.io/", "description":"The best place to build, test, and discover front-end code. CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration.","image":""},
+    { "catagory": "code editor", "name": "stackblitz", "link": "https://stackblitz.com/", "description":"","image":""},
+    { "catagory": "code editor", "name": "codesandbox", "link": "https://codesandbox.io/", "description":"Where teams build faster, together.Create, share, and get feedback with collaborative sandboxes for rapid web development.","image":""},
+    { "catagory": "code editor", "name": "replit", "link": "https://replit.com/", "description":"","image":""},
+    { "catagory": "code editor", "name": "jsfiddle", "link": "https://jsfiddle.net/", "description":"","image":""},
+    { "catagory": "font", "name": "google fonts", "link": "https://fonts.google.com/", "description":"","image":""},
+    { "catagory": "font", "name": "fontsarena", "link": "https://fontsarena.com/", "description":"","image":""},
+    { "catagory": "stock images", "name": "pixabay", "link": "https://pixabay.com/", "description":"","image":""},
+    { "catagory": "stock images", "name": "pexels", "link": "https://www.pexels.com/", "description":"","image":""},
+    { "catagory": "stock images", "name": "unsplash", "link": "https://unsplash.com/", "description":"","image":""},
+    { "catagory": "stock images", "name": "gratisography", "link": "https://gratisography.com/", "description":"","image":""},
+    { "catagory": "stock images", "name": "depositphotos", "link": "https://depositphotos.com/", "description":"","image":""},
+    { "catagory": "stock footages", "name": "coverr", "link": "https://coverr.co/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "openweathermap", "link": "https://openweathermap.org/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "mockaroo", "link": "https://www.mockaroo.com/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "omdbapi", "link": "https://omdbapi.com/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "reqres", "link": "https://reqres.in/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "jsonplaceholder", "link": "https://jsonplaceholder.typicode.com/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "fakestoreapi", "link": "https://fakestoreapi.com/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "apilist", "link": "https://apilist.fun/", "description":"","image":""},
+    { "catagory": "mockAPI", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "illustration", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "inspiration", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "icon", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "color", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "miscellaneous", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "", "name": "", "link": "", "description":"","image":""},
+    { "catagory": "", "name": "", "link": "", "description":"","image":""}
+
+  ]
+}
