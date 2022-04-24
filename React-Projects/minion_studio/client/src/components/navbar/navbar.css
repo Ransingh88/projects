@@ -1,0 +1,64 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #505050;
+}
+.navbar{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.logo{
+    width: 120px;
+}
+.nabar__left{
+    display: flex;
+    flex: 0.6;
+    align-items: center;
+}
+.navbar__menu{
+    display: flex;
+    margin-left: 4rem;
+}
+.navbar__menu-item{
+    padding: 0.2rem 0.6rem;
+    margin: 0 0.6rem;
+}
+.navbar__menu-item:hover{
+    color: #202020;
+    cursor: pointer;
+}
+
+.navbar__right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0.4;
+    padding: 0.2rem 0;
+}
+.user{
+    margin: 0 0.6rem;
+    padding: 0 0.4rem;
+}
+.user_name{
+    font-weight: 500;
+}
+.button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.4rem 1rem;
+}
+.button-login{
+    background: #303030;
+    color: whitesmoke;
+
+}
+.button-login:hover{
+    transition: all 0.3s;
+    color: #303030;
+    background-color: whitesmoke;
+}

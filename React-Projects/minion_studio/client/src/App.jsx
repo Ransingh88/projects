@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="app">
       <Navbar/>
+      
     <Routes>
       <Route index element={<Home/>}/>
       {/* <Route path="/" element={<Home/>}/> */}
