@@ -1,6 +1,7 @@
 const express = require('express')
 const connect = require('./config/db')
-const userController = require('./controller/user.controller')
+const userController = require('./routes/user.route')
+const resourcesController = require('./routes/resources.route')
 
 
 require('dotenv').config()
@@ -10,7 +11,8 @@ const app = express()
 
 const PORT = process.env.PORT || 5000
 app.use(express.json())
-app.use('/',userController)
+app.use('/user',userController)
+app.use('/resource',resourcesController)
 
 
 const start = async () =>{ 
@@ -19,4 +21,5 @@ const start = async () =>{
         console.log(`Server running on port ${PORT}`);
     })
 }
-module.exports = start()
+
+module.exports = start
