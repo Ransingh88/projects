@@ -8,8 +8,25 @@ const UserSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true
-    }
-})
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    dob:{
+        type:String,
+        required:true
+    },
+    usertype:{
+        type:String,
+        required:true
+    },
+},
+{
+    timestamps:true,
+    versionKey:false
+}
+)
 
 const User = mongoose.model('User',UserSchema)
 
