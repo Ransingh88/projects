@@ -11,8 +11,8 @@ const app = express()
 
 const PORT = process.env.PORT || 5000
 app.use(express.json())
-app.use('/user',userController)
-app.use('/resource',resourcesController)
+app.use('/api/user',userController)
+app.use('/api/resource',resourcesController)
 
 
 const start = async () =>{ 
