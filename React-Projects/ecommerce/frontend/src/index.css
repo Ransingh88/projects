@@ -5,7 +5,25 @@
 }
 
 :root{
-
+  --clr-primary:#7879F1;
+  --clr-secondary:#F178B6;
+  --clr-tertiary:#262B31;
+  --clr-gradient-lr:linear-gradient(to right, #7879F1 , #F178B6);
+  --clr-gradient-rl:linear-gradient(to left, #F178B6 , #7879F1);
+  --clr-white:#ffffff;
+  --clr-gray-10:#f4f4f4;
+  --clr-gray-20:#fafafa;
+  --clr-gray-50:#808080;
+  --clr-gray-90:#262626;
+  --clr-gray-100:#161616;
+  --clr-black:#000000;
+  --clr-dark-80:#202020;
+  --fs-xs:14px;
+  --fs-sm:16px;
+  --fs-md:32px;
+  --fs-lg:64px;
+  --fs-xl:72px;
+  --fs-xxl:94px;
 }
 
 body {
@@ -13,6 +31,20 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.heading{
+  font-size: var(--fs-md);
+  color: var(--clr-dark-80);
+  font-weight: 800;
+  letter-spacing: 0.005rem;
+}
+.heading > span{
+  background: var(--clr-gradient-rl);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu{
+  font-size: var(--fs-xs);
 }
 
 /* css grid system utility class */
