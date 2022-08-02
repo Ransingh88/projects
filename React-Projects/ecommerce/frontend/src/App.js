@@ -2,8 +2,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Welcome
+    <div className="">
+      Welcom to ecoshop
     </div>
   );
 }
