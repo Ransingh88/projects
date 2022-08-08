@@ -1,0 +1,28 @@
+.mainHeaderContainer{
+    height: 70px;
+    background: var(--clr-bg);
+    color: var(--clr-on_bg);
+    display: flex;
+}
+.headerContainer{
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo > img{
+    height: 30px;
+}
+.menus{
+    display: flex;
+    align-items: center;
+}
+.userSettings{
+    display: flex;
+    align-items: center;
+}
+.userSettings svg{
+    color: var(--clr-dark-80);
+    font-size:  20px;
+}
