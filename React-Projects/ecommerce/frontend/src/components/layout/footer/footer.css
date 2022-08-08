@@ -1,0 +1,12 @@
+.mainFooterContainer{
+    height: 300px;
+    background: var(--clr-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerContainer{
+    width: 100%;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+}
