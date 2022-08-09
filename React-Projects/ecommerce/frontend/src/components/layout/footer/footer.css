@@ -1,12 +1,78 @@
 .mainFooterContainer{
-    height: 300px;
-    background: var(--clr-tertiary);
+    /* height: 300px; */
+    background: var(--clr-bg);
+    color: var(--clr-on_bg);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid var(--clr-elevation1);
+    padding-top: var(--p16);
+    padding-bottom: var(--p6);
 }
 .footerContainer{
     width: 100%;
-    /* margin-top: 2rem;
-    margin-bottom: 2rem; */
+}
+.shopInfo{
+    padding-left: var(--p16);
+    font-size: var(--fs-caption);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shopInfo img{
+    height: 30px;
+    margin-bottom: var(--m4);
+}
+.shopInfo p{
+    display: flex;
+    align-items: center;
+}
+.shopInfo p svg{
+    margin-right: var(--m4);
+}
+.siteMap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.siteMap h4{
+    text-transform: uppercase;
+    font-size: var(--fs-body2);
+    margin-bottom: var(--m4);
+    font-weight: var(--w6);
+}
+.siteMap a{
+    font-size: var(--fs-caption);
+    text-transform: capitalize;
+    color: var(--clr-on_elevation1);
+    padding: var(--p1) 0;
+}
+.siteMap a:hover{
+    color: var(--clr-on_hover);
+}
+.copyright{
+    font-size: var(--fs-overline);
+    text-transform: lowercase;
+    text-align: center;
+    margin-top: var(--m10);
+    padding-top: var(--p10);
+    color: var(--clr-on_hover);
+}
+
+@media screen and (max-width:768px) {
+    .shopInfo{
+        align-items: center;
+        padding-left: 0;
+    }
+    .shopInfo p{
+        padding: var(--p1) 0;
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .siteMap, .copyright{
+        border-top: 1px solid var(--clr-surface);
+        padding-top: var(--p4);
+    }
 }

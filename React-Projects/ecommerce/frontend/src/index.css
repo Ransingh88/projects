@@ -202,9 +202,6 @@ h1,h2,h3,h4,h5,h6{
   margin: auto 0;
   /* background: bisque; */
 }
-.row > *{
-  /* background-color: pink; */
-}
 .row{
   display: grid;
   grid-template-columns: repeat(12,1fr);
