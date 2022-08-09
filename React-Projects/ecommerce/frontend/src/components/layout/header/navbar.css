@@ -1,28 +1,72 @@
 .mainHeaderContainer{
-    height: 70px;
+    /* transition: all 1s ease; */
+    height: 60px;
     background: var(--clr-bg);
     color: var(--clr-on_bg);
     display: flex;
 }
 .headerContainer{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo{
     display: flex;
     align-items: center;
+    padding-top: 0.4rem;
 }
-.logo > img{
+.logo  img{
     height: 30px;
 }
 .menus{
     display: flex;
     align-items: center;
 }
+.menus a{
+    color: var(--clr-on_bg);
+    margin: 0 var(--m3);
+    padding: var(--p2) var(--p3);
+    font-size: var(--fs-subtitle2);
+    text-transform: capitalize;
+}
+.menus a:hover{
+    color: var(--clr-on_hover);
+}
 .userSettings{
     display: flex;
     align-items: center;
 }
+.userSetting_searchBox{
+    
+    position: relative;
+    display: flex;
+    margin: var(--m2) var(--m5);
+}
+.userSetting_searchBox input{
+    /* transition: all 1s ease; */
+    border: none;
+    outline: 1px solid var(--clr-elevation1);
+    border-radius: var(--p3);
+    padding: var(--p4)  var(--p4) var(--p4) var(--p13);
+    background: var(--clr-surface);
+    color: var(--clr-on_elevation1);
+    font-weight: var(--w5);
+}
+.userSettings .searchIcon{
+    position: absolute;
+    align-self: center;
+    color: var(--clr-on_hover);
+}
+.userSettings a{
+    margin-top: var(--m3);
+    color: var(--clr-on_bg);
+    opacity: 0.9;
+}
+.userSettings a:hover{
+    color: var(--clr-on_hover);
+}
 .userSettings svg{
-    color: var(--clr-dark-80);
-    font-size:  20px;
+    font-size:  var(--fs-xs);
+    margin: var(--m2) var(--m5);
 }
