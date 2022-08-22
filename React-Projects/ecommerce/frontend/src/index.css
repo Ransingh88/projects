@@ -113,6 +113,7 @@
   --clr-on_elevation1:var(--clr-dark-700);
   --clr-on_elevation2:var(--clr-dark-600);
   --clr-on_hover:var(--clr-dark-100);
+  --clr-shade:0,0,0;
   
   --clr-success:#52c41a;
   --clr-error:#ff4d4f;
@@ -150,6 +151,7 @@
   --clr-on_elevation1:var(--clr-light-300);
   --clr-on_elevation2:var(--clr-light-400);
   --clr-on_hover:var(--clr-light-400);
+  --clr-shade:255, 255, 255;
   
   --clr-success:#52c41a;
   --clr-error:#ff4d4f;
