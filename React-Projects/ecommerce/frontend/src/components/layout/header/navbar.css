@@ -4,12 +4,17 @@
     background: var(--clr-bg);
     color: var(--clr-on_bg);
     display: flex;
+    position: sticky;
+    top: 0;
+    
 }
 .headerContainer{
     width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .logo{
     display: flex;
@@ -53,7 +58,7 @@
     color: var(--clr-on_elevation1);
     font-weight: var(--w5);
 }
-.userSettings .searchIcon{
+.userSettings .searchIcon, .mobileMenu_userSettings .searchIcon{
     position: absolute;
     align-self: center;
     color: var(--clr-on_hover);
@@ -63,10 +68,178 @@
     color: var(--clr-on_bg);
     opacity: 0.9;
 }
-.userSettings a:hover{
+.userSettings div{
+    display: flex;
+    align-items: center;
+}
+.userSettings a:hover, .mobileMenu_userSettings a:hover{
     color: var(--clr-on_hover);
 }
-.userSettings svg{
+.userSettings svg, .mobileMenuIcon{
     font-size:  var(--fs-xs);
     margin: var(--m2) var(--m5);
+}
+.setting{
+    display: flex;
+    align-items: center;
+}
+.userSettings_setting{
+
+}
+.userSettings_setting-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userSettings_setting-menu > div{
+    display: flex;
+    flex-direction: column;
+}
+.userSettings_cart{
+
+}
+.userSettings_cart-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobileMenu{
+    transition: all 0.3s;
+    position: absolute;
+    right: -10px;
+    top: 60px;
+    width: 200px;
+    background-color: var(--clr-bg);
+    border-radius: var(--p4);
+    padding: var(--p10) 0;
+    box-shadow: 0px 2px 20px 10px rgba(var(--clr-shade),0.1);
+}
+.mobileMenuShow{
+    visibility: visible;
+}
+.mobileMenuHide{
+    visibility: hidden;
+    display: none;
+}
+.mobileMenu_menus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobileMenu_menus a{
+    color: var(--clr-on_bg);
+    margin: 0 var(--m3);
+    padding: var(--p3) var(--p3);
+    font-size: var(--fs-subtitle2);
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+}
+.mobileMenu_menus a:hover, .mobileMenu_userSettings a:hover{
+    color: var(--clr-on_hover);
+    background-color: var(--clr-elevation1);
+}
+.mobileMenuIcon{
+    cursor: pointer;
+}
+.mobileMenu_userSettings{
+    padding: var(--p1) var(--p12);
+    border-top: 1px solid var(--clr-surface);
+
+}
+.mobileMenu_userSettings .userSetting_searchBox{
+    align-self: center;
+    width: 100%;
+}
+.mobileMenu_userSettings .userSetting_searchBox input{
+    width: 100%;
+}
+.mobileMenu_userSettings a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--fs-subtitle2);
+    color: var(--clr-on_bg);
+    padding: var(--p2) 0;
+}
+.mobileMenu_userSettings svg{
+    font-size:  var(--fs-xs);
+    margin: var(--m2);
+}
+.mobileMenu_theme{
+    display: flex;
+    justify-content: center;
+    margin: var(--m2) 0;
+
+}
+.mobileMenu_userInfo{
+    padding: 0 var(--p10) var(--p4);
+    margin-bottom: var(--m6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--clr-surface);
+}
+
+
+@media (min-width: 992px) { 
+    .mobileMenuIcon{
+        display: none;
+    }
+    .mobileMenu{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 992px) { 
+    .logo  img{
+        height: 25px;
+    }
+    .mobileMenuIcon{
+        display: flex;
+    }
+    .menus{
+        display: none;
+    }
+    .userSettings_cart-menu{
+        display: none;
+    }
+    .userSettings_setting-menu{
+        display: none;
+    }
+    .mobileMenu_userSettings{
+        display: none;
+    }
+    .mobileMenu_userInfo{
+        /* flex-direction: column;
+        text-align: center; */
+        display: none;
+    }
+    
+}
+
+@media (max-width: 576px) { 
+    .userSettings{
+        display: none;
+    }
+    .logo  img{
+        height: 20px;
+    }
+    .mobileMenu{
+        transition: all 0.3s;
+        width: 100%;
+        right:0;
+        top: 55px;
+    }
+    .mobileMenu_userSettings{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobileMenu_userInfo{
+        display: flex;
+        flex-direction: row;
+        text-align: inherit;
+    }
 }
