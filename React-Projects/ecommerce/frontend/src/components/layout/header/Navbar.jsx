@@ -5,15 +5,13 @@ import { IoSearchOutline, IoCartOutline, IoSettingsOutline, IoMenuOutline, IoClo
 import Theme from '../../../utils/theme/Theme';
 import { Link, NavLink } from "react-router-dom";
 import { useState } from 'react';
-import { useRef } from 'react';
-import { useEffect } from 'react';
 
 const Navbar = () => {
 
   const [showMenu,setShowMenu] = useState(false)
   const [showSetting,setShowSetting] = useState(false)
   const [showCart,setShowCart] = useState(false)
-  const [isAuth,setIsAuth] = useState(false)
+  const [isAuth] = useState(false)
 
 
   const navMenu = [
@@ -42,7 +40,7 @@ const Navbar = () => {
   const handleShowMenu = ()=>{
     const mobileMenu = document.getElementById('mobileMenuWindow')
     
-    if(showMenu == true){
+    if(showMenu === true){
       mobileMenu.classList.remove('animate__fadeInRight','mobileMenuShow')
       mobileMenu.classList.add('animate__fadeOutRight','mobileMenuHide')
       

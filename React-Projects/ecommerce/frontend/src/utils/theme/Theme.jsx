@@ -18,7 +18,7 @@ const Theme = () => {
     
   return (
     <>
-    <div className='theme' onClick={handleTheme}>{theme==="light-theme" ? <img src='./icons/sun.png' title='light-theme'/> : <img src='./icons/moon.png' title='dark-theme'/>}</div>
+    <div className='theme' onClick={handleTheme}>{theme==="light-theme" ? <img src='./icons/sun.png' alt='sun-icon' title='light-theme'/> : <img src='./icons/moon.png' alt='moon-icon' title='dark-theme'/>}</div>
     </>
   )
 }
