@@ -1,0 +1,9 @@
+.theme{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.theme img{
+    width: 1.5rem;
+    margin: 0 var(--m2);
+}
