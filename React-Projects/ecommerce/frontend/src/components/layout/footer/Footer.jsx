@@ -2,14 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {IoCallOutline, IoMailOutline, IoLocationOutline, IoHeartSharp} from 'react-icons/io5'
 import './footer.css'
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
+  const {theme} = useSelector((state)=>state.theme)
   return (
     <footer className='container-fluid mainFooterContainer'>
       <div className='container footerContainer'>
       <div className='row'>
         <div className='col-12 col-md-3 col-sm-6 shopInfo'>
-            <Link to="/">{true ? <img src="/images/logo/ecoshop-black.png" alt="ecoshop-logo" /> : <img src="/images/logo/ecoshop-white.png" alt="ecoshop-logo" />}</Link>
+            <Link to="/">{theme === 'light-theme' ? <img src="/images/logo/ecoshop-black.png" alt="ecoshop-logo" /> : <img src="/images/logo/ecoshop-white.png" alt="ecoshop-logo" />}</Link>
             <p><IoLocationOutline/> street no 267A, Bangalore,MD-74,IND</p>
             <p><IoCallOutline/> +917789542331</p>
             <p><IoMailOutline/> info@ecoshop.com</p>
