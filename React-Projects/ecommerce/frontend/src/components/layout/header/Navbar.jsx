@@ -5,6 +5,7 @@ import { IoSearchOutline, IoCartOutline, IoSettingsOutline, IoMenuOutline, IoClo
 import Theme from '../../../utils/theme/Theme';
 import { Link, NavLink } from "react-router-dom";
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
@@ -12,6 +13,8 @@ const Navbar = () => {
   const [showSetting,setShowSetting] = useState(false)
   const [showCart,setShowCart] = useState(false)
   const [isAuth] = useState(false)
+  const [profileImage] = useState('./icons/user.png')
+  const {theme} = useSelector((state)=>state.theme)
 
 
   const navMenu = [
@@ -66,7 +69,7 @@ const Navbar = () => {
     <header className='container-fluid mainHeaderContainer'>
       <div className="container headerContainer">
           <div className="logo">
-            <Link to="/">{true ? <img src="/images/logo/ecoshop-black.png" alt="ecoshop-logo" /> : <img src="/images/logo/ecoshop-white.png" alt="ecoshop-logo" />}</Link>
+            <Link to="/">{theme === 'light-theme' ? <img src="/images/logo/ecoshop-black.png" alt="ecoshop-logo" /> : <img src="/images/logo/ecoshop-white.png" alt="ecoshop-logo" />}</Link>
           </div>
           <div className="menus">
             {navMenu.map((menu,id)=>(
@@ -81,10 +84,11 @@ const Navbar = () => {
             </div>
             <div className='userSettings_cart' onClick={handleCart}>
             <Link to="/cart"><IoCartOutline/></Link>
+            {/* <div className='cartNotification'>10</div> */}
             {showCart && <div className='mobileMenu userSettings_cart-menu'>cart</div>}
             </div>
             <div className='userSettings_setting' onClick={handleUserSetting}>
-            <Link to="/setting"><IoSettingsOutline/></Link>
+            <Link to="/setting"><div className='userSetting_profile'><img src={profileImage} alt='userProfile'/></div></Link>
             {showSetting && <div className='mobileMenu userSettings_setting-menu'>
               {!isAuth ?
               <div>
