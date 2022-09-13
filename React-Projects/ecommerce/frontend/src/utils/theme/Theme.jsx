@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { darkTheme, lightTheme } from '../../redux/features/theme/themeSlice'
 import './theme.css'
 
 const Theme = () => {
-    const [theme,setTheme] = useState('light-theme')
+  const {theme} = useSelector((state)=>state.theme)
+  const dispatch = useDispatch()
 
     useEffect(()=>{
         document.body.className = theme
@@ -10,9 +13,10 @@ const Theme = () => {
 
     const handleTheme = ()=>{
        if(theme === 'dark-theme'){
-        setTheme('light-theme')
+        dispatch(lightTheme())
+        
        }else{
-        setTheme('dark-theme')
+        dispatch(darkTheme())
        }
     }
     
