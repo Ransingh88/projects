@@ -1,5 +1,5 @@
 import './App.css';
-import Routes from './Routes';
+import Routes from './routes/Routes';
 import Navbar from './components/layout/header/Navbar'
 import Footer from './components/layout/footer/Footer'
 import { ToastContainer } from 'react-toastify';
