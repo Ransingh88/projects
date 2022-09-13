@@ -1,8 +1,20 @@
 import React from 'react'
+import { useEffect } from 'react'
 import ProductCard from '../../../components/productCard/ProductCard'
 import './exclusiveProducts.css'
+import {useDispatch,useSelector} from 'react-redux'
+import { fetchAllProducts } from '../../../redux/features/product/productThunks'
+import ProductNotFound from '../../../components/notFound/ProductNotFound'
+import Loader from '../../../components/layout/loader/Loader'
+import { useState } from 'react'
 
 const ExclusiveProducts = () => {
+    const dispatch = useDispatch()
+    const {products,loading} = useSelector((state)=>state.product)
+
+    useEffect(()=>{
+        dispatch(fetchAllProducts())
+    },[products])
 
     const filters = [
         {
@@ -28,154 +40,9 @@ const ExclusiveProducts = () => {
             label:'filter'
         }
     ]
-
-    const excProducts =[
-        {
-            image:"pexels-gabriel-freytez-341523",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-garrett-morrow-1649771",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-laryssa-suaid-1667071",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-math-90946",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-pixabay-256198",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-pixabay-279906",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-tree-of-life-seeds-3259600",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-gabriel-freytez-341523",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-garrett-morrow-1649771",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-laryssa-suaid-1667071",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-math-90946",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-pixabay-256198",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-pixabay-279906",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-tree-of-life-seeds-3259600",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },{
-            image:"pexels-gabriel-freytez-341523",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-garrett-morrow-1649771",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        {
-            image:"pexels-pixabay-279906",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:true
-        },
-        {
-            image:"pexels-tree-of-life-seeds-3259600",
-            title:"lether hand bag",
-            description:"Lorem Ipsum is simply dummy text of the printing ",
-            price:"1599",
-            rating:4.5,
-            fevorite:false
-        },
-        
-    
-    ]
+    if(loading){
+        return <Loader/>
+    }
   return (
     <section className='exclusiveProducts'>
         <h1 className='heading exclusiveProduct-heading'><span>Exclusive</span> Products</h1>
@@ -184,11 +51,15 @@ const ExclusiveProducts = () => {
                 <p key={index} className={`filters_item ${item.active?'filters_item-active':null}`}>{item.label}</p>
             ))}
         </div>
+        {
+            products.length === 0 ? <ProductNotFound/> : 
+        
         <div className="exclusiveProduct-items">
-            {excProducts.map((item)=>(
-                <ProductCard {...item}/>
+            {products.map((item,index)=>(
+                <ProductCard key={index} {...item} />
             ))}
         </div>
+        }
     </section>
   )
 }
