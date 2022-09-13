@@ -27,15 +27,16 @@ const HomeCarousel = () => {
         modules={[Autoplay,Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="./images/products/pexels-laryssa-suaid-1667071.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-gabriel-freytez-341523.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-karolina-grabowska-5650016.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-math-90946.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-pixabay-256198.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-pixabay-279906.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-tree-of-life-seeds-3259600.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-karolina-grabowska-5650050.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="./images/products/pexels-tree-of-life-seeds-3259600.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage1" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage2" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage3" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage4" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage5" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage6" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage7" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage8" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage9" alt="1000x4000" /></SwiperSlide>
+        <SwiperSlide><img src="https://via.placeholder.com/500x2000?text=sliderimage10" alt="1000x4000" /></SwiperSlide>
       </Swiper>
         </div>
   )
