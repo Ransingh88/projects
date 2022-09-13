@@ -157,10 +157,10 @@
   --clr-error:#ff4d4f;
   --clr-info:#1890ff;
   --clr-warn:#faad14;
-  --clr-on_success:var(--clr-light-900);
-  --clr-on_error:var(--clr-light-900);
-  --clr-on_info:var(--clr-light-900);
-  --clr-on_warn:var(--clr-light-900);
+  --clr-on_success:var(--clr-light-100);
+  --clr-on_error:var(--clr-light-100);
+  --clr-on_info:var(--clr-light-100);
+  --clr-on_warn:var(--clr-light-100);
 
 }
 
