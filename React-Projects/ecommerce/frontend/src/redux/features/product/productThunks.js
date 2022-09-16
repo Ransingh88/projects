@@ -1,13 +1,18 @@
 import axios from 'axios'
-import { getAllProducts } from './productSlice'
+import {getAllProductsFail, getAllProductsRequest, getAllProductsSuccess, clearErrors } from './productSlice'
 
 export const fetchAllProducts = () => async (dispatch)=>{
     try {
+        dispatch(getAllProductsRequest())
         const res = await axios.get('/api/v1/products')
-        // console.log(res.data.product)
-        dispatch(getAllProducts(res.data.product))
+        dispatch(getAllProductsSuccess(res.data))
         
     } catch (error) {
-        console.log('----',error)
+        dispatch(getAllProductsFail(error.response.data.message))
     }
+}
+
+// *clearing error
+export const clearError = () => async (dispatch) => {
+    dispatch(clearErrors())
 }
