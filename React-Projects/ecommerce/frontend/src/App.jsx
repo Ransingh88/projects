@@ -11,7 +11,7 @@ function App() {
     <Navbar/>
     <Routes/>
     <Footer/>
-    <ToastContainer position="bottom-right" autoClose={2000} theme={'light'}/>
+    <ToastContainer position="top-right" autoClose={2000} theme={'light'}/>
     </>
   );
 }
