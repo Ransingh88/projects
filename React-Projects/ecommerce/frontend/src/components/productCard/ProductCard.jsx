@@ -4,8 +4,8 @@ import { IoHeartOutline, IoHeart } from 'react-icons/io5';
 import ReactStars from "react-rating-stars-component";
 
 const ProductCard = (props) => {
-  // const {title,description,price,rating,fevorite,offPercentage} = props
-  const {name,description,price,ratings,numOfReviews} = props
+  console.log(props)
+  const {name,description,price,ratings,numOfReviews,images} = props
   const offPercentage = 12
   const fevorite = true
   const options = {
@@ -24,7 +24,7 @@ const ProductCard = (props) => {
         <span className='fevoriteIcon'>
           {fevorite ? <IoHeart className='fillHeart'/> : <IoHeartOutline />}
         </span>
-      <img src={`https://via.placeholder.com/300?text=product+image`} alt={name} />
+      <img src={images.length === 0 ? `https://via.placeholder.com/300?text=No+Image+Found`:`${images[0].url}`} alt={name} />
       {/* <div className='product-newItemTag'>new</div> */}
       </div>
       <h3 className='productTitle'>{name.length < 20 ? name : `${description.substr(0,50)}...`}</h3>
