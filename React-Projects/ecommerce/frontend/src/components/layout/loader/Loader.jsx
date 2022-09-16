@@ -2,7 +2,7 @@ import React from 'react'
 import './loader.css'
 
 const Loader = () => {
-  document.body.classList.add('no-scroll');
+  // document.body.classList.add('no-scroll');
   return (
     <div className='loader'>
       <div className='loaderWrapper'>
