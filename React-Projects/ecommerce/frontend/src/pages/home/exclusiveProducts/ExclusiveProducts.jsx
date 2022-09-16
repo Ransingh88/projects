@@ -6,15 +6,20 @@ import {useDispatch,useSelector} from 'react-redux'
 import { fetchAllProducts } from '../../../redux/features/product/productThunks'
 import ProductNotFound from '../../../components/notFound/ProductNotFound'
 import Loader from '../../../components/layout/loader/Loader'
-import { useState } from 'react'
+import {Link} from 'react-router-dom'
+import {toast} from 'react-toastify'
+
 
 const ExclusiveProducts = () => {
     const dispatch = useDispatch()
-    const {products,loading} = useSelector((state)=>state.product)
+    const {products,loading, error} = useSelector((state)=>state.product)
 
     useEffect(()=>{
+        if(error){
+            return toast.error(error)
+        }
         dispatch(fetchAllProducts())
-    },[products])
+    },[dispatch,error])
 
     const filters = [
         {
@@ -56,7 +61,7 @@ const ExclusiveProducts = () => {
         
         <div className="exclusiveProduct-items">
             {products.map((item,index)=>(
-                <ProductCard key={index} {...item} />
+                <Link to={`product/${item.catagory}/${item._id}`}><ProductCard key={index} {...item} /></Link>
             ))}
         </div>
         }
