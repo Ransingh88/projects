@@ -1,0 +1,6 @@
+.mainProductDetailContainer{
+     min-height: 100vh;
+     background-color: var(--clr-bg);
+     padding-top: 0.6rem;
+     overflow: hidden;
+}
