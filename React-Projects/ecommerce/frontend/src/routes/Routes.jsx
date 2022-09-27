@@ -8,6 +8,7 @@ const PageRoutes = () => {
     <Routes>
         <Route exact path='/' element={<Home/>}/>
         <Route path='/product/:catagory/:id' element={<ProductDetails/>}/>
+        <Route path='*' element={<h1>404 not found</h1>}/>
     </Routes>
   )
 }
