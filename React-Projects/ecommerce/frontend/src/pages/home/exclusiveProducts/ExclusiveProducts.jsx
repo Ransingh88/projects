@@ -61,7 +61,7 @@ const ExclusiveProducts = () => {
         
         <div className="exclusiveProduct-items">
             {products.map((item,index)=>(
-                <Link to={`product/${item.catagory}/${item._id}`}><ProductCard key={index} {...item} /></Link>
+                <Link key={index} to={`product/${item.catagory}/${item._id}`}><ProductCard  {...item} /></Link>
             ))}
         </div>
         }
