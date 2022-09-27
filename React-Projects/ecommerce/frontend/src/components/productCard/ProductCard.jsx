@@ -4,7 +4,6 @@ import { IoHeartOutline, IoHeart } from 'react-icons/io5';
 import ReactStars from "react-rating-stars-component";
 
 const ProductCard = (props) => {
-  console.log(props)
   const {name,description,price,ratings,numOfReviews,images} = props
   const offPercentage = 12
   const fevorite = true
@@ -32,7 +31,7 @@ const ProductCard = (props) => {
       </div>
       <div className='productInfo-section'>
         <span className='productPrice'> { typeof offPercentage == 'number' ? <><div><p>&#8377; {price} </p> <span> {offPercentage}% off</span></div>&#8377; {Math.ceil(price - discountPrice)}</> : <>&#8377; {price}</>}</span>
-        <span className='productRatings'><ReactStars {...options}/>{ratings}({numOfReviews} Reviews)</span>
+        <span className='productRatings'><ReactStars {...options}/>{ratings.toFixed(1)}({numOfReviews} Reviews)</span>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 .exclusiveProducts{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +35,7 @@
     margin: var(--m6) 0;
     display: grid;
     grid-gap: 20px 10px;
-    grid-template-columns: repeat(5,minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr) );
     grid-auto-rows: auto;
     grid-auto-flow: dense;
     align-items: center;
