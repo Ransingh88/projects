@@ -1,0 +1,31 @@
+.reviewCardContainer{
+    margin: 0.4rem;
+    /* width: 550px; */
+    height: 220px;
+    padding: 0.6rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--clr-elevation1);
+    background-color: var(--clr-surface);
+    color: var(--clr-on_surface);
+    /* overflow-y: scroll; */
+}
+.reviewCardContainer::-webkit-scrollbar, .reviewComment::-webkit-scrollbar {
+    display: none;
+  }
+.reviewUserInfo{
+    display: flex;
+    align-items: center;
+}
+.reviewUserInfo svg{
+    font-size: 55px;
+    color: var(--clr-elevation2);
+}
+.reviewRaring{
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-body2);
+}
+.reviewComment{
+    max-height: 70%;
+    overflow-y: scroll;
+}
