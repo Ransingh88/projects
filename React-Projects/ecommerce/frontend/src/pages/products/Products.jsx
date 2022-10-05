@@ -88,6 +88,7 @@ const Products = () => {
         dispatch(fetchAllProducts())
         setRatings(0)
         setPrice([0,200000])
+        setCatagory('')
     }
 
   return ( 
@@ -147,6 +148,7 @@ const Products = () => {
                         </div>
                         
                 </div>
+                
                 <Button title="Apply Filter" className="btn-filter" onclick={handleApplyFilter}/>
                 <Button title="Reset Filters" className="btn-filter" onclick={handleResetFilter}/>
                 
