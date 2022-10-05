@@ -3,9 +3,10 @@ import 'animate.css';
 import '../../../utils/internetConnection'
 import { IoSearchOutline, IoCartOutline, IoSettingsOutline, IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import Theme from '../../../utils/theme/Theme';
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import userIcon from '../../../Assets/image/icons/user.png'
 
 const Navbar = () => {
 
@@ -13,11 +14,18 @@ const Navbar = () => {
   const [showSetting,setShowSetting] = useState(false)
   const [showCart,setShowCart] = useState(false)
   const [isAuth] = useState(false)
-  const [profileImage] = useState('./icons/user.png')
+  const [profileImage] = useState(userIcon)
   const {theme} = useSelector((state)=>state.theme)
+  const [keyword,setKeyword] = useState('')
+
+  const navigate = useNavigate()
 
 
   const navMenu = [
+    {
+      link:"products",
+      label:"all product"
+    },
     {
       link:"men",
       label:"men"
@@ -63,6 +71,22 @@ const Navbar = () => {
     setShowSetting(false)
     setShowCart(!showCart)
   }
+  const handleSearch = (e)=>{
+    setKeyword((e.target.value))
+    if(keyword.trim()){
+      navigate(`/products/${keyword}`)
+    }else{
+      navigate(`/products`)
+    }
+  }
+
+  // useEffect(()=>{
+  //   if(keyword.trim()){
+  //     navigate(`/products/${keyword}`)
+  //   }else{
+  //     navigate(`/products`)
+  //   }
+  // },[keyword])
 
    
   return (
@@ -80,7 +104,7 @@ const Navbar = () => {
           <div className="userSettings">
             <div className='userSetting_searchBox'>
             <IoSearchOutline className='searchIcon'/>
-            <input type="text"/>
+            <input type="text" onChange={handleSearch}/>
             </div>
             <div className='userSettings_cart' onClick={handleCart}>
             <Link to="/cart"><IoCartOutline/></Link>
