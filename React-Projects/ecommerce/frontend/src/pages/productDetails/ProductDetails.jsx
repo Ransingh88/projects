@@ -10,7 +10,6 @@ import ReactStars from "react-rating-stars-component";
 import Button from '../../components/button/Button'
 import ReviewCard from '../../components/reviewCard/ReviewCard'
 import { IoStar } from 'react-icons/io5'
-import { useState } from 'react'
 
 const ProductDetails = () => {
 
@@ -116,8 +115,8 @@ const ProductDetails = () => {
       <h1 className='heading customerReview-heading'><span>Customer</span> Review</h1>
         {productDetails.reviews && productDetails.reviews[0] ?
         (<div className='reviewContainer'><div className='productReview'>
-        {productDetails.reviews.map(review => {
-          return <ReviewCard name={review.name} rating={review.rating} comment={review.comment}/>
+        {productDetails.reviews.map((review,id) => {
+          return <ReviewCard key={id} name={review.name} rating={review.rating} comment={review.comment}/>
 })}
         </div>
         <div className='overalRating'>
