@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { darkTheme, lightTheme } from '../../redux/features/theme/themeSlice'
 import './theme.css'
 
+import sun from '../../Assets/image/icons/sun.png'
+import moon from '../../Assets/image/icons/moon.png'
+
 const Theme = () => {
   const {theme} = useSelector((state)=>state.theme)
   const dispatch = useDispatch()
@@ -22,7 +25,7 @@ const Theme = () => {
     
   return (
     <>
-    <div className='theme' onClick={handleTheme}>{theme==="light-theme" ? <img src='./icons/sun.png' alt='sun-icon' title='light-theme'/> : <img src='./icons/moon.png' alt='moon-icon' title='dark-theme'/>}</div>
+    <div className='theme' onClick={handleTheme}>{theme==="light-theme" ? <img src={sun} alt='sun-icon' title='light-theme'/> : <img src={moon} alt='moon-icon' title='dark-theme'/>}</div>
     </>
   )
 }
