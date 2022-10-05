@@ -1,6 +1,6 @@
 .productCard{
     min-height: 350px;
-    /* width: 260px; */
+    min-width: 260px;
     background-color: var(--clr-surface);
     color: var(--clr-on_surface);
     margin: var(--m2);

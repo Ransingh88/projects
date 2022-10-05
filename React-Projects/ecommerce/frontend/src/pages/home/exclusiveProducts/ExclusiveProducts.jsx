@@ -57,11 +57,11 @@ const ExclusiveProducts = () => {
             ))}
         </div>
         {
-            products.length === 0 ? <ProductNotFound/> : 
+            products.length === 0 ? <ProductNotFound title='Product Not Found...'/> : 
         
         <div className="exclusiveProduct-items">
             {products.map((item,index)=>(
-                <Link key={index} to={`product/${item.catagory}/${item._id}`}><ProductCard  {...item} /></Link>
+                <Link key={index} to={`/product/${item.catagory}/${item._id}`}><ProductCard  {...item} /></Link>
             ))}
         </div>
         }
