@@ -1,9 +1,9 @@
 import React from 'react'
 import './productNotFound.css'
 
-const ProductNotFound = () => {
+const ProductNotFound = ({title}) => {
   return (
-    <div className='productNotFound'><p>Product Not Found...</p></div >
+    <div className='productNotFound'><p>{title}</p></div >
   )
 }
 
