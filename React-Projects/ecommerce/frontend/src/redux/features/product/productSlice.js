@@ -15,6 +15,8 @@ export const productSlice = createSlice({
         getAllProductsSuccess:(state,action)=>{
             state.products = action.payload.product
             state.productsCount = action.payload.productCount
+            state.resultPerPage = action.payload.resultPerPage
+            state.filteredProductCount = action.payload.filteredProductCount
             state.loading = false
         },
         getAllProductsFail:(state,action)=>{
