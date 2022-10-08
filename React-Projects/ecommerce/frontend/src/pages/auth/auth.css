@@ -1,0 +1,71 @@
+.mainAuthContainer{
+    min-height: 90vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* min-width: fit-content; */
+}
+.authContainer{
+    background-color: var(--clr-elevation1);
+    color: var(--clr-on_elevation1);
+    width: 50%;
+    min-width: min-content;
+    height: 500px;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    display: flex;
+}
+.authGraficSection{
+    flex: 0.5;
+}
+.authFormSection{
+    flex: 0.5;
+}
+.authTab{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_bg);
+    /* padding: 0.6rem 0; */
+    border-radius: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px rgba(var(--clr-shade),0.1);
+}
+.authTab > .loginTab, .authTab > .registerTab{
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: var(--clr-on_bg);
+    padding: 0 0.4rem;
+}
+.authTab .loginTab.active{
+    background-color: var(--clr-primary);
+    color: var(--clr-light-100);
+    border-radius: 0.2rem 0 0 0.2rem;
+    transition: all 0.3s;
+}
+
+.authTab .registerTab.active{
+    background-color: var(--clr-primary);
+    color: var(--clr-light-100);
+    border-radius: 0 0.2rem 0.2rem 0;
+    transition: all 0.3s;
+}
+.login-section, .register-section{
+    margin: 1rem 0.5rem;
+    padding: 0.5rem;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
