@@ -1,0 +1,17 @@
+.profileAvatar{
+    display: flex;
+    align-items: center;
+}
+.profileAvatar img{
+    border: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 0.5rem;
+}
+/* .profileAvatar input{
+    padding: 0;
+} */
+/* .profileAvatar input::file-selector-button{
+    cursor: pointer;
+    height: 40px;
+} */
