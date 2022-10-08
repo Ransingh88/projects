@@ -112,7 +112,7 @@ const Navbar = () => {
             {showCart && <div className='mobileMenu userSettings_cart-menu'>cart</div>}
             </div>
             <div className='userSettings_setting' onClick={handleUserSetting}>
-            <Link to="/setting"><div className='userSetting_profile'><img src={profileImage} alt='userProfile'/></div></Link>
+            <Link to={`/auth/login`}><div className='userSetting_profile'><img src={profileImage} alt='userProfile'/></div></Link>
             {showSetting && <div className='mobileMenu userSettings_setting-menu'>
               {!isAuth ?
               <div>
@@ -151,7 +151,7 @@ const Navbar = () => {
           </div>
           <div className="mobileMenu_userSettings">
             <Link to="/cart">Cart<IoCartOutline/></Link>
-            <Link to="/setting">Setting<IoSettingsOutline/></Link>
+            <Link to="/auth">Setting<IoSettingsOutline/></Link>
             <span className='mobileMenu_theme'>
             <Theme/>
             </span>
