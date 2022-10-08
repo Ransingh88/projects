@@ -10,6 +10,7 @@ import ReactStars from "react-rating-stars-component";
 import Button from '../../components/button/Button'
 import ReviewCard from '../../components/reviewCard/ReviewCard'
 import { IoStar } from 'react-icons/io5'
+import MetaData from '../../components/layout/metaData/MetaData'
 
 const ProductDetails = () => {
 
@@ -70,8 +71,11 @@ const ProductDetails = () => {
       countRatings()
     }
   return (
-    <>{
+    <>
+    {
       loading ? <Loader/> :
+      <>
+      <MetaData title={`${productDetails.name} - Ecommerce`}/>
     <main className='container-fluid mainProductDetailContainer'>
       <section className='container productDetailContainer'>
         <div className="productDetails-imageSection">
@@ -140,6 +144,7 @@ const ProductDetails = () => {
         }
       </section>
     </main>
+    </>
     }
     </>
   )

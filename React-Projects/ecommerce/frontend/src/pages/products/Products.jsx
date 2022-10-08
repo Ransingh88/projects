@@ -9,6 +9,7 @@ import Slider from 'rc-slider';
 import Pagination from 'react-js-pagination'
 import Loader from '../../components/layout/loader/Loader'
 import ProductCard from '../../components/productCard/ProductCard'
+import MetaData from '../../components/layout/metaData/MetaData'
 
 import { useEffect } from 'react'
 import { fetchAllProducts } from '../../redux/features/product/productThunks'
@@ -92,7 +93,10 @@ const Products = () => {
     }
 
   return ( 
-    <>{loading ? <Loader/> :
+    <>
+    {loading ? <Loader/> :
+    <>
+    <MetaData title="Products - Ecommerce"/>
         <main className='container-fluid mainProductsContainer'>
             <section className='headingCatagoryWall'>
             <h1 className='heading customerReview-heading'>Products<span></span></h1>
@@ -181,6 +185,7 @@ const Products = () => {
         </div>
         </section>
         </main>
+        </>
     }</>
   )
 }
