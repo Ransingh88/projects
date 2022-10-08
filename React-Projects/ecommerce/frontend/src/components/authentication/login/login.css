@@ -1,0 +1,9 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.login-forgotPassword{
+    font-size: var(--fs-body2);
+    align-self: flex-end;
+}
