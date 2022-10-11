@@ -7,7 +7,7 @@ import { clearError, register } from '../../../redux/features/user/userThunks'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from '../../layout/loader/Loader'
 import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Register = () => {
 
@@ -46,7 +46,7 @@ const Register = () => {
             const reader = new FileReader()
 
             reader.onload = ()=>{
-                if(reader.readyState === '2'){
+                if(reader.readyState === 2){
                     setAvatarPreview(reader.result)
                     setAvatar(reader.result)
                 }
@@ -73,18 +73,28 @@ const Register = () => {
     <>{
         loading ? <Loader/> :
     <>
-    <form>
+    <div className='login_heading'>
+        <h2>Sign up</h2>
+        <p>Already have an account? <Link to='/auth/login'>Signin here</Link></p>
+    </div>
+    <form
+        className='register-form'
+        encType='multipart/form-data'
+    >
         <input type="text" required placeholder='Name' name="name" value={userFormData.name} onChange={handleUserFormData}/>
         <input type="email" required placeholder='Email' name="email" value={userFormData.email} onChange={handleUserFormData}/>
+        <div className='register-password'>
         <input type="password" required placeholder='Password' name="password" value={userFormData.password} onChange={handleUserFormData}/>
         <input type="password" required placeholder='Confirm Password' name="confirmpassword" value={userFormData.confirmpassword} onChange={handleUserFormData}/>
+        </div>
         <div className='profileAvatar'>
-        <img src={avatarPreview} alt="avatar preview" />
+        <img src={avatarPreview} alt="avatar preview"/>
         <input type="file"  name="avatar" accept='image/*' onChange={handleUserFormData}/>
         </div>
     </form>
-    <div>
-        <Button title="Register" className="btn-filter" onclick={handleRegister}/>
+    <div className='auth-action_btn'>
+        {/* <Button title="Register" className="btn-filter" onclick={handleRegister}/> */}
+        <button className='btn btn-primary btn-login_register' onClick={handleRegister} >sign Up</button>
     </div>
     </>
     }</>

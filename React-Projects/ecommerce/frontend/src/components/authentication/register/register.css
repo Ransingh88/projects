@@ -3,15 +3,27 @@
     align-items: center;
 }
 .profileAvatar img{
-    border: 50%;
+    border-radius: 50%;
     height: 40px;
     width: 40px;
     margin-right: 0.5rem;
 }
-/* .profileAvatar input{
-    padding: 0;
-} */
-/* .profileAvatar input::file-selector-button{
-    cursor: pointer;
-    height: 40px;
-} */
+.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.register-form input{
+    background-color: var(--clr-surface);
+    color: var(--clr-on_surface);
+}
+.register-password{
+    display: flex;
+}
+.register-password input:first-child{
+    margin-right: 0.5rem;
+}
+.register-password input:last-child{
+    margin-left: 0.5rem;
+}
