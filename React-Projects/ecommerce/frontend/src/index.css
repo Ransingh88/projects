@@ -176,14 +176,30 @@ a{
 
 input[type=text],input[type=password],input[type=email],input[type=file], select {
   width: 100%;
-  padding: 0.6rem 0.4rem;
+  padding: 0.6rem;
   margin: 0.6rem 0;
-  background-color: var(--clr-bg);
+  /* background-color: var(--clr-bg); */
   /* display: inline-block; */
   border: 1px solid var(--clr-elevation2);
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   box-sizing: border-box;
   outline: none;
+}
+.btn{
+  text-transform: capitalize;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: none;
+  margin: 0.5rem;
+}
+.btn-primary{
+  background-color: var(--clr-primary);
+  color: var(--clr-on_primary);
+}
+.btn-primary:hover{
+  background-color: var(--clr-primary-active);
+  color: var(--clr-on_primary);
 }
 
 h1,h2,h3,h4,h5,h6{
