@@ -38,6 +38,21 @@ export const userSlice = createSlice({
             state.user = null
             state.error = action.payload
         },
+        loadUserRequest:(state,action)=>{
+            state.loading = true
+            state.isAuthenticate = false
+        },
+        loadUserSuccess:(state,action)=>{
+            state.loading = false
+            state.isAuthenticate = true
+            state.user = action.payload
+        },
+        loadUserFail:(state,action)=>{
+            state.loading = false
+            state.isAuthenticate = false
+            state.user = null
+            state.error = action.payload
+        },
         clearErrors:(state,action)=>{
             return {...state,error:null}            
         }
@@ -45,5 +60,5 @@ export const userSlice = createSlice({
     }
 })
 
-export const {loginRequest,loginSuccess,loginFail,registerRequest,registerSuccess,registerFail,clearErrors} = userSlice.actions
+export const {loginRequest,loginSuccess,loginFail,registerRequest,registerSuccess,registerFail,clearErrors,loadUserSuccess,loadUserRequest,loadUserFail} = userSlice.actions
 export default userSlice.reducer
