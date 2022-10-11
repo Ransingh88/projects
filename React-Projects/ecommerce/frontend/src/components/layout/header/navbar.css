@@ -70,7 +70,7 @@
     color: var(--clr-on_bg);
     opacity: 0.9;
 }
-.userSettings div{
+.userSettings  div{
     display: flex;
     align-items: center;
 }
@@ -88,6 +88,12 @@
 .userSettings_setting{
     display: flex;
     align-items: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.userSettings_setting:hover .userSettings_setting-menu{
+    display: flex;
+    visibility: visible;
 }
 .userSettings_setting a{
     margin: 0;
@@ -111,9 +117,12 @@
 
 }
 .userSettings_setting-menu{
-    display: flex;
+    display: none;
+    visibility: hidden;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .userSettings_setting-menu > div{
     display: flex;
@@ -121,6 +130,7 @@
 }
 .userSettings_cart{
     position: relative;
+    transition: all 0.3s;
 
 }
 .cartNotification{
@@ -138,9 +148,14 @@
     font-size: 10px;
 }
 .userSettings_cart-menu{
-    display: flex;
+    display: none;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
+}
+.userSettings_cart:hover .userSettings_cart-menu{
+    display: flex;
+    visibility: visible;
 }
 .mobileMenu{
     transition: all 0.3s;

@@ -7,18 +7,19 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import userIcon from '../../../Assets/image/icons/user.png'
+import UserOption from '../userOption/UserOption';
 
 const Navbar = () => {
 
   const [showMenu,setShowMenu] = useState(false)
-  const [showSetting,setShowSetting] = useState(false)
-  const [showCart,setShowCart] = useState(false)
-  const [isAuth] = useState(false)
+  // const [showSetting,setShowSetting] = useState(false)
+  // const [showCart,setShowCart] = useState(false)
   const [profileImage] = useState(userIcon)
   const {theme} = useSelector((state)=>state.theme)
   const [keyword,setKeyword] = useState('')
 
   const navigate = useNavigate()
+  const {isAuthenticate,user} = useSelector(state=>state.user)
 
 
   const navMenu = [
@@ -64,12 +65,12 @@ const Navbar = () => {
   }
 
   const handleUserSetting = ()=>{
-    setShowCart(false)
-    setShowSetting(!showSetting)
+    // setShowCart(false)
+    // setShowSetting(!showSetting)
   }
   const handleCart = ()=>{
-    setShowSetting(false)
-    setShowCart(!showCart)
+    // setShowSetting(false)
+    // setShowCart(!showCart)
   }
   const handleSearch = (e)=>{
     setKeyword((e.target.value))
@@ -109,22 +110,12 @@ const Navbar = () => {
             <div className='userSettings_cart' onClick={handleCart}>
             <Link to="/cart"><IoCartOutline/></Link>
             {/* <div className='cartNotification'>10</div> */}
-            {showCart && <div className='mobileMenu userSettings_cart-menu'>cart</div>}
+            {isAuthenticate && <div className='mobileMenu userSettings_cart-menu'>cart</div>}
             </div>
             <div className='userSettings_setting' onClick={handleUserSetting}>
-            <Link to={`/auth/login`}><div className='userSetting_profile'><img src={profileImage} alt='userProfile'/></div></Link>
-            {showSetting && <div className='mobileMenu userSettings_setting-menu'>
-              {!isAuth ?
-              <div>
-                <h5>Welcome to ECOSHOP</h5>
-              <button>login</button>
-              <button>register</button>
-              </div> :
-              <div>
-              <h5>Welcome!</h5>
-              <h5>Ransingh Debasish</h5>
-              <button>logout</button>
-              </div>}
+            <Link to={`/auth/login`}><div className='userSetting_profile'><img src={user?.avatar?.url ? user.avatar.url : profileImage} alt='userProfile'/></div></Link>
+            {isAuthenticate && <div className='mobileMenu userSettings_setting-menu'>
+               <UserOption user={user}/> 
               </div>}
             </div>
             <Theme/>
@@ -132,7 +123,7 @@ const Navbar = () => {
           <div className='mobileMenuIcon' onClick={handleShowMenu}>{showMenu ? <IoCloseOutline /> : <IoMenuOutline/>}</div>
           </div>
           <div  className='mobileMenu mobileMenuHide animate__animated ' id='mobileMenuWindow'>
-          {!isAuth ?
+          {!isAuthenticate ?
               <div className='mobileMenu_userInfo'>
                 <h5>Welcome to ECOSHOP</h5>
                 <div>
