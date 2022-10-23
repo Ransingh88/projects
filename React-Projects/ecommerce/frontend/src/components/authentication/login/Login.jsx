@@ -1,14 +1,14 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import './login.css'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+
 import { clearError, login } from '../../../redux/features/user/userThunks'
-import googleIcon from '../../../Assets/image/icons/google.png'
-import Button from '../../button/Button'
+import {ROUTE_CONSTANTS} from '../../../constants/constants'
 import Loader from '../../layout/loader/Loader'
-import './login.css'
+import googleIcon from '../../../Assets/image/icons/google.png'
 
 const Login = () => {
     const [email,setEmail] = useState('')
@@ -26,7 +26,7 @@ const Login = () => {
 
         if(isAuthenticate){
             // toast.success('user login successfully')
-            navigate('/account')
+            navigate(ROUTE_CONSTANTS.ACCOUNT)
         }
     },[dispatch,error,isAuthenticate,navigate])
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './auth.css'
-import { Link, useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 
 import loginBgImage from '../../Assets/image/shopping-login.jpeg'
 import registerBgImage from '../../Assets/image/shopping-register.jpg'

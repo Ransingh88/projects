@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import Button from '../../button/Button'
+import React, { useEffect, useState } from 'react'
 import './register.css'
-import profileIcon from '../../../Assets/image/icons/user.png'
-import { clearError, register } from '../../../redux/features/user/userThunks'
+
 import { useDispatch, useSelector } from 'react-redux'
-import Loader from '../../layout/loader/Loader'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
+
+import { clearError, register } from '../../../redux/features/user/userThunks'
+import {ROUTE_CONSTANTS} from '../../../constants/constants'
+import Loader from '../../layout/loader/Loader'
+import profileIcon from '../../../Assets/image/icons/user.png'
 
 const Register = () => {
 
@@ -31,7 +32,7 @@ const Register = () => {
 
         if(isAuthenticate){
             
-            navigate('/account')
+            navigate(ROUTE_CONSTANTS.ACCOUNT)
         }
     },[dispatch,error,isAuthenticate,navigate])
 

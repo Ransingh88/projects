@@ -1,10 +1,13 @@
 import React from 'react'
+import './userOption.css'
+
 import { IoBagOutline, IoGridOutline, IoLogOutOutline, IoPersonCircleOutline } from 'react-icons/io5'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { logout } from '../../../redux/features/user/userThunks'
-import './userOption.css'
+
+import {logout } from '../../../redux/features/user/userThunks'
+import {ROUTE_CONSTANTS} from '../../../constants/constants'
 
 const UserOption = ({user}) => {
 
@@ -23,7 +26,7 @@ const UserOption = ({user}) => {
             <h5>{user.name}</h5>
         </div>
         <div className='userOpt-menus'>
-        <p onClick={()=>{navigate('/account')}}><IoPersonCircleOutline/>Profile</p>
+        <p onClick={()=>{navigate(ROUTE_CONSTANTS.ACCOUNT)}}><IoPersonCircleOutline/>Profile</p>
         {
             user.role === 'admin' && 
             <p onClick={()=>{navigate('/dashboard')}}><IoGridOutline/>Dashboard</p>
