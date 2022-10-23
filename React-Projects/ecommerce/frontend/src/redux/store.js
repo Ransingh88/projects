@@ -3,6 +3,7 @@ import themeReducer from './features/theme/themeSlice'
 import productReducer from './features/product/productSlice'
 import productDetailsReducer from './features/product/productDetails/productDetailSlice'
 import userReducer from './features/user/userSlice'
+import profileReducer from './features/user/profileSlice'
 
 export const store = configureStore({
     reducer:{
@@ -10,5 +11,6 @@ export const store = configureStore({
         product:productReducer,
         productDetail:productDetailsReducer,
         user:userReducer,
+        profile:profileReducer,
     }
 })
