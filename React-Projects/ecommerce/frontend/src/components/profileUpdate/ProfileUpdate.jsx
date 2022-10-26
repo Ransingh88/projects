@@ -45,6 +45,7 @@ const ProfileUpdate = () => {
 
         dispatch(updateProfile(myForm))
     }
+    
 
 
     useEffect(()=>{
@@ -82,7 +83,10 @@ const ProfileUpdate = () => {
     <Metadata title="update - profile" />
                 <div className='accountContainer_heading'>
                         <h2>Account Update</h2>
+                        <div>
                         <button className='btn btn-profileEdit btn-primary' onClick={handleUpdate}>Update</button>
+                        <button className='btn btn-profileEdit btn-primary' onClick={()=>{navigate('/account')}}>Cancel</button>
+                        </div>
                     </div>
                 <div className='accountContainer_userDetails'>
                 <div className='userDetails_profilePicture'>

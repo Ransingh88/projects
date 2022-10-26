@@ -8,7 +8,12 @@ import Profile from '../pages/profile/Profile'
 import {ROUTE_CONSTANTS} from '../constants/constants'
 // import { useSelector } from 'react-redux'
 import ProtectedRoute from '../components/protectedRoute/ProtectedRoute'
-import ProfileUpdate from '../components/profileUpdate/ProfileUpdate'
+import UpdateProfile from '../components/profileUpdate/ProfileUpdate'
+import UpdatePassword from '../pages/profile/changePassword/PasswordUpdate'
+import ResetPassword from '../pages/profile/resetPassword/ResetPassword'
+import Login from '../components/authentication/login/Login'
+import Register from '../components/authentication/register/Register'
+import ForgotPassword from '../pages/profile/forgotPassword/ForgotPassword'
 
 const PageRoutes = () => {
     // const {user,isAuthenticate,loading} = useSelector(state=>state.user)
@@ -19,12 +24,17 @@ const PageRoutes = () => {
         <Route path='/product/:catagory/:id' element={<ProductDetails/>}/>
         <Route exact path='/products' element={<Products/>}/>
         <Route path='/products/:keyword' element={<Products/>}/>
-        <Route path='/auth/:authtype' element={<Auth/>}/>
+        <Route exact path={`/${ROUTE_CONSTANTS.AUTH}`} element={<Auth/>}>
+            <Route path='login' element={<Login/>}/>
+            <Route path='register' element={<Register/>}/>
+            <Route path='forgotpassword' element={<ForgotPassword/>}/>
+            <Route path='resetpassword/:token' element={<ResetPassword/>}/>
+        </Route>
         {/* Protected Routes */}
         <Route element={<ProtectedRoute/>}>
           <Route exact path={`/${ROUTE_CONSTANTS.ACCOUNT}`} element={<Profile/>}>
-            <Route path='updateProfile' element={<ProfileUpdate/>}/>
-            <Route path='changePassword' element={<div>change password</div>}/>
+            <Route exact path='updateProfile' element={<UpdateProfile/>}/>
+            <Route exact path='changePassword' element={<UpdatePassword/>}/>
           </Route>
         </Route>
         <Route path='*' element={<h1>404 not found</h1>}/>

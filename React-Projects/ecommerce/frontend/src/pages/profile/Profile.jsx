@@ -1,20 +1,29 @@
 import React, { useEffect } from 'react'
 import './profile.css'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { IoBagOutline, IoLogOutOutline, IoPersonCircleOutline, IoHomeOutline, IoLockOpenOutline } from 'react-icons/io5'
 
 import Loader from '../../components/layout/loader/Loader'
 import MetaData from '../../components/layout/metaData/MetaData'
+import { logout } from '../../redux/features/user/userThunks'
+import { toast } from 'react-toastify'
 
 const Profile = () => {
 
     const {user,isAuthenticate,loading} = useSelector(state=>state.user)
     const navigate = useNavigate()
     const location = useLocation()
+    const dispatch = useDispatch()
 
     const userFistName = user?.name?.split(' ')
+
+    const handleLogout = ()=>{
+        dispatch(logout())
+        navigate('/')
+        toast.success('Logout successful')
+    }
 
     useEffect(()=>{
         if(isAuthenticate === false){
@@ -42,7 +51,7 @@ const Profile = () => {
                     <Link to="/account"><li> <IoPersonCircleOutline/> Profile</li></Link>
                     <li> <IoBagOutline/> Order</li>
                     <Link to="/account/changePassword"><li> <IoLockOpenOutline/> Change Password</li></Link>
-                    <li> <IoLogOutOutline/> Logout</li>
+                    <li onClick={handleLogout}> <IoLogOutOutline/> Logout</li>
                 </ul>
             </section>
             <section className='account_accountContainer'>

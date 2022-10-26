@@ -85,7 +85,8 @@ exports.forgotPassword = catchAsyncErrors(async(req,res,next)=>{
 
     await user.save({validateBeforeSave:false})
 
-    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`
+    // const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`
+    const resetPasswordUrl = `${process.env.FRONTEND_URL}/auth/resetpassword/${resetToken}`
 
     const message = `Your password reset token is : \n\n${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it.`
 
@@ -128,7 +129,7 @@ exports.resetPassword = catchAsyncErrors(async(req,res,next)=>{
         return next(new ErrorHandler(`Password does not match`, 400))
     }
 
-    user.password = rew.body.password
+    user.password = req.body.password
     user.resetPasswordToken = undefined
     user.resetPasswordExpire = undefined
 
@@ -156,6 +157,10 @@ exports.updatePassword = catchAsyncErrors(async(req,res,next)=>{
     if(!isPasswordMatched){
         return next(new ErrorHandler("Old Password is incorrect",400))
     } 
+
+    if(req.body.newPassword.length<8 || req.body.confirmPassword.length<8){
+        return next(new ErrorHandler("Password must be atleast 8 characters",400))
+    }
 
     if(req.body.newPassword !== req.body.confirmPassword){
         return next(new ErrorHandler("Password does not match",400))

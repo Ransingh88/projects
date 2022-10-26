@@ -5,12 +5,22 @@ const sendEmail = async(options)=>{
     const transporter = nodeMailer.createTransport({
         host:process.env.SMTP_HOST,
         port:process.env.SMTP_PORT,
-        service:process.env.SMTP_SERVICE,
+        // service:process.env.SMTP_SERVICE,
         auth:{
             user:process.env.SMTP_MAIL,
             pass:process.env.SMTP_PASSWORD
         }
     })
+
+    // MailTrap sandbox email
+    // var transporter = nodeMailer.createTransport({
+    //     host: "smtp.mailtrap.io",
+    //     port: 2525,
+    //     auth: {
+    //       user: "18958a367d55cb",
+    //       pass: "e17482277a54c5"
+    //     }
+    //   });
 
 
     const mailOptions = {

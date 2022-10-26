@@ -1,5 +1,7 @@
 export const ROUTE_CONSTANTS ={
     ROOT: '/',
     PRODUCT: '/product',
-    ACCOUNT: '/account'
+    ACCOUNT: '/account',
+    AUTH: '/auth',
+    LOGIN: '/login',
 }

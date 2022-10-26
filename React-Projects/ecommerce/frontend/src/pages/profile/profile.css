@@ -40,6 +40,9 @@
     
     border-radius: 0.3rem;
 }
+.account-sidebar_menus a{
+    color: var(--clr-on_surface);
+}
 .account-sidebar_menus li{
     margin: 0.4rem 0;
     padding: 0.4rem 1rem;
@@ -79,7 +82,7 @@
     color: var(--clr-on_bg);
 }
 .btn-profileEdit{
-    margin: 0;
+    margin: 0 0.4rem;
 }
 .accountContainer_userDetails{
     min-height: 80vh;

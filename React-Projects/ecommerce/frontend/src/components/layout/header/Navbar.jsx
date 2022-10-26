@@ -123,7 +123,7 @@ const Navbar = () => {
           <div className='mobileMenuIcon' onClick={handleShowMenu}>{showMenu ? <IoCloseOutline /> : <IoMenuOutline/>}</div>
           </div>
           <div  className='mobileMenu mobileMenuHide animate__animated ' id='mobileMenuWindow'>
-          {!isAuthenticate ?
+          {/* {!isAuthenticate ?
               <div className='mobileMenu_userInfo'>
                 <h5>Welcome to ECOSHOP</h5>
                 <div>
@@ -134,7 +134,7 @@ const Navbar = () => {
               <div className='mobileMenu_userInfo'>
               <h5>Welcome! <br/> Ransingh Debasish</h5>
               <button>logout</button>
-              </div>}
+              </div>} */}
            <div className="mobileMenu_menus">
             {navMenu.map((menu,id)=>(
               <NavLink key={id} to={`/${menu.link}`}>{menu.label}</NavLink>
