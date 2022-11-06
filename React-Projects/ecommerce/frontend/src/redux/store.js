@@ -5,6 +5,7 @@ import productDetailsReducer from './features/product/productDetails/productDeta
 import userReducer from './features/user/userSlice'
 import profileReducer from './features/user/profileSlice'
 import forgotPasswordSlice from './features/user/forgotPasswordSlice'
+import cartSlice from './features/product/cartSlice/cartSlice'
 
 export const store = configureStore({
     reducer:{
@@ -14,5 +15,6 @@ export const store = configureStore({
         user:userReducer,
         profile:profileReducer,
         forgotPassword:forgotPasswordSlice,
+        cart:cartSlice,
     }
 })
