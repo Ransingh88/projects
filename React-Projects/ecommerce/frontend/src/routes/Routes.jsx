@@ -14,6 +14,7 @@ import ResetPassword from '../pages/profile/resetPassword/ResetPassword'
 import Login from '../components/authentication/login/Login'
 import Register from '../components/authentication/register/Register'
 import ForgotPassword from '../pages/profile/forgotPassword/ForgotPassword'
+import Cart from '../pages/cart/Cart'
 
 const PageRoutes = () => {
     // const {user,isAuthenticate,loading} = useSelector(state=>state.user)
@@ -24,6 +25,7 @@ const PageRoutes = () => {
         <Route path='/product/:catagory/:id' element={<ProductDetails/>}/>
         <Route exact path='/products' element={<Products/>}/>
         <Route path='/products/:keyword' element={<Products/>}/>
+        <Route exact path='/cart' element={<Cart/>}/>
         <Route exact path={`/${ROUTE_CONSTANTS.AUTH}`} element={<Auth/>}>
             <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}/>
