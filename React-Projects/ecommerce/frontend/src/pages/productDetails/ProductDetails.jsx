@@ -7,10 +7,12 @@ import { fetchProductDetails } from '../../redux/features/product/productDetails
 import './productDetails.css'
 import ProductImageSlider from './productImageSlider/ProductImageSlider'
 import ReactStars from "react-rating-stars-component";
-import Button from '../../components/button/Button'
 import ReviewCard from '../../components/reviewCard/ReviewCard'
 import { IoStar } from 'react-icons/io5'
 import MetaData from '../../components/layout/metaData/MetaData'
+import { useState } from 'react'
+import { addItemsToCart } from '../../redux/features/product/cartSlice/cartThunks'
+import { toast } from 'react-toastify'
 
 const ProductDetails = () => {
 
@@ -21,6 +23,7 @@ const ProductDetails = () => {
     var star2 = 0
     var star1 = 0  
 
+    const [quantity,setQuantity] = useState(1)
     const dispatch = useDispatch()
     const {id} = useParams()
     const {productDetails, loading} = useSelector((state) => state.productDetail)
@@ -57,6 +60,21 @@ const ProductDetails = () => {
             }
           }
       })
+    }
+
+    const handleIncreamentQuantity = () => {
+      if(productDetails.stock <= quantity) return
+      setQuantity(quantity+1)
+    }
+
+    const handleDecreamentQuantity = () => {
+      if(quantity <= 1) return
+      setQuantity(quantity-1)
+    }
+
+    const handleAddToCart = () => {
+      dispatch(addItemsToCart(id,quantity))
+      toast.success('Item Added to cart')
     }
 
     useEffect(()=>{
@@ -99,13 +117,18 @@ const ProductDetails = () => {
           </div>
           <div>
             <p className='productDetails-stock'>Stock: <span className={productDetails.stock < 1 ? 'outOfStock' : productDetails.stock < 5 && productDetails.stock >= 1 ? 'limitedStock':'inStock'}>{productDetails.stock < 1 ? `out of stock` : productDetails.stock < 5 && productDetails.stock >= 1 ? `${productDetails.stock} left`: `InStock`}</span></p>
+            <div className='productDetails__quantityCount'>
+              <button onClick={handleDecreamentQuantity}>-</button>
+              <input readOnly type="number" name="" id="" value={quantity} />
+              <button onClick={handleIncreamentQuantity}>+</button>
+            </div>
           </div>
           </div>
           <div className='productDetails-actions'>
           <p className='productDetails-coupon'>Enjoy upto Rs. 5450 off  with promo code <span>DEBA30</span> untill 17 Dec 2022</p>
           <div className='productDetails-actionButton'>
-            <Button title="add to cart" className="addToCart" onclick={()=>{console.log('add to cart')}}/>
-            <Button title="Fevorite" className="fevorite" onclick={()=>{console.log('fevorite')}}/>
+            <button className="btn addToCart" onClick={handleAddToCart}>add to cart</button>
+            <button className="btn fevorite">Fevorite</button>
           </div>
           </div>
         </div>

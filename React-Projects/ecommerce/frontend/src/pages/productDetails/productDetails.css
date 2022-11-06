@@ -95,6 +95,21 @@
      border-radius: 0.2rem;
      padding: 0.02rem 0.4rem;
 }
+.productDetails__quantityCount{
+     display: flex;
+     align-items: center;
+}
+.productDetails__quantityCount input{
+     width: 30px;
+     padding: 0 0.5rem;
+     outline: none;
+     border: none;
+}
+.productDetails__quantityCount input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .productDetails-coupon{
      text-align: center;
      font-size: var(--fs-body2);

@@ -20,6 +20,7 @@ const Navbar = () => {
 
   const navigate = useNavigate()
   const {isAuthenticate,user} = useSelector(state=>state.user)
+  const {cartItems} = useSelector(state=>state.cart)
 
 
   const navMenu = [
@@ -109,8 +110,9 @@ const Navbar = () => {
             </div>
             <div className='userSettings_cart' onClick={handleCart}>
             <Link to="/cart"><IoCartOutline/></Link>
-            {/* <div className='cartNotification'>10</div> */}
-            {isAuthenticate && <div className='mobileMenu userSettings_cart-menu'>cart</div>}
+            {cartItems.length>=1 ?
+            <div className='cartNotification'>{cartItems?.length}</div> : null}
+            {cartItems.length>=1 ? <div className='mobileMenu userSettings_cart-menu'>{cartItems.map((prod)=>(<p>{prod.name}</p>))}</div> : null}
             </div>
             <div className='userSettings_setting' onClick={handleUserSetting}>
             <Link to={`/auth/login`}><div className='userSetting_profile'><img src={user?.avatar?.url ? user.avatar.url : profileImage} alt='userProfile'/></div></Link>

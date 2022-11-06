@@ -20,7 +20,9 @@ const Login = () => {
 
     useEffect(()=>{
         if(error){
-            toast.error(error)
+            if(error !== 'Plaese login to access'){
+                toast.error(error)
+            }
             dispatch(clearError())
         }
 
