@@ -1,0 +1,115 @@
+.mainConfirmOrderContainer{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    padding-top: 0.6rem;
+    /* overflow: hidden; */
+}
+.confirmOrderContainer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.confirmOrder-heading{
+   margin: 2rem 0;
+}
+.multiStep_container{
+    width: 70%;
+    margin: auto;
+}
+.confirmOrderDetailsContainer{
+    margin-top: 2rem;
+    display: flex;
+}
+.confirmOrderDeatils-section{
+    flex: 0.7;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--clr-bg);
+}
+.priceDetails-section{
+    flex: 0.3;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.priceDetails_price_breakup{
+    padding: 1rem;
+    border-radius: 0.3rem;
+    height: fit-content;
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-elevation1);
+    box-shadow: 0px 2px 20px 5px rgba(var(--clr-shade),0.05);
+}
+.priceDetails-section h4, .confirmOrderDeatils-section h4{
+    color: var(--clr-on_hover);
+    text-transform: uppercase;
+}
+.priceDetails_prices{
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceDetails-totalPayble_section, .priceDetails-prices_section{
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--clr-elevation1);
+}
+.priceDetails_totalPayble{
+    font-weight: 600;
+    font-size: 18px;
+}
+.confirmOrderDeatils_address, .confirmOrderDeatils_cartItems{
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+}
+.confirmOrderDeatils_cartItems{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.confirmOrderDeatils_cartItems::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2rem;
+  }
+.confirmOrderDeatils_cartItems::-webkit-scrollbar-thumb {
+    background-color: var(--clr-elevation2); 
+    border-radius: 2rem;
+  }
+.confirmOrderDeatils_cartItems::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr-elevation1); 
+  }
+
+.confirmOrderDeatils_address p{
+    font-style: italic;
+    padding: 0.2rem 0;
+}
+.confirmOrderDeatils_address p span{
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+}
+.confirmOrderDeatils_cartItem{
+    /* background-color: red; */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.confirmOrderDeatils_cartItem span{
+    display: flex;
+    align-items: center;
+}
+.confirmOrderDeatils_cartItem span p{
+    color: var(--clr-on_surface);
+}
+.confirmOrderDeatils_cartItem span:hover{
+    cursor: pointer;
+}
+.confirmOrderDeatils_cartItem span img{
+    width: 80px;
+    margin-right: 1rem;
+}
+.shipping_actionBtn{
+    margin-top: 3rem;
+}

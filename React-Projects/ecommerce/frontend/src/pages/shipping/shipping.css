@@ -1,0 +1,74 @@
+.mainShippingContainer{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    padding-top: 0.6rem;
+    /* overflow: hidden; */
+}
+.shippingContainer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.shipping-heading{
+   margin: 2rem 0;
+}
+.multiStep_container{
+    width: 70%;
+    margin: auto;
+}
+.shippingDetailsContainer{
+    margin-top: 2rem;
+    display: flex;
+}
+.shippingDeatils-section{
+    flex: 0.7;
+    padding: 1rem;
+    margin: 1rem;
+    height: 400px;
+    background-color: var(--clr-bg);
+    /* box-shadow: 0px 2px 20px 5px rgba(var(--clr-shade),0.05); */
+}
+.priceDetails-section{
+    flex: 0.3;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.priceDetails_price_breakup{
+    padding: 1rem;
+    border-radius: 0.3rem;
+    height: fit-content;
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-elevation1);
+    box-shadow: 0px 2px 20px 5px rgba(var(--clr-shade),0.05);
+}
+.priceDetails-section h4, .shippingDeatils-section h4{
+    color: var(--clr-on_hover);
+    text-transform: uppercase;
+}
+.priceDetails_prices{
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceDetails-totalPayble_section, .priceDetails-prices_section{
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--clr-elevation1);
+}
+.priceDetails_totalPayble{
+    font-weight: 600;
+    font-size: 18px;
+}
+.shippingDeatils_address{
+    margin-top: 0.5rem;
+}
+.shippingDeatils_address span{
+    display: flex;
+    gap: 1.5rem;
+}
+.shipping_actionBtn{
+    margin-top: 3rem;
+}
