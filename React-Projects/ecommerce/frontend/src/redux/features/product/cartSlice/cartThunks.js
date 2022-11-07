@@ -1,5 +1,5 @@
 import axios from "axios"
-import { addToCart,removeFromCart } from "./cartSlice"
+import { addToCart,removeFromCart,saveShippingInfo } from "./cartSlice"
 
 // add to cart
 export const addItemsToCart =(id,quantity) => async (dispatch,getState) => {
@@ -12,6 +12,7 @@ export const addItemsToCart =(id,quantity) => async (dispatch,getState) => {
             price:data.product.price,
             image:data.product.images[0].url,
             stock:data.product.stock,
+            catagory:data.product.catagory,
             quantity
         }))
 
@@ -22,5 +23,11 @@ export const addItemsToCart =(id,quantity) => async (dispatch,getState) => {
 // remove from cart
 export const removeItemFromCart =(id) => async (dispatch,getState) => {
     dispatch(removeFromCart({productId:id}))
-    // localStorage.setItem("cartItems",JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem("cartItems",JSON.stringify(getState().cart.cartItems))
+}
+
+// saveShipping info
+export const shippingInfoSave =(data) => async (dispatch) => {
+    dispatch(saveShippingInfo(data))
+    localStorage.setItem("shippingInfo",JSON.stringify(data))
 }
