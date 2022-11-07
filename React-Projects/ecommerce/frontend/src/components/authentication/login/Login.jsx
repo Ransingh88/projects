@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './login.css'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 import { clearError, login } from '../../../redux/features/user/userThunks'
@@ -16,7 +16,9 @@ const Login = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const {search} = useLocation()
     const {loading,isAuthenticate,error} = useSelector(state=>state.user)
+    const redirect = search ? `/${search.split("=")[1]}` : ROUTE_CONSTANTS.ACCOUNT
 
     useEffect(()=>{
         if(error){
@@ -28,9 +30,10 @@ const Login = () => {
 
         if(isAuthenticate){
             // toast.success('user login successfully')
-            navigate(ROUTE_CONSTANTS.ACCOUNT)
+            // navigate(ROUTE_CONSTANTS.ACCOUNT)
+            navigate(redirect)
         }
-    },[dispatch,error,isAuthenticate,navigate])
+    },[dispatch,error,isAuthenticate,navigate,redirect])
 
     // useEffect(()=>{
     //     if(isAuthenticate){
