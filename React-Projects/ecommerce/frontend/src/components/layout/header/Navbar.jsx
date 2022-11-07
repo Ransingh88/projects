@@ -112,7 +112,7 @@ const Navbar = () => {
             <Link to="/cart"><IoCartOutline/></Link>
             {cartItems.length>=1 ?
             <div className='cartNotification'>{cartItems?.length}</div> : null}
-            {cartItems.length>=1 ? <div className='mobileMenu userSettings_cart-menu'>{cartItems.map((prod)=>(<p>{prod.name}</p>))}</div> : null}
+            {cartItems.length>=1 ? <div className='mobileMenu userSettings_cart-menu'>{cartItems.map((prod,id)=>(<p key={id}>{prod.name}</p>))}</div> : null}
             </div>
             <div className='userSettings_setting' onClick={handleUserSetting}>
             <Link to={`/auth/login`}><div className='userSetting_profile'><img src={user?.avatar?.url ? user.avatar.url : profileImage} alt='userProfile'/></div></Link>
