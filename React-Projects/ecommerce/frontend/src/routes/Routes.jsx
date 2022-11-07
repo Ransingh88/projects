@@ -15,6 +15,8 @@ import Login from '../components/authentication/login/Login'
 import Register from '../components/authentication/register/Register'
 import ForgotPassword from '../pages/profile/forgotPassword/ForgotPassword'
 import Cart from '../pages/cart/Cart'
+import Shipping from '../pages/shipping/Shipping'
+import ConfirmOrder from '../pages/order/confirmOrder/ConfirmOrder'
 
 const PageRoutes = () => {
     // const {user,isAuthenticate,loading} = useSelector(state=>state.user)
@@ -38,6 +40,8 @@ const PageRoutes = () => {
             <Route exact path='updateProfile' element={<UpdateProfile/>}/>
             <Route exact path='changePassword' element={<UpdatePassword/>}/>
           </Route>
+          <Route path='shipping' element={<Shipping/>}/>
+          <Route exact path='/order/confirm' element={<ConfirmOrder/>}/>
         </Route>
         <Route path='*' element={<h1>404 not found</h1>}/>
     </Routes>
