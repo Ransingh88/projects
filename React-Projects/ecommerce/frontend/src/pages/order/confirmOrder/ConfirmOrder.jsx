@@ -40,7 +40,7 @@ const ConfirmOrder = () => {
                 <div className='confirmOrderDeatils_address'>
                     <p><span>name : </span> {`${shippingInfo.firstName} ${shippingInfo.middleName===undefined ? '' : shippingInfo?.middleName} ${shippingInfo.lastName}`}</p>
                     <p><span>email : </span> {shippingInfo.email}</p>
-                    <p><span>phone no. : </span> {shippingInfo.phoneNumber}</p>
+                    <p><span>phone no. : </span> {shippingInfo.phoneNo}</p>
                     <p><span>address : </span> {address}</p>
                 </div>
                 </div>

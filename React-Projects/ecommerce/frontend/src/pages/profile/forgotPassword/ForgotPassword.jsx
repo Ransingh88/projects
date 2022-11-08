@@ -1,13 +1,12 @@
 import React, { useEffect,useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Loader from '../../../components/layout/loader/Loader'
 import {forgotPassword} from '../../../redux/features/user/profileThunk'
 
 import MetaData from '../../../components/layout/metaData/MetaData'
 import { toast } from 'react-toastify'
 import { clearErrors } from '../../../redux/features/user/forgotPasswordSlice'
-import { ROUTE_CONSTANTS } from '../../../constants/constants'
 
 const ForgotPassword = () => {
 

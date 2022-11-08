@@ -4,15 +4,14 @@ import Navbar from './components/layout/header/Navbar'
 import Footer from './components/layout/footer/Footer'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useEffect } from 'react';
-import { loadUser } from './redux/features/user/userThunks';
-import { useDispatch } from 'react-redux';
 
 function App() {
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(loadUser())
-  },[])
+
+  // useEffect(()=>{
+  //   dispatch(loadUser())
+  //   getStripeApiKey()
+  // },[])
+
   return (
     <>
     <Navbar/>

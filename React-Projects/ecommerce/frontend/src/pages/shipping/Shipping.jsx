@@ -27,7 +27,7 @@ const Shipping = () => {
     const [state,setState] = useState(shippingInfo?.state)
     const [country,setCountry] = useState(shippingInfo?.country)
     const [pinCode,setPinCode] = useState(shippingInfo?.pinCode)
-    const [phoneNumber,setPhoneNumber] = useState(shippingInfo?.phoneNumber)
+    const [phoneNumber,setPhoneNumber] = useState(shippingInfo?.phoneNo)
 
     const handleShippingDetails = ()=>{
         if(address ===''|| pinCode ==='' ||state==='' || country==='' || city === '' || firstName==='' || lastName==='' || email==='' || address === undefined|| pinCode ===undefined ||state===undefined || country===undefined || city === undefined || firstName===undefined || lastName===undefined || email===undefined){
@@ -38,7 +38,7 @@ const Shipping = () => {
             toast.error('phone number should be 10 digit')
             return;
         }
-        dispatch(shippingInfoSave({firstName,middleName,lastName,email,address,city,state,country,pinCode,phoneNumber}))
+        dispatch(shippingInfoSave({firstName,middleName,lastName,email,address,city,state,country,pinCode,phoneNo:phoneNumber}))
         navigate('/order/confirm')
     }
 
