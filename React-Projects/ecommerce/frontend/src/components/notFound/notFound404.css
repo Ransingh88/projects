@@ -1,0 +1,24 @@
+.main404Container{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    padding-top: 0.6rem;
+    /* overflow: hidden; */
+}
+.container404{
+    height: 80vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.pageNotFound_404{
+    font-size: 200px;
+    padding: 0;
+}
+.pageNotFound_notFound{
+    font-size: var(--fs-sm);
+}
+.pageNotFound_quote{
+    font-size: var(--fs-body2);
+}
