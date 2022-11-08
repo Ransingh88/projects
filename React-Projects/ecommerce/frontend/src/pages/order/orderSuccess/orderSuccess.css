@@ -1,0 +1,29 @@
+.mainOrderSuccessContainer{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    padding-top: 0.6rem;
+    /* overflow: hidden; */
+}
+.orderSuccessContainer{
+    height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.orderSuccessContainer p{
+    font-size: var(--fs-sm);
+}
+
+.viewOrderBtn{
+    margin-top: 2rem;
+    background-color: var(--clr-on_surface);
+    color: var(--clr-surface);
+    border: 1px solid var(--clr-on_surface);
+}
+.viewOrderBtn:hover{
+    background-color: var(--clr-surface);
+    color: var(--clr-on_surface);
+    transition: 0.3s ease;
+}
