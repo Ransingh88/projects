@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
+import axios from 'axios'
 import {Routes, Route} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import {Elements} from '@stripe/react-stripe-js'
+import {loadStripe} from '@stripe/stripe-js'
+
 import Auth from '../pages/auth/Auth'
 import Home from '../pages/home/Home'
 import ProductDetails from '../pages/productDetails/ProductDetails'
 import Products from '../pages/products/Products'
 import Profile from '../pages/profile/Profile'
-import {ROUTE_CONSTANTS} from '../constants/constants'
-// import { useSelector } from 'react-redux'
 import ProtectedRoute from '../components/protectedRoute/ProtectedRoute'
 import UpdateProfile from '../components/profileUpdate/ProfileUpdate'
 import UpdatePassword from '../pages/profile/changePassword/PasswordUpdate'
@@ -17,9 +20,27 @@ import ForgotPassword from '../pages/profile/forgotPassword/ForgotPassword'
 import Cart from '../pages/cart/Cart'
 import Shipping from '../pages/shipping/Shipping'
 import ConfirmOrder from '../pages/order/confirmOrder/ConfirmOrder'
+import Payment from '../pages/payment/Payment'
+import OrderSuccess from '../pages/order/orderSuccess/OrderSuccess'
+import NotFound404 from '../components/notFound/NotFound404'
+
+import {ROUTE_CONSTANTS} from '../constants/constants'
+import { loadUser } from '../redux/features/user/userThunks'
 
 const PageRoutes = () => {
-    // const {user,isAuthenticate,loading} = useSelector(state=>state.user)
+
+    const [stripeApiKey,setStripeApiKey] = useState("")
+    const dispatch = useDispatch();
+    const getStripeApiKey = async ()=>{
+      const {data} = await axios.get('/api/v1/stripeApiKey')
+      setStripeApiKey(data.stripeApiKey)
+    }
+
+    useEffect(() => {
+      dispatch(loadUser());
+      getStripeApiKey()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
   return (
     <Routes>
@@ -40,10 +61,18 @@ const PageRoutes = () => {
             <Route exact path='updateProfile' element={<UpdateProfile/>}/>
             <Route exact path='changePassword' element={<UpdatePassword/>}/>
           </Route>
-          <Route path='shipping' element={<Shipping/>}/>
+          <Route exact path='shipping' element={<Shipping/>}/>
           <Route exact path='/order/confirm' element={<ConfirmOrder/>}/>
+          <Route exact path='/success' element={<OrderSuccess/>}/>
         </Route>
-        <Route path='*' element={<h1>404 not found</h1>}/>
+        <Route path='/process/payment' element={
+          (stripeApiKey !=='' || stripeApiKey!==undefined)  && (<Elements stripe={loadStripe(stripeApiKey)}>
+            <ProtectedRoute>
+              <Payment/>
+          </ProtectedRoute>
+        </Elements>)
+        }/>
+        <Route path='*' element={<NotFound404/>}/>
     </Routes>
   )
 }
