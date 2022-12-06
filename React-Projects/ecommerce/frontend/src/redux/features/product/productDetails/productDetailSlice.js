@@ -19,11 +19,27 @@ export const productDetailsSlice = createSlice({
             state.error = action.payload
             state.loading = false
         },
+        newReviewRequest:(state,action)=>{
+            state.loading = true
+        },
+        newReviewSuccess:(state,action)=>{
+            state.success = action.payload
+            state.loading = false
+        },
+        newReviewFail:(state,action)=>{
+            state.success = false
+            state.loading = false
+        },
+        newReviewReset:(state,action)=>{
+            state.error = action.payload
+            state.loading = false
+            state.success = false
+        },
         clearErrors:(state,action)=>{
             return {...state,error:null}            
         }
     }
 })
 
-export const {productDetailsFail, productDetailsRequest, productDetailsSuccess, clearErrors} = productDetailsSlice.actions
+export const {productDetailsFail, productDetailsRequest, productDetailsSuccess, newReviewFail,newReviewRequest,newReviewReset,newReviewSuccess, clearErrors} = productDetailsSlice.actions
 export default productDetailsSlice.reducer

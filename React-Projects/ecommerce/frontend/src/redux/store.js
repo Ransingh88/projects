@@ -7,6 +7,8 @@ import profileReducer from './features/user/profileSlice'
 import forgotPasswordSlice from './features/user/forgotPasswordSlice'
 import cartSlice from './features/product/cartSlice/cartSlice'
 import orderSlice from './features/order/orderSlice'
+import myOrderSlice from './features/order/myOrderSlice'
+import myOrderDetailsSlice from './features/order/myOrderDetailsSlice'
 
 export const store = configureStore({
     reducer:{
@@ -18,5 +20,7 @@ export const store = configureStore({
         forgotPassword:forgotPasswordSlice,
         cart:cartSlice,
         order:orderSlice,
+        myOrder:myOrderSlice,
+        myOrderDetails:myOrderDetailsSlice,
     }
 })

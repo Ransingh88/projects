@@ -1,6 +1,7 @@
 import axios from "axios"
-import { clearErrors, productDetailsFail, productDetailsRequest, productDetailsSuccess } from "./productDetailSlice"
+import { clearErrors, newReviewFail, newReviewRequest, newReviewSuccess, productDetailsFail, productDetailsRequest, productDetailsSuccess } from "./productDetailSlice"
 
+// get product details
 export const fetchProductDetails =(id) => async (dispatch) => {
     try {
         dispatch(productDetailsRequest())
@@ -9,6 +10,23 @@ export const fetchProductDetails =(id) => async (dispatch) => {
         
     } catch (error) {
         dispatch(productDetailsFail(error.response.data.message))
+    }
+}
+
+// new review
+export const submitNewReview =(reviewData) => async (dispatch) => {
+    try {
+        dispatch(newReviewRequest())
+
+        const config = {
+            headers: {"Content-Type": "application/json"}
+        }
+
+        const res = await axios.put(`/api/v1/review`, reviewData, config)
+        dispatch(newReviewSuccess(res.data.success))
+        
+    } catch (error) {
+        dispatch(newReviewFail(error.response.data.message))
     }
 }
 

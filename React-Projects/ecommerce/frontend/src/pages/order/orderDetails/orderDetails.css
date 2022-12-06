@@ -1,0 +1,42 @@
+.mainOrderDetailContainer{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    /* padding-top: 0.6rem; */
+    overflow: hidden;
+}
+.orderDetailContainer{
+
+}
+.orderDetailsInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.orderStatus-delivered{
+    color: var(--clr-success);
+}
+.orderStatus-processing{
+    color: var(--clr-warn);
+}
+.orderStatus-cancelled{
+    color: var(--clr-error);
+}
+.orderDetails_itemContainer{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0.5rem 0;
+}
+.orderDetails_itemContainer img{
+    width: 100px;
+}
+.orderDetails_itemContainer a{
+    color: var(--clr-on_surface);
+}
+.orderDetails_itemContainer div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

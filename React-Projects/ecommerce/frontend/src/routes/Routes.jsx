@@ -24,8 +24,10 @@ import Payment from '../pages/payment/Payment'
 import OrderSuccess from '../pages/order/orderSuccess/OrderSuccess'
 import NotFound404 from '../components/notFound/NotFound404'
 
+import Order from '../pages/order/Order'
 import {ROUTE_CONSTANTS} from '../constants/constants'
 import { loadUser } from '../redux/features/user/userThunks'
+import OrderDetails from '../pages/order/orderDetails/OrderDetails'
 
 const PageRoutes = () => {
 
@@ -60,10 +62,12 @@ const PageRoutes = () => {
           <Route exact path={`/${ROUTE_CONSTANTS.ACCOUNT}`} element={<Profile/>}>
             <Route exact path='updateProfile' element={<UpdateProfile/>}/>
             <Route exact path='changePassword' element={<UpdatePassword/>}/>
+            <Route exact path='order' element={<Order/>}/>
           </Route>
           <Route exact path='shipping' element={<Shipping/>}/>
-          <Route exact path='/order/confirm' element={<ConfirmOrder/>}/>
           <Route exact path='/success' element={<OrderSuccess/>}/>
+          <Route exact path='/order/confirm' element={<ConfirmOrder/>}/>
+          <Route exact path='/order/:id' element={<OrderDetails/>}/>
         </Route>
         <Route path='/process/payment' element={
           (stripeApiKey !=='' || stripeApiKey!==undefined)  && (<Elements stripe={loadStripe(stripeApiKey)}>

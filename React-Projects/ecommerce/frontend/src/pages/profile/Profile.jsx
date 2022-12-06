@@ -47,9 +47,9 @@ const Profile = () => {
                     </div>
                 </div>
                 <ul className='account-sidebar_menus'>
-                    <li> <IoHomeOutline/> Home</li>
+                    <Link to="/"><li> <IoHomeOutline/> Home</li></Link>
                     <Link to="/account"><li> <IoPersonCircleOutline/> Profile</li></Link>
-                    <li> <IoBagOutline/> Order</li>
+                    <Link to="/account/order"><li> <IoBagOutline/> Order</li></Link>
                     <Link to="/account/changePassword"><li> <IoLockOpenOutline/> Change Password</li></Link>
                     <li onClick={handleLogout}> <IoLogOutOutline/> Logout</li>
                 </ul>

@@ -4,7 +4,7 @@ import {CardNumberElement,CardCvcElement,CardExpiryElement,useStripe,useElements
 import Stepper from '../../components/stepper/Stepper'
 import { useDispatch, useSelector } from 'react-redux'
 import { useRef } from 'react'
-import { grossTotalPrice, totalPrice } from '../../redux/features/product/cartSlice/cartSlice'
+import { clearCart, grossTotalPrice, totalPrice } from '../../redux/features/product/cartSlice/cartSlice'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -79,6 +79,7 @@ const Payment = () => {
                     dispatch(createOrder(order))
                     toast.success('Payment Successfull')
                     navigate('/success')
+                    dispatch(clearCart())
                 }else{
                     toast.error('Payment Failed! There is some issue while processing payment.')
                 }

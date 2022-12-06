@@ -9,7 +9,7 @@ const OrderSuccess = () => {
         <section className='container orderSuccessContainer'>
             <img src={SucessIcon} alt="" />
             <p>Your order has been placed successfully</p>
-            <Link to='/order' className='btn viewOrderBtn'>view Order</Link>
+            <Link to='/account/order' className='btn viewOrderBtn'>view Order</Link>
         </section>
     </main>
   )

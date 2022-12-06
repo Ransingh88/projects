@@ -31,7 +31,7 @@ const UserOption = ({user}) => {
             user.role === 'admin' && 
             <p onClick={()=>{navigate('/dashboard')}}><IoGridOutline/>Dashboard</p>
         }
-        <p onClick={()=>{navigate('/order')}}><IoBagOutline/>Order</p>
+        <p onClick={()=>{navigate('/account/order')}}><IoBagOutline/>Order</p>
         <p onClick={handleLogout}><IoLogOutOutline/>Logout</p>
         </div>
     </div>

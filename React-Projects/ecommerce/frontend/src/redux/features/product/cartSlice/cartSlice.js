@@ -42,9 +42,19 @@ export const cartSlice = createSlice({
         },
         couponCodePrice:(state,action)=>{
             state.cartPrice.coupon =  action.payload
-        }
+        },
+        clearCart:(state,action)=>{
+            state.cartItems =  []
+            state.cartPrice = {
+                shippingCharge:60,
+                coupon:0,
+                total:0,
+                grossTotal:0
+            }
+            state.shippingInfo =  {}
+        },
     }
 })
 
-export const {addToCart,removeFromCart,grossTotalPrice,totalPrice,couponCodePrice,saveShippingInfo} = cartSlice.actions
+export const {addToCart,removeFromCart,grossTotalPrice,totalPrice,couponCodePrice,saveShippingInfo,clearCart} = cartSlice.actions
 export default cartSlice.reducer

@@ -1,0 +1,21 @@
+.mainMyOrderContainer{
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-on_surface);
+    padding-top: 0.6rem;
+    /* overflow: hidden; */
+}
+.myOrderContainer{
+    padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   height: 90vh;
+   overflow-y: scroll;
+   /* align-items: center; */
+}
+.myOrderContainer::-webkit-scrollbar{
+    display: none;
+}
+.myOrder-heading{
+    align-self: center;
+}
