@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {getAllProductsFail, getAllProductsRequest, getAllProductsSuccess, clearErrors } from './productSlice'
+import {getAllProductsFail, getAllProductsRequest, getAllProductsSuccess, clearErrors, getAdminProductsFail, getAdminProductsSuccess, getAdminProductsRequest } from './productSlice'
 
 export const fetchAllProducts = (keyword="",currentPage=1,price,catagory,ratings=0) => async (dispatch)=>{
     try {
@@ -18,6 +18,17 @@ export const fetchAllProducts = (keyword="",currentPage=1,price,catagory,ratings
         
     } catch (error) {
         dispatch(getAllProductsFail(error.response?.data.message))
+    }
+}
+export const fetchAdminProducts = () => async (dispatch)=>{
+    try {
+        dispatch(getAdminProductsRequest())
+
+        const res = await axios.get('/api/v1/admin/products')
+        dispatch(getAdminProductsSuccess(res?.data))
+        
+    } catch (error) {
+        dispatch(getAdminProductsFail(error.response?.data.message))
     }
 }
 

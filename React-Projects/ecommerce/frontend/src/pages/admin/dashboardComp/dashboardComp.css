@@ -1,0 +1,58 @@
+.dashboard_heading{
+    text-align: center;
+    margin: 1rem 0;
+}
+.dashboardComp_container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+
+}
+.dashboard_left{
+}
+.dashboard_right{
+}
+.dashboard_summery{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 0.6rem 0;
+}
+.dashboard_totalRevenue{
+    width: 100%;
+    height: 100px;
+    margin: 0.6rem 0;
+    background-color: var(--clr-elevation1);
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard_summery_itemBox{
+    height: 150px;
+    width: 200px;
+    border-radius: 0.4rem;
+    background-color: var(--clr-primary);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #303030;
+}
+.iemBox1{
+    background-color: #C6D0BC;
+}
+.iemBox2{
+    background-color: #F6D78B;
+}
+.iemBox3{
+    background-color: #A3A7FC
+}
+.dashboard_lineGraph, .dashboard_doughnutGraph{
+    height: 400px;
+    width: 100%;
+    margin: 2rem 0;
+}

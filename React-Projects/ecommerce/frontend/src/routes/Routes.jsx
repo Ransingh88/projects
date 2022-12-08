@@ -28,6 +28,11 @@ import Order from '../pages/order/Order'
 import {ROUTE_CONSTANTS} from '../constants/constants'
 import { loadUser } from '../redux/features/user/userThunks'
 import OrderDetails from '../pages/order/orderDetails/OrderDetails'
+import Dashboard from '../pages/admin/Dashboard'
+import DashboardComp from '../pages/admin/dashboardComp/DashboardComp'
+import ProductList from '../pages/admin/productList/ProductList'
+import CreateProduct from '../pages/admin/createProduct/CreateProduct'
+import UpdateProduct from '../pages/admin/updateProduct/UpdateProduct'
 
 const PageRoutes = () => {
 
@@ -68,6 +73,12 @@ const PageRoutes = () => {
           <Route exact path='/success' element={<OrderSuccess/>}/>
           <Route exact path='/order/confirm' element={<ConfirmOrder/>}/>
           <Route exact path='/order/:id' element={<OrderDetails/>}/>
+          <Route isAdmin={true} exact path='/admin' element={<Dashboard/>}>
+            <Route exact path='dashboard' element={<DashboardComp/>}/>
+            <Route exact path='allproducts' element={<ProductList/>}/>
+            <Route exact path='createproduct' element={<CreateProduct/>}/>
+            <Route exact path='updateproduct/:id' element={<UpdateProduct/>}/>
+          </Route>
         </Route>
         <Route path='/process/payment' element={
           (stripeApiKey !=='' || stripeApiKey!==undefined)  && (<Elements stripe={loadStripe(stripeApiKey)}>

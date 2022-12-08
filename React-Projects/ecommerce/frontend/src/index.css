@@ -174,7 +174,7 @@ a{
   text-decoration: none;
 }
 
-input[type=text],input[type=password],input[type=email],input[type=file],input[type=number], select {
+input[type=text],input[type=password],input[type=email],input[type=file],input[type=number], select, textarea {
   width: 100%;
   padding: 0.6rem;
   margin: 0.6rem 0;

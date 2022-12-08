@@ -23,11 +23,23 @@ export const productSlice = createSlice({
             state.error = action.payload
             state.loading = false
         },
+        getAdminProductsRequest:(state,action)=>{
+            state.products = []
+            state.loading = true
+        },
+        getAdminProductsSuccess:(state,action)=>{
+            state.products = action.payload.product
+            state.loading = false
+        },
+        getAdminProductsFail:(state,action)=>{
+            state.error = action.payload
+            state.loading = false
+        },
         clearErrors:(state,action)=>{
             return {...state,error:null}            
         }
     }
 })
 
-export const {getAllProductsRequest, getAllProductsSuccess, getAllProductsFail, clearErrors} = productSlice.actions
+export const {getAllProductsRequest, getAllProductsSuccess, getAllProductsFail,getAdminProductsFail,getAdminProductsRequest,getAdminProductsSuccess, clearErrors} = productSlice.actions
 export default productSlice.reducer

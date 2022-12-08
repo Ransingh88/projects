@@ -218,7 +218,7 @@ const ProductDetails = () => {
         <h4>Submit Review</h4>
         <div>
         <ReactStars {...reviewOptions} size={28} onChange={(newRating)=>{setReviewRating(newRating)}}/>
-        <textarea name="" id="" cols="40" rows="8" value={userReview} onChange={(e)=>{setUserReview(e.target.value)}}></textarea>
+        <textarea name="" id="" cols="40" rows="5" value={userReview} onChange={(e)=>{setUserReview(e.target.value)}}></textarea>
         </div>
         <div>
           <button className='btn' onClick={handleReviewWindowToggle}>Cancel</button>

@@ -9,6 +9,8 @@ import cartSlice from './features/product/cartSlice/cartSlice'
 import orderSlice from './features/order/orderSlice'
 import myOrderSlice from './features/order/myOrderSlice'
 import myOrderDetailsSlice from './features/order/myOrderDetailsSlice'
+import newProductSlice from './features/product/createProduct/createProductSlice'
+import adminProductReducer from './features/product/adminProduct/adminProductSlice'
 
 export const store = configureStore({
     reducer:{
@@ -22,5 +24,7 @@ export const store = configureStore({
         order:orderSlice,
         myOrder:myOrderSlice,
         myOrderDetails:myOrderDetailsSlice,
+        newProduct:newProductSlice,
+        adminProduct:adminProductReducer,
     }
 })
