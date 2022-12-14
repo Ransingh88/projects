@@ -51,7 +51,7 @@ const lineState = {
   datasets: [
     {
       label: 'Total Amount',
-      data: [0,2000],
+      data: [0,orderDetails?.totalAmount],
       borderColor: 'rgb(255, 99, 132)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     }
