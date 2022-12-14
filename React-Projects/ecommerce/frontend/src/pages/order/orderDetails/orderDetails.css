@@ -22,7 +22,7 @@
     color: var(--clr-error);
 }
 .orderDetails_itemContainer{
-    width: 60%;
+    /* width: 60%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,4 +39,17 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+.orderDetails_ordersProcessContainer{
+    display: flex;
+}
+.orderDetails_orders{
+    width: 70%;
+
+}
+.orderDetails_orderStatus{
+    width: 30%;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    padding-left: 1.2rem;
 }

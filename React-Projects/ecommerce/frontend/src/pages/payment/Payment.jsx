@@ -80,6 +80,7 @@ const Payment = () => {
                     toast.success('Payment Successfull')
                     navigate('/success')
                     dispatch(clearCart())
+                    localStorage.setItem('cartItems',JSON.stringify([]))
                 }else{
                     toast.error('Payment Failed! There is some issue while processing payment.')
                 }

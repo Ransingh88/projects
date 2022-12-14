@@ -14,6 +14,8 @@ import {
   import { Line, Doughnut } from 'react-chartjs-2';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdminProducts } from '../../../redux/features/product/productThunks';
+import { fetchAdminOrders } from '../../../redux/features/order/adminOrder/adminOrdersThunks';
+import { fetchAdminUsers } from '../../../redux/features/user/adminUsers/adminUsersThunks';
 
   ChartJS.register(
     CategoryScale,
@@ -30,6 +32,8 @@ const DashboardComp = () => {
 
   
   const {products} = useSelector(state => state.product)
+  const {orderDetails} = useSelector(state => state.adminOrder)
+  const {users} = useSelector(state => state.adminUser)
   const dispatch = useDispatch()
   let outOfStuck = 0
   products && products.forEach(element => {
@@ -65,6 +69,8 @@ const doughnutState = {
 
 useEffect(()=>{
   dispatch(fetchAdminProducts())
+  dispatch(fetchAdminOrders())
+  dispatch(fetchAdminUsers())
 },[dispatch])
 
 
@@ -84,11 +90,11 @@ useEffect(()=>{
                 </div>
                 <div className='dashboard_summery_itemBox iemBox2'>
                     <h3>Orders</h3>
-                    <span>23</span>
+                    <span>{orderDetails?.orders.length}</span>
                 </div>
                 <div className='dashboard_summery_itemBox iemBox3'>
                     <h3>Users</h3>
-                    <span>102</span>
+                    <span>{users && users.length}</span>
                 </div>
             </div>
             <div className='dashboard_lineGraph'>
@@ -98,7 +104,7 @@ useEffect(()=>{
         <div className='dashboard_right'>
         <div className='dashboard_totalRevenue'>
                 <h3>Total Amount</h3>
-                <span>5,01,250</span>
+                <span>{orderDetails?.totalAmount}</span>
             </div>
             <div className='dashboard_doughnutGraph'>
             <Doughnut data={doughnutState} options={options}/>

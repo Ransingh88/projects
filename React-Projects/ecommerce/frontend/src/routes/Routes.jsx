@@ -33,6 +33,11 @@ import DashboardComp from '../pages/admin/dashboardComp/DashboardComp'
 import ProductList from '../pages/admin/productList/ProductList'
 import CreateProduct from '../pages/admin/createProduct/CreateProduct'
 import UpdateProduct from '../pages/admin/updateProduct/UpdateProduct'
+import OrderList from '../pages/admin/orderList/OrderList'
+import UpdateOrder from '../pages/admin/updateOrder/UpdateOrder'
+import UsersList from '../pages/admin/usersList/UsersList'
+import UpdateUser from '../pages/admin/updateUser/UpdateUser'
+import Reviews from '../pages/admin/reviews/Reviews'
 
 const PageRoutes = () => {
 
@@ -78,6 +83,11 @@ const PageRoutes = () => {
             <Route exact path='allproducts' element={<ProductList/>}/>
             <Route exact path='createproduct' element={<CreateProduct/>}/>
             <Route exact path='updateproduct/:id' element={<UpdateProduct/>}/>
+            <Route exact path='allorders' element={<OrderList/>}/>
+            <Route exact path='updateorder/:id' element={<UpdateOrder/>}/>
+            <Route exact path='allusers' element={<UsersList/>}/>
+            <Route exact path='updateuser/:id' element={<UpdateUser/>}/>
+            <Route exact path='allreviews' element={<Reviews/>}/>
           </Route>
         </Route>
         <Route path='/process/payment' element={

@@ -9,13 +9,14 @@ import { clearErrors } from '../../../redux/features/product/productSlice'
 import { clearError as adminClearErrors } from '../../../redux/features/product/adminProduct/adminProductThunks'
 import { deleteAdminProduct } from '../../../redux/features/product/adminProduct/adminProductThunks'
 import { deleteAdminProductReset } from '../../../redux/features/product/adminProduct/adminProductSlice'
+import Loader from '../../../components/layout/loader/Loader'
 
 const ProductList = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {products,error} = useSelector(state => state.product)
-    const {error:deleteError, isDeleted} = useSelector(state => state.adminProduct)
+    const {error:deleteError, isDeleted, loading} = useSelector(state => state.adminProduct)
 
     const handleProductDelete = (id) =>{
       dispatch(deleteAdminProduct(id))
@@ -39,6 +40,8 @@ const ProductList = () => {
     },[dispatch,error,deleteError,isDeleted,navigate])
 
   return (
+    <>
+    { loading ? <Loader/> :
     <div className='productList_container'>
         <h1 className='dashboard_heading'><span>All Products</span></h1>
         <div>
@@ -67,6 +70,7 @@ const ProductList = () => {
       </table>
         </div>
     </div>
+      }</>
   )
 }
 

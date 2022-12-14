@@ -184,7 +184,7 @@ exports.updateProfile = catchAsyncErrors(async(req,res,next)=>{
 
     if(req.body.avatar !==''){
         const user = await User.findById(req.user.id)
-        const imageId = await user.avatar.public_id
+        const imageId = user.avatar.public_id
         await cloudinary.v2.uploader.destroy(imageId)
 
         const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar,{
@@ -262,6 +262,10 @@ exports.deleteUser = catchAsyncErrors(async(req,res,next)=>{
     if(!user){
         return next(new ErrorHandler(`User does nt exist with Id:${req.params.id}`,400))
     }
+
+    const imageId = user.avatar.public_id
+    await cloudinary.v2.uploader.destroy(imageId)
+
     user.remove()
 
     res.status(200).json({

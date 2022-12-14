@@ -10,7 +10,10 @@ import orderSlice from './features/order/orderSlice'
 import myOrderSlice from './features/order/myOrderSlice'
 import myOrderDetailsSlice from './features/order/myOrderDetailsSlice'
 import newProductSlice from './features/product/createProduct/createProductSlice'
-import adminProductReducer from './features/product/adminProduct/adminProductSlice'
+import adminProductSlice from './features/product/adminProduct/adminProductSlice'
+import adminOrderSlice from './features/order/adminOrder/adminOrdersSlice'
+import adminUsersSlice from './features/user/adminUsers/adminUsersSlice'
+import adminReviewsSlice from './features/user/adminReviews/adminReviewsSlice'
 
 export const store = configureStore({
     reducer:{
@@ -25,6 +28,9 @@ export const store = configureStore({
         myOrder:myOrderSlice,
         myOrderDetails:myOrderDetailsSlice,
         newProduct:newProductSlice,
-        adminProduct:adminProductReducer,
+        adminProduct:adminProductSlice,
+        adminOrder:adminOrderSlice,
+        adminUser:adminUsersSlice,
+        adminReviews:adminReviewsSlice,
     }
 })

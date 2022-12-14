@@ -29,23 +29,23 @@ const Navbar = () => {
       label:"all product"
     },
     {
-      link:"men",
+      link:"products/men",
       label:"men"
     },
     {
-      link:"women",
+      link:"products/women",
       label:"women"
     },
     {
-      link:"sports",
+      link:"products/sports",
       label:"sports"
     },
     {
-      link:"electronics",
+      link:"products/electronics",
       label:"electronics"
     },
     {
-      link:"mobile",
+      link:"products/mobile",
       label:"mobile"
     },
   ]

@@ -56,3 +56,7 @@
     width: 100%;
     margin: 2rem 0;
 }
+.review_searchbox{
+    display: flex;
+    gap: 1rem;
+}

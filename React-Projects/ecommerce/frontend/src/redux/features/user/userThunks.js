@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { toast } from 'react-toastify'
 import {loginSuccess,loginFail,loginRequest,registerRequest,registerSuccess,registerFail,clearErrors, loadUserSuccess, loadUserRequest, loadUserFail, logoutSuccess, logoutFail} from './userSlice'
 
 // Login
@@ -8,7 +9,12 @@ export const login = (email,password) => async (dispatch)=>{
 
         const config = {headers:{"Content-Type":"application/json"}}
 
-        const {data} = await axios.post(`/api/v1/login`,{email,password},config)
+        const {data} = await toast.promise(axios.post(`/api/v1/login`,{email,password},config),
+        {
+            pending: "Logging in",
+            success: "Logged in Successfully",
+            error: "Can not Login! Try Again",
+          })
 
         dispatch(loginSuccess(data.user))
         
@@ -24,7 +30,12 @@ export const register = (userdata) => async (dispatch)=>{
 
         const config = {headers:{"Content-Type":"multipart/form-data"}}
 
-        const {data} = await axios.post(`/api/v1/register`,userdata,config)
+        const {data} = await toast.promise(axios.post(`/api/v1/register`,userdata,config),
+        {
+            pending: "Creating account",
+            success: "Registred Successfully",
+            error: "Can not Login! Try Again",
+          })
 
         dispatch(registerSuccess(data.user))
     } catch (error) {

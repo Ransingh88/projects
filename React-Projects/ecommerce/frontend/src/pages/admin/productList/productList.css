@@ -24,7 +24,7 @@
   
   .dashboard_table tr:hover {
     background-color: var(--clr-elevation1);
-    color: var(--clr-on_elevation1);
+    /* color: var(--clr-on_elevation1); */
   }
   
   .dashboard_table th {
@@ -52,4 +52,10 @@
   }
   .deleteActionBtn svg:hover,  .editActionBtn svg:hover{
     scale: 1.1;
+  }
+  .deliveredRow{
+    color: var(--clr-success);
+  }
+  .processingRow , tr.processingRow:nth-child(even){
+    color: var(--clr-error);
   }

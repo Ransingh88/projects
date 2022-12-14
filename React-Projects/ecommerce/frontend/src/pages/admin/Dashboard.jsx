@@ -1,15 +1,32 @@
 import React from 'react'
-import { IoAddCircleOutline, IoBagHandleOutline, IoGridOutline, IoHomeOutline, IoListOutline, IoPeopleOutline } from 'react-icons/io5'
+import { IoAddCircleOutline, IoBagHandleOutline, IoGridOutline,IoLogOutOutline, IoHomeOutline, IoListOutline, IoPeopleOutline } from 'react-icons/io5'
 import { MdOutlineRateReview } from 'react-icons/md'
-import { useSelector } from 'react-redux'
-import { Link, Outlet } from 'react-router-dom'
+import { useSelector,useDispatch } from 'react-redux'
+import { Link, Navigate, Outlet, useLocation,useNavigate } from 'react-router-dom'
 import MetaData from '../../components/layout/metaData/MetaData'
 import './dashboard.css'
+import { toast } from 'react-toastify'
+
+import {logout } from '../../redux/features/user/userThunks'
 
 const Dashboard = () => {
 
-    const {user,isAuthenticate,loading} = useSelector(state=>state.user)
+    const {pathname} = useLocation()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const {user} = useSelector(state=>state.user)
     const userFistName = user?.name?.split(' ')
+
+    const handleLogout = ()=>{
+        dispatch(logout())
+        navigate('/')
+        toast.success('Logout successful')
+    }
+
+    if(pathname === '/admin'){
+        return <Navigate to='/admin/dashboard'/>
+    }
   return (
     <>
     <MetaData title={`myprofile - ${user.name}`}/>
@@ -28,10 +45,10 @@ const Dashboard = () => {
                     <Link to="/admin/dashboard"><li> <IoGridOutline/> Dashboard</li></Link>
                     <Link to="/admin/allproducts"><li> <IoBagHandleOutline/> All Products</li></Link>
                     <Link to="/admin/createproduct"><li> <IoAddCircleOutline/> Create Product</li></Link>
-                    <Link to="/admin/createproduct"><li> <IoListOutline/> Orders</li></Link>
-                    <Link to="/admin/createproduct"><li> <IoPeopleOutline/> Users</li></Link>
-                    <Link to="/admin/createproduct"><li> <MdOutlineRateReview/> Reviews</li></Link>
-                    {/* <li onClick={handleLogout}> <IoLogOutOutline/> Logout</li> */}
+                    <Link to="/admin/allorders"><li> <IoListOutline/> Orders</li></Link>
+                    <Link to="/admin/allusers"><li> <IoPeopleOutline/> Users</li></Link>
+                    <Link to="/admin/allreviews"><li> <MdOutlineRateReview/> Reviews</li></Link>
+                    <li onClick={handleLogout}> <IoLogOutOutline /> Logout</li>
                 </ul>
             </section>
             <section className='dashboard_dashboardContainer'>
