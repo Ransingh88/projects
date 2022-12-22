@@ -13,26 +13,26 @@ const Order = () => {
     const dispatch = useDispatch()
     const {orders,loading,error} = useSelector(state=>state.myOrder)
     const {user} = useSelector(state=>state.user)
-    const [sortOrder,setSortOrder] = useState('asc')
-    let aa = [...orders]
-    const [bb, setbb] = useState(aa)
+    // const [sortOrder,setSortOrder] = useState('asc')
+    // let aa = [...orders]
+    // const [bb, setbb] = useState(aa)
 
   
 
-    const handleSortOrder = () => {
-      if(sortOrder === 'asc'){
-        setSortOrder('desc')
-        bb.sort(
-          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-        );
-      }
-      else if(sortOrder === 'desc'){
-        setSortOrder('asc')
-        bb.sort(
-          (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
-        );
-      }
-    }
+    // const handleSortOrder = () => {
+    //   if(sortOrder === 'asc'){
+    //     setSortOrder('desc')
+    //     bb.sort(
+    //       (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    //     );
+    //   }
+    //   else if(sortOrder === 'desc'){
+    //     setSortOrder('asc')
+    //     bb.sort(
+    //       (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+    //     );
+    //   }
+    // }
 
    
     useEffect(()=>{
@@ -41,7 +41,7 @@ const Order = () => {
             dispatch(clearErrors())
         }
         dispatch(myOrders())
-        handleSortOrder()
+        // handleSortOrder()
     },[dispatch, error])
   return (
     <>
@@ -61,7 +61,7 @@ const Order = () => {
     <div className='accountContainer_heading'>
                       <h2>{`${user?.name?.split(" ")[0]}'s orders`}</h2>
                       <div>
-                        <button className='btn' onClick={handleSortOrder}>sort</button>
+                        <button className='btn'>sort</button>
                       </div>
               </div>
               <div className='myOrderContainer'>

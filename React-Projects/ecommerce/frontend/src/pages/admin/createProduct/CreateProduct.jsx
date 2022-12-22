@@ -26,7 +26,7 @@ const CreateProduct = () => {
 ]
 const dispatch = useDispatch()
 const navigate = useNavigate()
-const {products,loading,error,success} = useSelector(state=>state.newProduct)
+const {loading,error,success} = useSelector(state=>state.newProduct)
 
 const [name,setName] = useState('')
 const [description,setDescription] = useState('')
