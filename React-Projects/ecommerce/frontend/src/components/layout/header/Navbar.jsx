@@ -144,7 +144,7 @@ const Navbar = () => {
           </div>
           <div className="mobileMenu_userSettings">
             <Link to="/cart">Cart<IoCartOutline/></Link>
-            <Link to="/auth">Setting<IoSettingsOutline/></Link>
+            <Link to="/auth/login">Setting<IoSettingsOutline/></Link>
             <span className='mobileMenu_theme'>
             <Theme/>
             </span>
