@@ -2,7 +2,7 @@
   {
     "image": "cinemabox",
     "title": "Cinemabox",
-    "desc": "Discover the world of cinema at our movie website. Browse through our extensive collection of movies and TV shows, read reviews, and create your own watchlist.",
+    "desc": "(UNDER DEVELOPMENT) Discover the world of cinema at our movie website. Browse through our extensive collection of movies and TV shows, read reviews, and create your own watchlist.",
     "tech": ["react-2", "redux", "logo-javascript", "html-1", "sass-1"],
     "demo": "https://cinemabox.onrender.com",
     "code": "https://github.com/Ransingh88/react_projects/tree/main/cinemabox"
