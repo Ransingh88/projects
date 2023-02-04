@@ -2,7 +2,7 @@
   {
     "image": "cinemabox",
     "title": "Cinemabox",
-    "desc": "Discover the world of cinema at our movie website. Browse through our extensive collection of movies and TV shows, read reviews, and create your own watchlist. With a user-friendly interface and regular updates, we are the ultimate destination for movie enthusiasts. Explore now and join the community of cinema lovers.Its uses TMDB api to get all the data.",
+    "desc": "Discover the world of cinema at our movie website. Browse through our extensive collection of movies and TV shows, read reviews, and create your own watchlist.",
     "tech": ["react-2", "redux", "logo-javascript", "html-1", "sass-1"],
     "demo": "https://cinemabox.onrender.com",
     "code": "https://github.com/Ransingh88/react_projects/tree/main/cinemabox"
@@ -48,7 +48,7 @@
     "code": "https://github.com/Ransingh88/project-impact_guru"
   },
   {
-    "image": "Hotels",
+    "image": "hotels",
     "title": "Hotels",
     "desc": "Clone of Hotels.com website. Hotels.com is a leading provider of hotel accommodation worldwide, offering booking services through its own network of localised websites.",
     "tech": [
@@ -65,7 +65,7 @@
   {
     "image": "pencil",
     "title": "Pencil",
-    "desc": "(UNDER DEVELOPMENT)Its a elearning platform, where user can learn and get all types of course by free or subscribe basis with respect to course creator, It has admin dashboard so that the individual creator create,release their course or lectures.",
+    "desc": "(UNDER DEVELOPMENT)Its a elearning platform, where user can learn and get all types of course by free or subscribe basis with respect to course creator.",
     "tech": ["logo-javascript", "html-1", "css-3"],
     "demo": "https://sephora-clone.netlify.app",
     "code": "https://github.com/Ransingh88/projects/tree/main/Project-Sephora"
