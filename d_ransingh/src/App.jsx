@@ -14,7 +14,7 @@ function App() {
           </a>
         </p>
       </div>
-      {/* <Home /> */}
+      <Home />
     </div>
   )
 }
