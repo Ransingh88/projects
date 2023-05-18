@@ -3,6 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+.banner__notification{
+  background-color: rgb(255, 245, 63);
+  color: #202020;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* .App {
   
