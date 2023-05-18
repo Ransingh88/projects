@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
   margin: 0;
   box-sizing: border-box;
 }
-.banner__notification{
+.banner__notification {
   background-color: rgb(255, 245, 63);
   color: #202020;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
 }
 
 /* .App {

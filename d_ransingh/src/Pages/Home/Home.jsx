@@ -78,14 +78,6 @@ const Home = () => {
 //     }
     return (
       <div className={styles.Container}>
-        <div className="banner__notification">
-          <p>
-            We're deprecating this website, Discover new website{" "}
-            <a href="https://debasishransingh.onrender.com/">
-              debasishransingh.com
-            </a>
-          </p>
-        </div>
         {/* <div className={styles.mainContainer}>
             <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning>
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
