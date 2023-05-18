@@ -77,7 +77,15 @@ const Home = () => {
 //         setVs(true)
 //     }
     return (
-        <div className={styles.Container}>
+      <div className={styles.Container}>
+        <div className="banner__notification">
+          <p>
+            We're deprecating this website, Discover new website{" "}
+            <a href="https://debasishransingh.onrender.com/">
+              debasishransingh.com
+            </a>
+          </p>
+        </div>
         {/* <div className={styles.mainContainer}>
             <Warning vs={vs}><p>! The  website is under development</p><button onClick={handleWarning}>X</button></Warning>
             <img src="./images/picSquare.jpg" alt="ProfileImage" />
@@ -91,46 +99,49 @@ const Home = () => {
                     <p>Resume</p>
             </div></a>
             </div> */}
-            <section id="hero">
-                <Hero/>
-            </section>
-            <section id="about">
-            <About/>
-            </section>
-            <section id="skills">
-            <Technologies />
-            <Proficient/>
-            <Tools/>
-            </section>
-            <section id="experience">
-                <Experience/>
-            </section>
-            <section id="project">
-            <div className={styles.projectSection}>
-               
-                <Heading>Projects</Heading>
-                <div className={styles.projectContent}>
-                    
-                
-                {/* <Card/>
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="skills">
+          <Technologies />
+          <Proficient />
+          <Tools />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="project">
+          <div className={styles.projectSection}>
+            <Heading>Projects</Heading>
+            <div className={styles.projectContent}>
+              {/* <Card/>
                 <Card/>
                 <Card/>
                 <Card/>
                     <Card /> */}
-                    {projectData.map(({image,title,desc,tech,demo,code},index) => (
-                        
-                        <Card key={index } title={title} desc={desc} tech={tech} img={image} demo={ demo} code={ code} />
-                    )
-
-                    )}
-
-                    </div>
+              {projectData.map(
+                ({ image, title, desc, tech, demo, code }, index) => (
+                  <Card
+                    key={index}
+                    title={title}
+                    desc={desc}
+                    tech={tech}
+                    img={image}
+                    demo={demo}
+                    code={code}
+                  />
+                )
+              )}
             </div>
-            </section>
-            <section id="contact">
-            <Contact/>
-            </section>
-            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
     )
 }
 
