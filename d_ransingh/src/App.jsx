@@ -8,8 +8,8 @@ function App() {
       <Navbar />
       <div className="banner__notification">
         <p>
-          We're deprecating this website, Discover new website{" "}
-          <a href="https://debasishransingh.onrender.com/">
+          I'm deprecating this website, Discover new portfolio{" "}
+          <a href="https://debasishransingh.dev">
             debasishransingh.com
           </a>
         </p>
